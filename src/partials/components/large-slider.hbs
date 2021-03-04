@@ -1,0 +1,26 @@
+<div class="large-slider js-large-slider">
+  <div class="large-slider__in swiper-container">
+    <div class="swiper-wrapper">
+      {{#each LargeSlider }}
+      <div class="large-slider__item swiper-slide" style="background-image: url({{this}});"></div>
+      {{/each }}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="large-slider__slider-nav-buttons-container">
+      <div class="container">
+        <button class="slider__nav-button slider__nav-button--prev">
+          <div class="slider__nav-button-bg"></div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+        <button class="slider__nav-button slider__nav-button--next">
+          <div class="slider__nav-button-bg"></div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

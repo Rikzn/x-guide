@@ -1,0 +1,15 @@
+{
+  "title": "X-Guide - Ответы на вопросы",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Ответы на вопросы",
+        "href": "/questions.html" },
+      { "text": "Я новичок, с чего начать?",
+        "href": "/question.html" }
+    ]
+  },
+  "form-section-header": "Не нашли ответ \nна свой вопрос?",
+  "form-header": "Задайте свой вопрос"
+}

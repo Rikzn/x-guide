@@ -1,0 +1,30 @@
+<section class="about {{#if about-mod}}{{about-mod}}{{/if}}">
+  <div class="container about__container">
+    <div class="about__description-container">
+      <h2 class="about__header">
+        <span class="about__header-text about__header-text--large">X-Guide — это</span>
+        <span class="about__header-text about__header-text--small">команда опытных гидов и фотографов</span>
+      </h2>
+      <p class="about__text">Команда XGuide состоит из лучших в мире профессиональных гидов в своей сфере. Мы ручаемся за их опыт, чтобы увеличить ваши шансы на успех. Команда XGuide состоит из лучших 
+      в мире профессиональных гидов в своей сфере. Мы ручаемся за их опыт, чтобы увеличить ваши шансы на успех
+      </p>
+      <a href="#" class="link--button link--button--blue about__link">
+          <span class="link--button__text link--button__text--bg">Подробнее о компании</span>
+          <span class="link--button__text link--button__text--for">Подробнее о компании</span>
+      </a>
+    </div>
+    <div class="about__video-container">
+      <img class="about__video-bg" src="./img/bg-shape.png" alt="bg-shape">
+      <div class="about__video-preview">
+        <img class="about__video" src="./img/about-video.jpg" alt="about video">
+        <div class="about__video-preview-mask">
+        </div>
+        <div class="about__video-play-button">
+          {{> play-button }}
+        </div>
+        <button class="about__item-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs" data-video-img-src="./img/about-video.jpg">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

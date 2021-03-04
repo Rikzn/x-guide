@@ -1,0 +1,35 @@
+{
+  "title": "X-Guide - Гиды",
+  "Header": {
+    "header": "Гиды",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Гиды",
+        "href": "/guides.html" }
+    ],
+    "hero-img-src": "./img/hero__bg2.jpg"
+  },
+  "Grid-guides": {
+    "tabs-nav": ["Все", "Восхождения", "Походы", "Скитур и фрирайд", "Скалолазание", "Кайт бординг", "Дайвинг", "Парапланеризм", "Спелеология"],
+    "tabs-items": [
+      { "header": "Зубко максим",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-2.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-2.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" }]
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}

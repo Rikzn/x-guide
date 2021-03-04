@@ -1,0 +1,175 @@
+<section class="guide-description">
+  <div class="container guide-description__container">
+    <div class="guide-description__left-col">
+      <div class="guide-description__block">
+        <h3 class="guide-description__block-header">Интересные факты
+        </h3>
+        <ul class="guide-description__block-list">
+          <li class="guide-description__block-list-item">Любимый номер – 13.
+          </li>
+          <li class="guide-description__block-list-item">Единственный российский участник Red Bull X-Fighters.
+          </li>
+          <li class="guide-description__block-list-item">Свою самую серьёзную травму получил на велосипеде, не на мотоцикле!)
+          </li>
+        </ul>
+      </div>
+      <div class="guide-description__block">
+        <h3 class="guide-description__block-header">Достижения
+        </h3>
+        <ul class="guide-description__block-list">
+          <li class="guide-description__block-list-item">Более 33 восхождений на Эльбрус
+          </li>
+          <li class="guide-description__block-list-item">4 восхожднния на Эльбрус с Запада
+          </li>
+          <li class="guide-description__block-list-item">5 восхождений на Казбек с Юга
+          </li>
+          <li class="guide-description__block-list-item">14 летниз воссхождений на Эльбрус с Юга
+          </li>
+          <li class="guide-description__block-list-item">10 зимних на Эльбрус с Севера
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-description-right-col">
+      <div class="guide-description__short-info">
+        <p class="guide-description__short-info-row">
+          <span class="guide-description__short-info-left-col">Начало карьеры
+          </span>
+          <span class="guide-description__short-info-right-col">2009
+          </span>
+        </p>
+        <p class="guide-description__short-info-row">
+          <span class="guide-description__short-info-left-col">Город
+          </span>
+          <span class="guide-description__short-info-right-col">Казань
+          </span>
+        </p>
+        <p class="guide-description__short-info-row">
+          <span class="guide-description__short-info-left-col">Дата рождения
+          </span>
+          <span class="guide-description__short-info-right-col">12.11.1990
+          </span>
+        </p>
+        <p class="guide-description__short-info-row">
+          <span class="guide-description__short-info-left-col">Соцсети
+          </span>
+          <span class="guide-description__short-info-right-col">
+            <span class="guide-description__socials-link-container">
+              <a href="#" class="guide-description__socials-link">
+                <svg class="guide-description__socials-link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#fb"/>
+                </svg>
+              </a>
+              <a href="#" class="guide-description__socials-link">
+                <svg class="guide-description__socials-link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#instagram"/>
+                </svg>
+              </a>
+              <a href="#" class="guide-description__socials-link">
+                <svg class="guide-description__socials-link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#vk"/>
+                </svg>
+              </a>
+            </span>
+          </span>
+        </p>
+      </div>
+      <div class="guide-description__credo">
+        <h3 class="guide-description__credo-header">Кредо
+        </h3>
+        <div class="guide-description__credo-quote">
+          <svg class="guide-description__credo-quote-border-bottom" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.75 44.63"><path vector-effect="non-scaling-stroke" d="M.13,0V2.51A9.5,9.5,0,0,0,9.63,12h42a10.5,10.5,0,0,1,10.5,10.5V43a1.5,1.5,0,0,0,2.32,1.26l46.92-30.55a10.5,10.5,0,0,1,5.73-1.7h322a9.5,9.5,0,0,0,9.5-9.5V0"/></svg>
+          <svg class="guide-description__credo-quote-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#quotes"/>
+          </svg>
+          <p class="guide-description__credo-quote-text">Вера только в себя и свои силы! И никогда не сдаваться! Нет страшнее и сильнее соперника, чем ты сам!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tours-of-guide">
+    <div class="container tours-of-guide__container">
+      <h2 class="tours-of-guide__header">Туры Ильдара
+      </h2>
+
+      <div class="tour-accordion-container js-accordion">
+
+        {{#each Tours.headers }}
+        <div class="tour-accordion tour-accordion--small js-accordion-item">
+          <button class="tour-accordion__button js-accordion-btn">
+            <span>Посмотреть даты</span>
+          </button>
+
+          <div class="tour-accordion__row tour-accordion__row--header">
+            <div class="tour-accordion__content-side">
+              <div class="tour-accordion__left-col tour-accordion__aline-center-block">
+                <h3 class="tour-accordion__header">
+                  {{ this }}
+                </h3>
+                <span class="tour-accordion__info-label tour-accordion__info-label--mob-hide">7 дат
+                </span>
+              </div>
+              <div class="tour-accordion__right-col tour-accordion__aline-center-block">
+                <span class="tour-accordion__header--secondary">Регионы
+                </span>
+              </div>
+            </div>
+            <div class="tour-accordion__aside tour-accordion__aline-center-block">
+              <span class="tour-accordion__chevron-icon-container">
+                <svg class="tour-accordion__chevron-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#icon-chevron"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="tour-accordion__content-container js-accordion-content">
+            {{#each ../Tours.items }}
+            <div class="tour-accordion__row">
+              <div class="tour-accordion__content-side">
+                <div class="tour-accordion__left-col">
+                  <p class="tour-accordion__text  tour-accordion__text--bold">
+                    {{ this.date }}
+                  </p>
+                </div>
+                <div class="tour-accordion__right-col">
+                  <p class="tour-accordion__text tour-accordion__text--truncated">
+                    {{ this.header }}
+                  </p>
+                </div>
+              </div>
+              <div class="tour-accordion__aside">
+                <a class="link--button link--button--orange tour-accordion__link-button  js-video-modal-button" href="#">
+                  <span class="link--button__text link--button__text--bg">
+                    <span class="link--button__icon-container">
+                      <span class="link--button__icon">
+                        <svg class="link--button__icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <use href="#phone--filled"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span>Задать вопрос гиду</span>
+                  </span>
+                  <span class="link--button__text link--button__text--for">
+                    <span class="link--button__icon-container">
+                      <span class="link--button__icon">
+                        <svg class="link--button__icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <use href="#phone--filled"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span>Задать вопрос гиду</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            {{/each }}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

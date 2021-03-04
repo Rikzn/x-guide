@@ -1,0 +1,150 @@
+<section class="guide-description">
+  <div class="container tour-description__container"></div>
+  <div class="tour-description">
+    <div class="container tours-of-guide__container">
+      <h2 class="tour-description__title">Стоимость экспедиции</h2>
+      <div class="tour-description__text">Внеси 5000 ₽, чтобы забронировать место в группе, остальную сумму в 1-й день тура. Первые места в группе дешевле, по мере её заполняемости цена будет расти до 36900 ₽</div>
+      <div class="tour-description__list">
+        <div class="tour-description__block">
+          <div class="tour-description__block-title"><img src="img/check.svg" alt="">Что входит в стоимость</div>
+          <div class="tour-description__block-in">
+            <ul>
+              <li>Гиды 1 на 4 чел.</li>
+              <li>Кислородное оборудование</li>
+              <li>
+                Питание 3-х разовое
+                <div class="grid-catalog__item-info-container js-tour-info">
+                  <button class="grid-catalog__item-info-click-target js-tour-info-button"></button>
+                  <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#info-icon"></use>
+                  </svg>
+                  <div class="grid-catalog__item-info js-tour-info-modal">
+                    <div class="grid-catalog__item-info-content-container">
+                      <div class="grid-catalog__item-info-close-area js-tour-info-button"></div>
+                      <div class="grid-catalog__item-info-content">
+                        <button class="grid-catalog__item-info-close-button js-tour-info-button"></button>
+                        <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--easy"><span>Очень просто</span></h4>
+                        <p class="grid-catalog__item-info-text">Этими поездками могут пользоваться почти все. Легкая физическая нагрузка, не требующая навыков нахождения в горах и передвижения по сложному рельефу.</p>
+                        <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--medium"><span>Средней сложности</span></h4>
+                        <p class="grid-catalog__item-info-text">Потребуется физическая подготовка и выносливость, специальная одежда и обувь.</p>
+                        <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--hard"><span>Сложно</span></h4>
+                        <p class="grid-catalog__item-info-text">Физическая подготовка перед поездкой должна начинаться не позднее, чем за 2 месяца до начала поездки. Ведь вам предстоит путешествовать пешком и подниматься до высоты 3000 м над уровнем моря и более.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>Все трансферы</li>
+              <li>Значок Альпинист РФ</li>
+              <li>Фото с вершины + видео восхождения</li>
+            </ul>
+            <ul>
+              <li>Проживание комфорт</li>
+              <li>Повар</li>
+              <li>Встреча в АЭР / ЖД</li>
+              <li>Снаряжение</li>
+              <li>План тренировок</li>
+              <li>Обучение + сертификат</li>
+              <li>МЧС, GPS, аптечка</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tour-description__block">
+          <div class="tour-description__block-title"><img src="img/del.svg" alt="">Что не входит в стоимость</div>
+          <div class="tour-description__block-in">
+            <ul>
+              <li>Канатка (единоразово, подъем и спуск)</li>
+              <li>Перекусы на выход, примерно</li>
+              <li>Плата за вход в "Нац Парк"</li>
+              <li>Аренда снаряжения, все в наличие</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tour-accordion-container js-accordion">
+        {{#each Tours.headers }}
+        <div class="tour-accordion js-accordion-item">
+          <button class="tour-accordion__button js-accordion-btn">
+            <span>Оставить заявку</span>
+          </button>
+
+          <div class="tour-accordion__row tour-accordion__row--header">
+            <div class="tour-accordion__content-side">
+              <div class="tour-accordion__left-col tour-accordion__aline-center-block">
+                <h3 class="tour-accordion__header">
+                  {{ this }}
+                </h3>
+                <span class="tour-accordion__info-label">7 дат</span>
+              </div>
+              <div class="tour-accordion__right-col tour-accordion__aline-center-block">
+                <span class="tour-accordion__header--secondary tour-accordion__header--secondary-price">
+                  Промо цена до 29.12
+                  <div class="grid-catalog__item-info-container js-tour-info">
+                    <button class="grid-catalog__item-info-click-target js-tour-info-button"></button>
+                    <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#info-icon"></use>
+                    </svg>
+                    <div class="grid-catalog__item-info js-tour-info-modal">
+                      <div class="grid-catalog__item-info-content-container">
+                        <div class="grid-catalog__item-info-close-area js-tour-info-button"></div>
+                        <div class="grid-catalog__item-info-content">
+                          <button class="grid-catalog__item-info-close-button js-tour-info-button"></button>
+                          <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--easy"><span>Очень просто</span></h4>
+                          <p class="grid-catalog__item-info-text">Этими поездками могут пользоваться почти все. Легкая физическая нагрузка, не требующая навыков нахождения в горах и передвижения по сложному рельефу.</p>
+                          <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--medium"><span>Средней сложности</span></h4>
+                          <p class="grid-catalog__item-info-text">Потребуется физическая подготовка и выносливость, специальная одежда и обувь.</p>
+                          <h4 class="grid-catalog__item-info-header grid-catalog__item-level grid-catalog__item-level--hard"><span>Сложно</span></h4>
+                          <p class="grid-catalog__item-info-text">Физическая подготовка перед поездкой должна начинаться не позднее, чем за 2 месяца до начала поездки. Ведь вам предстоит путешествовать пешком и подниматься до высоты 3000 м над уровнем моря и более.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div class="tour-accordion__aside tour-accordion__aline-center-block">
+              <span class="tour-accordion__chevron-icon-container">
+                <svg class="tour-accordion__chevron-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#icon-chevron"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="tour-accordion__content-container js-accordion-content">
+            {{#each ../Tours.items }}
+            <div class="tour-accordion__row">
+              <div class="tour-accordion__content-side">
+                <div class="tour-accordion__left-col">
+                  <p class="tour-accordion__text  tour-accordion__text--bold">
+                    {{ this.date }}
+                  </p>
+                </div>
+                <div class="tour-accordion__right-col">
+                  <p class="tour-accordion__text tour-accordion__text--price">
+                    <span class="tour-accordion__text-price">{{ this.price }} </span>
+                    <span class="tour-accordion__text-price-old">{{ this.price_old }} </span>
+                  </p>
+                </div>
+              </div>
+              <div class="tour-accordion__aside">
+                <a class="link--button link--button--orange tour-accordion__link-button" href="#">
+                  <span class="link--button__text link--button__text--bg">
+                    <span class="tour-accordion__link-button-text-desc">Оставить заявку</span>
+                    <span class="tour-accordion__link-button-text-mob">Заявка</span>
+                  </span>
+                  <span class="link--button__text link--button__text--for">
+                    <span class="tour-accordion__link-button-text-desc">Оставить заявку</span>
+                    <span class="tour-accordion__link-button-text-mob">Заявка</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            {{/each }}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

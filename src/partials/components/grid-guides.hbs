@@ -1,0 +1,72 @@
+<section class="grid-guides">
+  <div class="container grid-guides__container js-tabs">
+    <div class="grid-regions__tabs-nav js-tabs-slider">
+      <div class="grid-regions__tabs-nav-buttons-container">
+        <button class="slider__nav-button slider__nav-button--prev">
+          <div class="slider__nav-button-bg">
+          </div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+        <div class="slider__nav-button-bg-mask">
+        </div>
+        <button class="slider__nav-button slider__nav-button--next">
+          <div class="slider__nav-button-bg">
+          </div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+        <div class="slider__nav-button-bg-mask slider__nav-button-bg-mask--next">
+        </div>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {{#each Grid-guides.tabs-nav }}
+            <div class="swiper-slide">
+              <a href="#" class="tours-slider__nav-link js-tabs-nav {{#if @first}}active{{/if}}">{{ this }}</a>        
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-regions__tab-items">
+      {{#each Grid-guides.tabs-nav }}
+        <div class="tab-items__item grid-regions__tab-item js-tabs-item {{#if @first}}active{{/if}}">
+          {{#each ../Grid-guides.tabs-items }}
+            <div class="grid-guides__item" href="#">
+              <div class="grid-guides__item-photo">
+                <img class="grid-guides__item-photo-img" src={{ this.bg-src }} alt="guide photo">
+              </div>
+              <div class="grid-guides__item-content">
+                <h3 class="grid-guides__item-header">{{ this.header }}
+                </h3>
+                <p class="grid-guides__item-category">Альпинизм
+                </p>
+                <ul class="grid-guides__item-description">
+                  <li class="grid-guides__item-description-item">Более 33 восхождений на Эльбрус
+                  </li>
+                  <li class="grid-guides__item-description-item">14 на Эльбрус с Юга
+                  </li>
+                  <li class="grid-guides__item-description-item">10 на Эльбрус с Севера
+                  </li>
+                  <li class="grid-guides__item-description-item">5 на Эльбрус с Востока
+                  </li>
+                </ul>
+                <a class="grid-guides__item-social-link" href="#">
+                  <svg class="grid-guides__item-social-link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#instagram"/>
+                  </svg>
+                </a>
+              </div>
+              <a class="grid-guides__item-link" href="#"></a>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

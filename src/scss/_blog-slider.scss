@@ -1,0 +1,222 @@
+.blog__slider-wrap {
+  margin: 0 -8rem 4.3rem;
+  
+  @include breakpoint (mobile) {
+    margin: 2rem 0 1.6rem;
+    
+    .blog__slider {
+      border-radius: 1rem;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 2.5rem;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 20px;
+    
+    .swiper-pagination-bullet {
+      flex-grow: 1;
+      width: auto;
+      height: 2px;
+      background: #FFF;
+      border-radius: 0;
+    }
+
+  }
+}
+.swiper-slide-active {
+  .blog__slide {
+    border-radius: 1rem;
+    
+    @include breakpoint (mobile) {
+      border-radius: 0;
+    }
+  }
+}
+.blog__slide {
+  position: relative;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 67.2rem;
+  padding: 6rem 8rem 5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  transition: border-radius ease-out 0.2s;
+  transition-delay: 0.5s;
+  
+  @include breakpoint (mobile) {
+    height: 26.6rem;
+    padding: 2rem 2rem 5rem;
+    border-radius: 0;
+    background-position: center center;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 27.35%, #2B669B 98.87%);
+  }
+
+  &-info-label {
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    
+    &Content {
+      margin-right: .5rem;
+      padding: .8rem 1rem;
+      display: inline-block;
+      position: relative;
+      font-family: var(--nunito);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: var(--white);
+      background-color: rgba(18,33,77,.4);
+      border-radius: .6rem;
+      
+      @include breakpoint (mobile) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &-favorites-button {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-left: .5rem;
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    border-radius: .6rem;
+    background-color: rgba(18,33,77,.4);
+    pointer-events: all;
+    
+    &-icon {
+      width: 1.4rem;
+      height: 1.2rem;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      fill: var(--white);
+      
+      &:hover {
+        fill: var(--soft-red);
+        opacity: 0.6;
+      }
+      &:focus {
+        fill: var(--soft-red);
+        opacity: 0.6;
+      }
+      &.active {
+        fill: var(--soft-red);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.blog__slide-contentContainer {
+  position: relative;
+  z-index: 2;
+}
+.blog__slide-author-info {
+  display: flex;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-top: 5.8rem;
+  
+  @include breakpoint (mobile) {
+    -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+    margin-top: 2rem;
+  }
+}
+.blog__slide-author-img {
+  @include objectFitCover;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-right: 1.4rem;
+
+  @include breakpoint (mobile) {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+  }
+}
+.blog__slide-author-name {
+  font-family: var(--nunito);
+  font-size: 1.4rem;
+  line-height: 120%;
+  font-weight: 400;
+  color: var(--white);
+}
+.blog__slide-content {
+  max-width: 55%;
+  
+  @include breakpoint (mobile) {
+    max-width: 100%;
+  }
+}
+.blog__slide-header {
+  font-family: var(--jost);
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 6.2rem;
+  line-height: 123%;
+  color: var(--white);
+  
+  @include breakpoint (mobile) {
+    font-size: 2.4rem;
+  }
+}
+.blog__slide-text {
+  padding-top: 4rem;
+  font-family: var(--nunito);
+  font-size: 2rem;
+  line-height: 130%;
+  color: var(--white);
+  
+  @include breakpoint (mobile) {
+    display: none;
+  }
+}
+.blog__slider-nav-buttons-container {
+  font-size: 0;
+  position: absolute;
+  bottom: 5rem;
+  left: 8rem;
+  z-index: 2;
+  
+  @include breakpoint (mobile) {
+    display: none;
+  }
+  
+  .slider__nav-button-bg {
+    background-color: rgba(225,225,225,0.2);
+  }
+  .slider__nav-button-icon {
+    fill: #FFF !important;
+  }
+}

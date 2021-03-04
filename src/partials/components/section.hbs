@@ -1,0 +1,11 @@
+<section>
+    <div class="container">
+        <h1>This is page section on page: {{ title }}</h1>
+       
+        <ul class="people_list">
+            {{#each posts}}
+            <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

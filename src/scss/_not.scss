@@ -1,0 +1,51 @@
+.not  {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  @include breakpoint (mobile) {
+    background-position: top center; 
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: right;
+    padding-top: 17rem;
+  }
+  
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+    
+    &-in {
+      width: 270px;
+    }
+
+    .link--button {
+      width: 270px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    color: #FFF;
+    font-size: 108px;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 900;
+    font-family: var(--jost);
+    text-transform: uppercase;
+    text-align: justify;
+    
+    &-sub {
+      font-size: 21px;
+    } 
+  }
+}

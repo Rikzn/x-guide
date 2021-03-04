@@ -1,0 +1,111 @@
+{
+  "title": "X-Guide - Блог",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Блог",
+        "href": "/blog.html" }
+    ]
+  },
+  "Tags": [
+    { "text": "Альпинизм",
+      "number": "111"
+    },
+    { "text": "Бег",
+      "number": "128"
+    },
+    { "text": "Библиотека технологий",
+      "number": "37"
+    },
+    { "text": "Велотуризм",
+      "number": "8"
+    },
+    { "text": "Водный туризм",
+      "number": "18"
+    },
+    { "text": "Горнолыжные тесты",
+      "number": "15"
+    },
+    { "text": "Горнолыжный отдых",
+      "number": "95"
+    },
+    { "text": "Горные лыжи",
+      "number": "211"
+    },
+    { "text": "Дети",
+      "number": "21"
+    },
+    { "text": "Зимний туризм",
+      "number": "9"
+    },
+    { "text": "Идеи для путешествий",
+      "number": "8"
+    },
+    { "text": "Интервью",
+      "number": "18"
+    },
+    { "text": "История брендов",
+      "number": "15"
+    },
+    { "text": "Как выбрать?",
+      "number": "95"
+    },
+    { "text": "Кемпинг",
+      "number": "211"
+    },
+    { "text": "Команда «Спорт-Марафон»",
+      "number": "21"
+    },
+    { "text": "Лекции",
+      "number": "9"
+    },
+    { "text": "Личный опыт",
+      "number": "8"
+    },
+    { "text": "Лукбук",
+      "number": "18"
+    },
+    { "text": "Новости магазина",
+      "number": "15"
+    },
+    { "text": "Обувь",
+      "number": "95"
+    },
+    { "text": "Одежда",
+      "number": "211"
+    },
+    { "text": "Полезная информация",
+      "number": "21"
+    },
+    { "text": "Сервис-Центр",
+      "number": "9"
+    },
+    { "text": "Скалолазание",
+      "number": "8"
+    },
+    { "text": "Ски-тур",
+      "number": "18"
+    },
+    { "text": "Снаряжение",
+      "number": "15"
+    },
+    { "text": "Сноуборд",
+      "number": "95"
+    },
+    { "text": "Треккинг",
+      "number": "211"
+    },
+    { "text": "Хранение и уход",
+      "number": "21"
+    },
+    { "text": "Это интересно!",
+      "number": "9"
+    }
+  ],
+  "choose-header": "Выберите тему",
+  "choose-block-mod": "",
+  "Blog": ["./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-3.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-5.jpg", "./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-3.jpg"],
+  "form-section-header": "Остались вопросы?\n Получите нашу консультацию",
+  "form-header": "Заявка\n на консультацию"
+}

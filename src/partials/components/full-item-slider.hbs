@@ -1,0 +1,12 @@
+<section class="full-item-slider js-full-small-slider">
+  <div class="swiper-container">
+	  <div class="full-item-slider__items swiper-wrapper">
+  		{{#each FullItemsSlider }}
+    	<div class="full-item-slider__item swiper-slide" style="background-image: url({{this.img}});">
+    		<div class="full-item-slider__item-video-icn">{{> play-button }}</div>
+    		<button class="full-item-slider__item-video js-video-modal-button" data-video-id="{{this.video}}" data-video-img-src="{{this.img}}"></button>
+    	</div>
+    	{{/each }}
+  	</div>
+  </div>
+</div>

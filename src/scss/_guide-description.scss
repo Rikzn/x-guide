@@ -1,0 +1,257 @@
+.guide-description {
+
+}
+.guide-description__container {
+  padding-top: 11rem;
+  padding-bottom: 7rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    display: block;
+    padding-top: 4rem;
+  }
+}
+.guide-description__block {
+  margin-top: 7rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 3rem;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.guide-description__block-header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    line-height: 140%;
+  }
+}
+.guide-description__block-list {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.7rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+.guide-description__block-list-item {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2.2rem;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-left: 1.6rem;
+  }
+
+  &::before {
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: calc((2.7rem - 6px)/2);
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--blue);
+
+    @include breakpoint(mobile) {
+      top: calc((2.2rem - 6px) / 2);
+    }
+  }
+}
+.guide-description-right-col {
+  margin-left: 18rem;
+  padding-top: 3rem;
+  flex: 0 0 34%;
+  
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.guide-description__short-info {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 220%;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+  }
+}
+.guide-description__short-info-row {
+  display: flex;
+  align-items: center;
+}
+.guide-description__short-info-left-col {
+  padding-right: 1rem;
+  flex: 0 0 62%;
+  opacity: 0.4;
+}
+.guide-description__short-info-right-col {
+  font-weight: bold;
+}
+.guide-description__socials-link-container {
+  display: flex;
+  margin: 1rem 0 1rem -1.2rem;
+  flex-wrap: wrap;
+
+  @include breakpoint(mobile) {
+    margin: 1rem 0 1rem -0.8rem;
+  }
+}
+.guide-description__socials-link {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  margin: 0.6rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--gray-blue);
+  font-size: 0;
+
+  @include breakpoint(mobile) {
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: 0.4rem;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.guide-description__socials-link-icon {
+  display: block;
+  max-width: 2.2rem;
+  max-height: 1.7rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    max-width: 1.5rem;
+    max-height: 1.2rem;
+  }
+}
+.guide-description__credo {
+  margin-top: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 3rem;
+  }
+}
+.guide-description__credo-header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+  }
+}
+.guide-description__credo-quote {
+  margin-top: 3rem;
+  padding: 4.6rem 5.6rem 4rem;
+  position: relative;
+  border-left: 1px solid var(--gray-blue);
+  border-right: 1px solid var(--gray-blue);
+  border-top: 1px solid var(--gray-blue);
+  border-bottom: 1px solid rgba($color: #ffffff, $alpha: 1.0);
+  border-radius: 10px 10px 0px 0px;
+
+  @include breakpoint(mobile) {
+    margin-top: 1.6rem;
+    padding: 3.5rem 4.6rem 2.8rem;
+  }
+}
+.guide-description__credo-quote-text {
+  position: relative;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.7rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+.guide-description__credo-quote-border-bottom {
+  width: calc(100% + 2px);
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  stroke: var(--gray-blue);
+  fill: none;
+}
+.guide-description__credo-quote-icon {
+  width: 10rem;
+  height: 5rem;
+  position: absolute;
+  transform: translate(-28%, -18%);
+  fill: var(--gray-blue);
+
+  @include breakpoint(mobile) {
+    width: 7rem;
+    height: 3.5rem;
+    transform: translate(-38%, -18%);
+  }
+}
+
+.tours-of-guide {
+  background-color: var(--gray-blue);
+}
+.tours-of-guide__container {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+.tours-of-guide__header {
+  margin-bottom: 3rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 6.5rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 140%;
+  }
+}

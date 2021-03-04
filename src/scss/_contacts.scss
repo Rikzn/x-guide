@@ -1,0 +1,348 @@
+.contacts {}
+.contacts__container {
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+  }
+}
+.contacts__content-row {
+  display: flex;
+  position: relative;
+  z-index: 2;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+}
+.contacts__content-left-col {
+  flex: 1;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+.contacts__header {
+  margin-bottom: 5rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 6.2rem;
+  line-height: 123%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 125%;
+  }
+}
+.contacts__text {
+  max-width: 56rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 129%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    line-height: 125%;
+  }
+}
+.contacts__text--bold {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 110%;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 125%;
+  }
+}
+.contacts__form-content {
+  margin-top: 7rem;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin-top: 6rem;
+    order: 1;
+  }
+}
+.contacts__form-content 
+.form-section__form {
+  display: flex;
+  margin: 0 -1rem;
+  padding: 0;
+  flex-wrap: wrap;
+  grid-gap: unset;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+.contacts__form-content 
+.form-section__form-heading {
+  margin-left: 1rem;
+  flex: 0 0 calc(100% - 2rem);
+
+  @include breakpoint(mobile) {
+    margin-left: 0;
+    flex: 1;
+  }
+}
+.contacts__form-content
+.form-section__form-group {
+  margin: 1rem;
+  flex: 0 0 calc(50% - 2rem);
+
+  @include breakpoint(mobile) {
+    margin: 0.8rem 0;
+
+    &:nth-of-type(even) {
+      order: 1;
+    }
+  }
+}
+.contacts__form-content 
+.form-section__form-checkbox {
+  max-width: unset;
+  padding: 0.8rem 0;
+}
+.form-section__form 
+.selects__choices {
+  height: 6rem;
+
+  @include breakpoint(mobile) {
+    height: 5rem;
+  }
+}
+
+.contacts__content-right-col {
+  display: flex;
+  margin-left: 170px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    margin-left: 0;
+  }
+}
+.contacts__link--tel {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+  }
+}
+.contacts__link--email {
+  margin-bottom: 4rem;
+  font-size: 4.5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
+.contacts__opening-hours {
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+  }
+}
+.contacts__social-links-header {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 125%;
+
+  @include breakpoint(mobile) {
+    margin-top: 3rem;
+  }
+}
+.contacts__social-links {
+  word-spacing: 1.2rem;
+
+  li {
+    display: inline-block;
+  }
+}
+.contacts__social-links-link {
+  display: inline-block;
+  width: 4.8rem;
+  height: 4.8rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--gray-blue);
+  
+  &:hover {
+    background-color: var(--blue);
+    
+    .contacts__social-links-link-icon {
+      fill: #FFF;
+    }
+  }
+}
+.contacts__social-links-link-icon {
+  max-width: 2.2rem;
+  max-height: 2rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: var(--primary-color);
+}
+.contacts__map {
+  font-size: 10px;
+  height: 56rem;
+  margin-top: 8rem;
+  margin-bottom: -8rem;
+  position: relative;
+  border-radius: 1rem;
+  background-color: var(--gray-blue);
+  overflow: hidden;
+  z-index: 1;
+
+  @include breakpoint(mobile) {
+    height: 45rem;
+    margin-top: 4rem;
+    margin-bottom: -16rem;
+  }
+}
+.ymaps-layers-pane,
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: grayscale(1);
+}
+.contacts__map-balloon {
+  position: absolute;
+  display: block;
+  max-width: 28.8rem;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0px 1.3rem 2rem rgba(0, 0, 0, 0.09);
+  background: #FFF;
+  
+  transform: translateY(-50%);
+  top: 40px;
+  left: 65px;
+  
+  @include breakpoint(mobile) {
+    max-width: 27.5rem;
+    padding: 2.7rem;
+  }
+}
+.contacts__map-balloon-header {
+  display: block;
+  margin: 0 0 2rem;
+  color: #000;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 133%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  
+}
+.contacts__map-balloon-link {
+  display: block;
+  margin: 0 0 0.8rem;
+  color: #000;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: var(--gray);
+}
+.contacts__map-balloon-text {
+  max-width: 20rem;
+  margin: 1.6rem 0 0.5rem;
+  color: #000;
+  color: var(--gray);
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  
+  
+  @include breakpoint(mobile) {
+    max-width: 100%;
+    margin: 1rem 0 0; 
+  }
+}
+.contacts__map-balloon-arrow {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  border: 2rem solid transparent;
+  border-left: 0 solid transparent;
+  border-right: 2.2rem solid #fff;
+  margin: auto;
+}
+
+@include breakpoint (tablet) {
+  .contacts__map {
+    height: 44.5rem;
+  }
+  .contacts__map-balloon {
+    max-width: 20rem;
+    left: auto;
+    top: -20px;
+    transform: translateX(-50%) translateY(-100%);
+  }
+  .contacts__map-balloon-arrow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 99.8%;
+      bottom: auto;
+      border: 2.8rem solid transparent;
+      border-bottom: 0 solid transparent;
+      border-top: 2rem solid #fff;
+      margin: auto;
+  }
+}
+
+.requisites-section {
+  position: relative;
+  overflow: hidden;
+}
+.requisites-section .form-section__container {
+  
+  @include breakpoint(mobile) {
+    padding-top: 20rem;
+  }
+}
+.requisites-section .form-section__header-description {
+  line-height: 170%;
+
+  @include breakpoint(mobile) {
+    padding-top: 0;
+    font-size: 2rem;
+    line-height: 125%;
+  }
+}

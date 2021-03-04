@@ -1,0 +1,16 @@
+{
+  "title": "X-Guide - Каталог туров",
+  "Header": {
+    "header": "Каталог туров",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Туры",
+        "href": "/catalog.html" }
+    ],
+    "hero-img-src": "./img/hero__bg1.jpg"
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура",
+  "times": [1,2,3,4,5,6,7,8]
+}

@@ -1,0 +1,75 @@
+<section class="blog__themes">
+  <div class="container">
+    <div class="grid-guide-blog-container">
+      <div class="grid-guide-blog">
+        {{#each Blog }}
+          <div class="grid-guide-blog__item">
+            <div class="grid-guide-blog__item-photo-cotainer">
+              <img class="grid-guide-blog__item-img" src={{ this }} alt="">
+              <div class="gallery__item-info-label">
+                <span class="gallery__item-info-labelContent">Восхождение</span>
+              </div>
+              <button class="grid-guide-blog__favorites-button">
+                <svg class="grid-guide-blog__favorites-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#favorites-icon"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="grid-guide-blog__item-content">
+              <p class="grid-guide-blog__item-date">09.09.2020
+              </p>
+              <h4 class="grid-guide-blog__item-header">Как выбрать треккинговые ботинки?
+              </h4>
+              <p class="grid-guide-blog__item-text">Учимся выбирать самый ответственный элемент снаряжения в пешем походе — треккинговую обувь
+              </p>
+              <p class="grid-guide-blog__item-autor">Александр Иванов
+              </p>
+            </div>
+
+            <a class="grid-guide-blog__item-link" href="#">
+            </a>
+          </div>
+        {{/each }}
+      </div>
+      <div class="blog__themes-button">
+        <a href="#" class="link--button link--button--blue">
+          <span class="link--button__text link--button__text--bg">Показать еще 25 из 91 </span>
+          <span class="link--button__text link--button__text--for">Показать еще 25 из 91 </span>
+        </a>
+      </div>
+    </div>
+    <div class="grid-catalog__form-container js-submit-message">
+      <div class="grid-catalog__form-bg-container">
+        <img class="grid-catalog__form-bg" src="./img/bg-shape.png" alt="bg-shape">
+      </div>
+      <div class="blog__form-wrapper grid-catalog__form-wrapper">
+        <h3 class="blog__form-header grid-catalog__form-header">Узнавайте о новых турах и об изменениях первыми
+        </h3>
+
+        <form action="/" method="POST" class="blog__form" data-need-validation="">
+          <div class="blog__form-group">
+            <input id="email-input" type="email" class="blog__form-input grid-catalog__form-input" placeholder="Введите адрес эл. почты" required>
+            
+          </div>
+
+          <button type="submit" class="blog__form-submit">
+            <svg class="blog__form-submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#arrow"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="blog__form-success-wrapper">
+        <div class="blog__form-success-icon-container">
+          <svg class="blog__form-success-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#success"/>
+          </svg>
+        </div>
+        <h3 class="blog__form-success-header">Спасибо! Вы подписались на нашу рассылку
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

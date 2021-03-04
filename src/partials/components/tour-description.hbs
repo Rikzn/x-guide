@@ -1,0 +1,117 @@
+<section class="guide-description">
+  <div class="container tour-description__container"></div>
+  <div class="tour-description">
+    <div class="container tours-of-guide__container">
+      <h2 class="tour-description__title">Стоимость экспедиции</h2>
+      <div class="tour-description__text">Внеси 5000 ₽, чтобы забронировать место в группе, остальную сумму в 1-й день тура. Первые места в группе дешевле, по мере её заполняемости цена будет расти до 36900 ₽</div>
+      <div class="tour-description__list">
+        <div class="tour-description__block">
+          <div class="tour-description__block-title"><img src="img/check.svg" alt="">Что входит в стоимость</div>
+          <div class="tour-description__block-in">
+            <ul>
+              <li>Гиды 1 на 4 чел.</li>
+              <li>Кислородное оборудование</li>
+              <li>Питание 3-х разовое</li>
+              <li>Все трансферы</li>
+              <li>Значок Альпинист РФ</li>
+              <li>Фото с вершины + видео восхождения</li>
+            </ul>
+            <ul>
+              <li>Проживание комфорт</li>
+              <li>Повар</li>
+              <li>Встреча в АЭР / ЖД</li>
+              <li>Снаряжение</li>
+              <li>План тренировок</li>
+              <li>Обучение + сертификат</li>
+              <li>МЧС, GPS, аптечка</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tour-description__block">
+          <div class="tour-description__block-title"><img src="img/del.svg" alt="">Что не входит в стоимость</div>
+          <div class="tour-description__block-in">
+            <ul>
+              <li>Канатка (единоразово, подъем и спуск)</li>
+              <li>Перекусы на выход, примерно</li>
+              <li>Плата за вход в "Нац Парк"</li>
+              <li>Аренда снаряжения, все в наличие</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tour-accordion-container js-accordion">
+        {{#each Tours.headers }}
+        <div class="tour-accordion js-accordion-item">
+          <button class="tour-accordion__button js-accordion-btn">
+            <span>Оставить заявку</span>
+          </button>
+
+          <div class="tour-accordion__row tour-accordion__row--header">
+            <div class="tour-accordion__content-side">
+              <div class="tour-accordion__left-col tour-accordion__aline-center-block">
+                <h3 class="tour-accordion__header">
+                  {{ this }}
+                </h3>
+                <span class="tour-accordion__info-label">7 дат</span>
+              </div>
+              <div class="tour-accordion__right-col tour-accordion__aline-center-block">
+                <span class="tour-accordion__header--secondary">Регионы</span>
+              </div>
+            </div>
+            <div class="tour-accordion__aside tour-accordion__aline-center-block">
+              <span class="tour-accordion__chevron-icon-container">
+                <svg class="tour-accordion__chevron-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#icon-chevron"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="tour-accordion__content-container js-accordion-content">
+            {{#each ../Tours.items }}
+            <div class="tour-accordion__row">
+              <div class="tour-accordion__content-side">
+                <div class="tour-accordion__left-col">
+                  <p class="tour-accordion__text  tour-accordion__text--bold">
+                    {{ this.date }}
+                  </p>
+                </div>
+                <div class="tour-accordion__right-col">
+                  <p class="tour-accordion__text tour-accordion__text--truncated">
+                    {{ this.header }}
+                  </p>
+                </div>
+              </div>
+              <div class="tour-accordion__aside">
+                <a class="link--button tour-accordion__link-button  js-video-modal-button" href="#">
+                  <span class="link--button__text link--button__text--bg">
+                    <span class="link--button__icon-container">
+                      <span class="link--button__icon">
+                        <svg class="link--button__icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <use href="#phone--filled"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span>Задать вопрос гиду</span>
+                  </span>
+                  <span class="link--button__text link--button__text--for">
+                    <span class="link--button__icon-container">
+                      <span class="link--button__icon">
+                        <svg class="link--button__icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <use href="#phone--filled"/>
+                        </svg>
+                      </span>
+                    </span>
+                    <span>Задать вопрос гиду</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            {{/each }}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

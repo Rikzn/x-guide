@@ -1,0 +1,112 @@
+<section class="grid-reviews">
+  <div class="container grid-regions__container js-tabs">
+    <div class="grid-regions__tabs-nav js-tabs-slider">
+      <div class="grid-regions__tabs-nav-buttons-container">
+        <button class="slider__nav-button slider__nav-button--prev">
+          <div class="slider__nav-button-bg">
+          </div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+        <div class="slider__nav-button-bg-mask">
+        </div>
+        <button class="slider__nav-button slider__nav-button--next">
+          <div class="slider__nav-button-bg">
+          </div>
+          <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#arrow-next"/>
+          </svg>
+        </button>
+        <div class="slider__nav-button-bg-mask slider__nav-button-bg-mask--next">
+        </div>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {{#each Grid-reviews.tabs-nav }}
+            <div class="swiper-slide">
+              <a href="#" class="tours-slider__nav-link js-tabs-nav {{#if @first}}active{{/if}}">{{ this }}</a>        
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-regions__tab-items">
+      {{#each Grid-reviews.tabs-nav }}
+        <div class="tab-items__item grid-regions__tab-item js-tabs-item {{#if @first}}active{{/if}}">
+          {{#each ../Grid-reviews.tabs-items }}
+            <div class="reviews__slider-item slider__item grid-reviews__item">
+                  <div class="slider__item-back-layer">
+                    <img class="slider__item-bg-img" src={{ this.bg-src }} alt="review-img">
+                    <div class="slider__item-bg-gradient">
+                    </div>
+                  </div>
+                  
+                  <div class="slider__item-content">
+                    <svg class="reviews__slider-item-quotes-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#quotes"/>
+                    </svg>
+                    <h3 class="reviews__slider-item-header">Земля круглая,Вселенная огромна, а восхождение на Эльбрус никого не оставляет ...
+                    </h3>
+                    <a href="#" class="reviews__slider-item-author-link">
+                      <svg class="reviews__slider-item-author-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use href="#instagram"/>
+                      </svg>
+                      <span class="reviews__slider-item-author-name">Рустем Биктагиров</span>
+                    </a>
+                  </div>
+                  <div class="reviews__slider-item-video-play-button">
+                    {{> play-button }}
+                  </div>
+                  <button class="reviews__slider-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs" data-video-img-src="./img/about-video.jpg">
+                  </button>
+                </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="grid-catalog__link-container">
+      <a href="#" class="link--button link--button--blue">
+        <span class="link--button__text link--button__text--bg">Показать еще 25 из 91 </span>
+        <span class="link--button__text link--button__text--for">Показать еще 25 из 91 </span>
+      </a>
+    </div>
+
+
+    <div class="grid-catalog__form-container js-submit-message">
+      <div class="grid-catalog__form-bg-container">
+        <img class="grid-catalog__form-bg" src="./img/bg-shape.png" alt="bg-shape">
+      </div>
+      <div class="blog__form-wrapper grid-catalog__form-wrapper">
+        <h3 class="blog__form-header grid-catalog__form-header">Присоединяйтесь к&nbsp;нашему&nbsp;сообществу
+        </h3>
+
+        <form action="/" method="POST" class="blog__form" data-need-validation="">
+          <div class="blog__form-group">
+            <input id="email-input" type="email" class="blog__form-input grid-catalog__form-input" placeholder="Введите адрес эл. почты" required>
+            
+          </div>
+
+          <button type="submit" class="blog__form-submit">
+            <svg class="blog__form-submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#arrow"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="blog__form-success-wrapper">
+        <div class="blog__form-success-icon-container">
+          <svg class="blog__form-success-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#success"/>
+          </svg>
+        </div>
+        <h3 class="blog__form-success-header">Спасибо! Вы подписались на нашу рассылку
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

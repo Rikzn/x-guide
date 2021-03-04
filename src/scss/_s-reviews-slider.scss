@@ -1,0 +1,117 @@
+.s-reviews {
+	margin: 10rem 0;
+	overflow: hidden;
+	
+	@include breakpoint(mobile) {
+		margin: 6rem 0;
+	}
+	
+
+	.container {
+		position: relative;
+	}
+
+	&__header {
+		font-family: var(--jost);
+		font-style: italic;
+		font-weight: 900;
+		font-size: 4.5rem;
+		padding-left: 0;
+		margin-bottom: 3.3rem;
+		text-transform: uppercase;
+		color: var(--primary-color);
+		
+		@include breakpoint(mobile) {
+			font-size: 2.4rem;
+		}
+	}
+
+	.s-reviews__slider {
+		display: block;		
+	}
+
+	.swiper-container {
+		overflow: visible;
+	}
+
+	.reviews__slider-nav-buttons-container {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.swiper-slide {
+		display: block;
+		width: 39rem;
+		margin-right: 2.3rem;
+
+		.reviews__slider-item {
+			transform: none;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		@include breakpoint (mobile) {
+			width: 27.9rem;
+			margin-right: 1rem;
+			
+			.slider__item {
+				padding-top: 1.5rem;
+				padding-left: 1.5rem;
+			}
+
+			.reviews__slider-item-header {
+				margin-top: 1.3rem;
+				font-size: 1.4rem;
+				font-weight: 900;
+				line-height: 1.8rem;
+			}
+
+			.reviews__slider-item-video-play-button {
+				width: 9.6rem;
+    			height: 9.6rem;
+			}
+		}
+	}
+
+	.reviews__slider-item {
+		width: 39rem;
+		height: 54.5rem;
+		
+		@include breakpoint (mobile) {
+			width: 27.9rem;
+			height: 41.8rem;
+		}
+	}
+
+	.s-reviews__link-container {
+		margin-top: 4rem;
+		text-align: right;
+	}
+
+	.swiper-slide:not(.swiper-slide-visible) {
+    	opacity: 0;
+    	transform: translateX(100%);
+    	visibility: hidden;
+    	transition: opacity .7s,transform .7s,visibility 0s linear .7s;
+    	transition: opacity .7s,transform .7s,visibility 0s linear .7s,-webkit-transform .7s;
+    	
+    	@include breakpoint (mobile) {
+    		opacity: 1;
+    		transform: none;
+    		visibility: visible;
+    	}
+	}
+
+	.swiper-slide-prev {
+		@include breakpoint (mobile) {
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+	}
+
+	.link--button__text {
+		padding-left: 4.4rem;
+		padding-right: 4.4rem;
+	}
+}

@@ -1,0 +1,39 @@
+{
+  "title": "X-Guide - Отзывы",
+  "Header": {
+    "header": "Отзывы",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Отзывы",
+        "href": "/reviews.html" }
+    ],
+    "hero-img-src": "./img/hero__bg3.jpg",
+    "description": "Наш уникальный проект, в котором собрались любители путешествий, экстрима и незабываемых эмоций",
+    "link-text": "Оставить отзыв"
+  },
+  "Grid-reviews": {
+    "tabs-nav": ["Все", "Восхождения", "Походы", "Скитур и фрирайд", "Скалолазание", "Кайт бординг", "Дайвинг", "Парапланеризм", "Спелеология"],
+    "tabs-items": [
+      { "header": "Крым",
+        "bg-src": "./img/team-item-1.jpg" },
+      { "header": "Байкал",
+        "bg-src": "./img/review-img-1.jpg" },
+      { "header": "Кавказ",
+        "bg-src": "./img/team-item-3.jpg" },
+      { "header": "Кавказ",
+        "bg-src": "./img/review-img-1.jpg" },
+      { "header": "Крым",
+        "bg-src": "./img/team-item-3.jpg" },
+      { "header": "Байкал",
+        "bg-src": "./img/team-item-1.jpg" },
+      { "header": "Крым",
+        "bg-src": "./img/team-item-1.jpg" },
+      { "header": "Байкал",
+        "bg-src": "./img/review-img-1.jpg" },
+      { "header": "Байкал",
+        "bg-src": "./img/team-item-3.jpg" }]
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}

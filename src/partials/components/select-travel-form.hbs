@@ -1,0 +1,72 @@
+<section class="select-travel-form">
+  <div class="container select-travel-form__container">
+    <div class="select-travel-form__description">
+      <h3 class="select-travel-form__description-header">Мы также организуем индивидуальные
+        и корпоративные путешествия в разные уголки России
+      </h3>
+      <p class="select-travel-form__description-text">Оставьте заявку, и мы свяжемся с вами, чтобы обсудить все детали и ваше пожелания
+      </p>
+    </div>
+    <div class="select-travel-form__form-container">
+      <img class="select-travel-form__form-bg" src="./img/bg-shape.png" alt="bg-shape">
+      <div class="form-section__form-content js-submit-message">
+        <div class="form-section__form-bg">
+          <img class="form-section__form-bg-img" src="./img/bg-shape.png" alt="bg-shape">
+        </div>
+        <form action="/" method="POST" class="form-section__form" data-need-validation="">
+          <h2 class="form-section__form-heading">Выберите путешествие</h2>
+
+          <div class="form-section__form-group">
+            <label for="individualRadio" class="select-travel-form__form-label">
+              <input id="individualRadio" name="type" type="radio" class="select-travel-form__form-radio visually-hidden" checked>
+              <span class="select-travel-form__form-radio-text">Индивидуальные туры</span>
+            </label>
+            <label for="corporateRadio" class="select-travel-form__form-label">
+              <input id="corporateRadio" name="type" type="radio" class="select-travel-form__form-radio visually-hidden">
+              <span class="select-travel-form__form-radio-text">Корпоративные туры</span>
+            </label>
+          </div>
+
+          <div class="form-section__form-group">
+            <input id="name" type="text" class="form-section__form-input" name="name" placeholder="Ваше имя" required>
+            <label for="name" class="form-section__form-label">
+              <span class="form-section__form-label-text">Ваше имя</span>
+            </label>
+          </div>
+
+          <div class="form-section__form-group">
+            <input id="phone-number-input" type="tel" class="form-section__form-input js-phone-input" name="phone" placeholder="Телефон" data-parsley-phone required>
+            <label for="phone-number-input" class="form-section__form-label">
+              <span class="form-section__form-label-text">Телефон</span>
+            </label>
+          </div>
+
+          <div class="form-section__form-group">
+            <label for="policy" class="form-section__form-checkbox">
+              <input id="policy" type="checkbox" name="policy" class="form-section__form-checkbox-input" checked required>
+              <span class="form-section__form-checkbox-mark">
+              </span>
+              <div class="form-section__form-checkbox-text">
+                Даю согласие на обработку персональных данных
+              </div>
+            </label>
+          </div>
+
+          <div class="form-section__form-group">
+            <button type="submit" class="link--button link--button--orange form-section__submit">
+              <span class="link--button__text link--button__text--bg">Отправить</span>
+              <span class="link--button__text link--button__text--for">Отправить</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="form-section__form-modal form-modal--hidden">
+          <h3 class="form-section__form-modal-header">Спасибо! Ваша заявка отправлена!
+          </h3>
+          <p class="form-section__form-modal-text">Наши специалисты свяжутся с Вами после обработки заявки
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

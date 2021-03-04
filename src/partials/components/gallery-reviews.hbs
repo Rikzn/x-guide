@@ -1,0 +1,231 @@
+<section class="gallery-reviews">
+    <div class="container gallery-reviews__container">
+
+      <h3 class="gallery-reviews__header">Галерея</h3>
+      <div class="gallery__grid-container js-gallery-slider">
+        <div class="swiper-container gallery-reviews__swiper-container">
+          <div class="swiper-wrapper gallery__grid">
+            <div class="swiper-slide">
+              <div class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">5:30</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на эльбрус
+                    </p>
+                  </div>
+                  <div class="gallery__item-play-button">
+                    {{> play-button }}
+                  </div>
+                </div>
+                <button class="gallery__item-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs"
+                data-video-img-src="./img/gallery__item-1.jpg">
+                </button>
+              </div>
+            </div>
+              
+            <div class="swiper-slide">
+              <div class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-2.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">20 фото</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Непал
+                    </p>
+                  </div>
+                </div>
+                <a class="gallery__item-link" href="#"></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-3.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">20 фото</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Казбек
+                    </p>
+                  </div>
+                </div>
+                <a class="gallery__item-link" href="#"></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">5:30</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Эльбрус
+                    </p>
+                  </div>
+                  <div class="gallery__item-play-button">
+                    {{> play-button }}
+                  </div>
+                </div>
+                <button class="gallery__item-video-modal-button js-video-modal-button" data-video-id="6NGGVHJ3BKE" data-video-img-src="./img/gallery__item-1.jpg">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-reviews__link-container gallery__link-container">
+        <a href="#" class="link--button link--button--blue">
+          <span class="link--button__text link--button__text--bg">Все фотоотчеты</span>
+          <span class="link--button__text link--button__text--for">Все фотоотчеты</span>
+        </a>
+      </div>
+
+
+      <h3 class="gallery-reviews__header reviews__header">Отзывы</h3>
+      <div class="reviews__grid js-reviews-slider"> 
+        <div class="swiper-container reviews__slider">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviews__slider-item slider__item">
+                  <div class="slider__item-back-layer">
+                    <img class="slider__item-bg-img" src="./img/review-img-1.jpg" alt="review-img">
+                    <div class="slider__item-bg-gradient">
+                    </div>
+                  </div>
+                  
+                  <div class="slider__item-content">
+                    <svg class="reviews__slider-item-quotes-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#quotes"/>
+                    </svg>
+                    <h3 class="reviews__slider-item-header">Земля круглая,Вселенная огромна, а восхождение на Эльбрус никого не оставляет ...
+                    </h3>
+                    <a href="#" class="reviews__slider-item-author-link">
+                      <svg class="reviews__slider-item-author-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use href="#instagram"/>
+                      </svg>
+                      <span class="reviews__slider-item-author-name">Рустем Биктагиров</span>
+                    </a>
+                  </div>
+                  <div class="reviews__slider-item-video-play-button">
+                    {{> play-button }}
+                  </div>
+                  <button class="reviews__slider-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs" data-video-img-src="./img/about-video.jpg">
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="reviews__slider-item slider__item">
+                  <div class="slider__item-back-layer">
+                    <img class="slider__item-bg-img" src="./img/gallery__item-2.jpg" alt="review-img">
+                    <div class="slider__item-bg-gradient">
+                    </div>
+                  </div>
+                  
+                  <div class="slider__item-content">
+                    <svg class="reviews__slider-item-quotes-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#quotes"/>
+                    </svg>
+                    <h3 class="reviews__slider-item-header">КРУПНЕЙШИЙ ТУРИСТИЧЕСКИЙ И ГОРНОЛЫЖНЫЙ МАГАЗИН ...
+                    </h3>
+                    <a href="#" class="reviews__slider-item-author-link">
+                      <svg class="reviews__slider-item-author-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use href="#instagram"/>
+                      </svg>
+                      <span class="reviews__slider-item-author-name">Александр Иванов</span>
+                    </a>
+                  </div>
+                  <div class="reviews__slider-item-video-play-button">
+                    {{> play-button }}
+                  </div>
+                  <button class="reviews__slider-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs" data-video-img-src="./img/about-video.jpg">
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="reviews__slider-item slider__item">
+                  <div class="slider__item-back-layer">
+                    <img class="slider__item-bg-img" src="./img/review-img-1.jpg" alt="review-img">
+                    <div class="slider__item-bg-gradient">
+                    </div>
+                  </div>
+                  <div class="slider__item-content">
+                    <svg class="reviews__slider-item-quotes-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#quotes"/>
+                    </svg>
+                    <h3 class="reviews__slider-item-header">Земля круглая,Вселенная огромна, а восхождение на Эльбрус никого не оставляет ...
+                    </h3>
+                    <a href="#" class="reviews__slider-item-author-link">
+                      <svg class="reviews__slider-item-author-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use href="#instagram"/>
+                      </svg>
+                      <span class="reviews__slider-item-author-name">Рустем Биктагиров</span>
+                    </a>
+                  </div>
+                  <div class="reviews__slider-item-video-play-button">
+                    {{> play-button }}
+                  </div>
+                  <button class="reviews__slider-video-modal-button js-video-modal-button" data-video-id="CNpqVWhgdZs" data-video-img-src="./img/about-video.jpg">
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="reviews__slider-nav-buttons-container">
+          <button class="slider__nav-button slider__nav-button--prev">
+            <div class="slider__nav-button-bg">
+            </div>
+            <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#arrow-next"/>
+            </svg>
+          </button>
+          <button class="slider__nav-button slider__nav-button--next">
+            <div class="slider__nav-button-bg">
+            </div>
+            <svg class="slider__nav-button-icon" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#arrow-next"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-reviews__link-container reviews__link-container">
+        <a href="#" class="link--button link--button--blue">
+          <span class="link--button__text link--button__text--bg">Все отзывы</span>
+          <span class="link--button__text link--button__text--for">Все отзывы</span>
+        </a>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+{
+  "title": "X-Guide - О нас",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "О нас",
+        "href": "/about.html" }
+    ],
+    "hero-img-src": "./img/hero__bg2.jpg"
+  },
+  "FullItemsSlider": [
+    {
+      "img": "./img/small-slider/slide1.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide2.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide3.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide4.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide5.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide6.jpg",
+      "video": "CNpqVWhgdZs"
+    }
+  ],
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}

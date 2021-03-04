@@ -1,0 +1,17 @@
+{
+  "title": "X-Guide - Фотоотчет",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Фотоотчет",
+        "href": "/photo.html" }
+    ],
+    "hero-img-src": "./img/photo-bg.jpg"
+  },
+  "about-mod": "about--white",
+  "LargeSlider": ["./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png"],
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура",
+  "accordion-off-padding": true
+}

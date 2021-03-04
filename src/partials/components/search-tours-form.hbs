@@ -1,0 +1,90 @@
+<section class="search-tours-form-section">
+  <div class="container search-tours-form__container js-accordion">
+    <div class="search-tours-form__accordion js-accordion-item">
+      <button class="search-tours-form__mobile-button js-accordion-btn">
+        <span class="search-tours-form__mobile-button-text">Подобрать тур</span>
+        <span class="search-tours-form__mobile-button-icon-wrapper">
+          <svg class="search-tours-form__mobile-button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#loupe"></use>
+          </svg>
+          <svg class="search-tours-form__mobile-button-icon2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use href="#icon-chevron--thin"/>
+            <div class="search-tours-form__mobile-button-close"></div>
+          </svg>
+        </span>
+      </button>
+      <div class="search-tours-form__wrapper js-accordion-content">
+        <form action="/" method="POST" class="search-tours-form">
+          <div class="search-tours-form__group">
+            <label for="date" class="search-tours-form__label">Даты</label>
+            <div class="search-tours-form__select-input-layout">
+              <input id="date" type="text" class="search-tours-form__input search-tours-form__input--date-range " readonly>
+              <svg class="search-tours-form__input-icon search-tours-form__input-icon--date-range-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron--thin"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="search-tours-form__group">
+            <label for="direction" class="search-tours-form__label">Направление</label>
+            <div class="search-tours-form__input-placeholder">Куда ?</div>
+            <div class="search-tours-form__select-input-layout">
+              <select id="direction" name="direction" class="search-tours-form__input search-tours-form__input--select">
+                <option value="" selected=""></option>
+                <option value="Эльбрус">Эльбрус</option>
+                <option value="Непал">Непал</option>
+                <option value="Казбек">Казбек</option>
+                <option value="Эльбрус">Эльбрус</option>
+                <option value="Непал">Непал</option>
+                <option value="Казбек">Казбек</option>
+              </select>  
+              <svg class="search-tours-form__input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#loupe"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="search-tours-form__group">
+            <label for="type" class="search-tours-form__label">Тип тура</label>
+            <div class="search-tours-form__input-placeholder">Какой тур?</div>
+            <div class="search-tours-form__select-input-layout">
+              <select id="type" name="type" class="search-tours-form__input search-tours-form__input--select">
+                <option value="" selected=""></option>
+                <option value="Восхождения">Восхождения</option>
+                <option value="Треккинг">Треккинг</option>
+                <option value="Сплавы">Сплавы</option>
+              </select>  
+              <svg class="search-tours-form__input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron--thin"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="search-tours-form__group">
+            <label for="level" class="search-tours-form__label">Уровень подготовки</label>
+            <div class="search-tours-form__input-placeholder">Какой уровень?</div>
+            <div class="search-tours-form__select-input-layout">
+              <select id="level" name="level" class="search-tours-form__input search-tours-form__input--select">
+                <option value="" selected=""></option>
+                <option value="Восхождения">Низкий</option>
+                <option value="Треккинг">Средний</option>
+                <option value="Сплавы">Сложный</option>
+              </select>  
+              <svg class="search-tours-form__input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron--thin"/>
+              </svg>
+            </div>
+          </div>
+
+          <button type="submit" class="search-tours-form__submit">
+            <svg class="search-tours-form__submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#loupe"/>
+            </svg>
+
+            <span class="search-tours-form__submit-text">Найти тур</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,213 @@
+.choose-section {
+  @include breakpoint(mobile) {
+    position: relative;
+    top: -337px;
+    margin-bottom: -50px;
+    
+    &.active {
+      margin-bottom: -330px;
+    }
+  }
+}
+.choose-section--category {
+  .choose-section__accordion-content {
+    margin-top: 3rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
+  }
+  .choose-section__tags-list {
+    margin-top: 0;
+    margin-bottom: 9rem;
+    
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    position: static;
+    margin-bottom: 0;
+  }
+}
+.choose-section--questions {
+  @include breakpoint(mobile) {
+    position: static;
+    margin-bottom: 0;
+    margin-bottom: 3rem;
+  }
+}
+.choose-section--questions {
+  .choose-section__right-column {
+    @include breakpoint(mobile) {
+      margin-left: 0;
+      display: block;
+    }
+  }
+}
+.choose-section__container {
+  position: relative;
+  z-index: 10;
+}
+.choose-section__top-row {
+  display: flex;
+  align-items: center;
+}
+.choose-section__header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.choose-section--category .choose-section__header {
+  font-size: 6.2rem;
+  
+   @include breakpoint(mobile) {
+     display: inline-block;
+     font-size: 2.4rem;
+   }
+}
+.choose-section__right-column {
+  display: flex;
+  margin-left: 4rem;
+  flex: 1 0 auto;
+}
+.choose-section__selected-tag {
+  display: none;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  color: var(--white);
+  transform: skew(-10deg, 0);
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: skew(10deg, 0);
+    font-weight: 700;
+  }
+}
+.choose-section--category .choose-section__selected-tag {
+  display: inline-block;
+  
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.choose-section__selected-tag-link {
+  display: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 2.6rem;
+  position: relative;
+  vertical-align: middle;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+.choose-section__button {
+  margin-left: auto;
+  padding: 1rem 2rem;
+  background-color: rgba($color: #295F98, $alpha: 0.05);
+  border-radius: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--blue);
+
+  &:active {
+    opacity: 1;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.choose-section__button-icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 0.6rem;
+  margin-left: 4.6rem;
+  vertical-align: middle;
+  fill: var(--blue);
+  transition: transform 0.25s ease-in-out;
+
+  .js-accordion-item.active & {
+    transform: rotate(180deg);
+  }
+}
+.choose-section__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-in-out;
+  background: #FFF; 
+}
+.choose-section__tags-list {
+  margin-top: 4rem;
+  columns: 5;
+  
+  @include breakpoint(mobile) {
+    columns: 2;
+  }
+
+  @media(max-width: 500px) {
+    columns: 1;
+  }
+}
+.choose-section__tag {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: var(--blue);
+  
+  a {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+    &:hover {
+      background: var(--gray-blue) !important; 
+    }
+  }
+}
+.choose-section__number-label {
+  opacity: 0.5;
+}

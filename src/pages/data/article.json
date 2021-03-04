@@ -1,0 +1,17 @@
+{
+  "title": "X-Guide - Статья",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Блог",
+        "href": "/" },
+      { "text": "Альпинизм",
+        "href": "/article.html" }
+    ]
+  },
+  "Blog": ["./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-3.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-5.jpg", "./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-3.jpg"],
+  "Blog2": ["./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-3.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-5.jpg", "./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-4.jpg", "./img/guide-blog-img-3.jpg"],
+  "form-section-header": "Остались вопросы?\n Получите нашу консультацию",
+  "form-header": "Заявка \nна консультацию"
+}

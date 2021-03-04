@@ -1,0 +1,167 @@
+.link--button {
+  position: relative;
+  display: inline-block;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 1.1rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:link {
+    color: #295F98;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.link--button--prepare {
+  .link--button__text--bg {
+    color: #12214D;
+    box-shadow: inset 0 0 0 1px #EDF3FB;
+    background-color: transparent;
+  }
+  .link--button__text--for {
+    color: #12214D;
+    box-shadow: inset 0 0 0 1px #EDF3FB;
+    background-color: #EDF3FB;
+  }
+}
+
+.link--button--orange {
+  .link--button__text--bg {
+    color: var(--soft-red);
+    box-shadow: inset 0 0 0 1px var(--soft-red);
+    background-color: transparent;
+  }
+  .link--button__text--for {
+    color: #fff;
+    box-shadow: inset 0 0 0 1px var(--soft-red);
+    background-color: var(--soft-red);
+  }
+}
+
+.link--button__text {
+  padding: 2rem 2.6rem;
+  display: block;
+  border-radius: 1.1rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.4rem 2.6rem;
+  }
+}
+.link--button__text--bg {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: var(--soft-red);
+  box-shadow: inset 0 0 0 1px var(--soft-red);
+}
+.link--button__text--for {
+  position: relative;
+  background-color: var(--soft-red);
+  color: var(--white);
+  mask: url(../img/button-sprite.png);
+  mask-size: 3000% 100%;
+  mask-position: 100% 0;
+  mask-repeat: no-repeat;
+  animation: link--button-anim2 0.8s steps(29) forwards;
+
+  @include breakpoint (mobile) {
+    animation: none;
+  }
+
+  .link--button:hover & {
+    animation-name: link--button-anim;
+  }
+}
+.link--button__icon-container {
+  display: inline-block;
+  width: 3.6rem;
+  margin-right: 0.6rem;
+  margin-left: -0.7rem;
+}
+.link--button__icon {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.link--button__icon-svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.link--button--white {
+  .link--button__text--bg {
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+  }
+  .link--button__text--for {
+    color: #295F98;
+    box-shadow: inset 0 0 0 1px #fff;
+    background-color: #fff;
+    mask: url(../img/button-sprite.png);
+    mask-size: 3000% 100%;
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
+    animation: link--button-anim 0.8s steps(29) forwards !important;
+  }
+
+  &:hover .link--button__text--for {
+    animation-name: link--button-anim2 !important;
+  }
+}
+
+.link--button--blue {
+  .link--button__text--bg {
+    color: #295F98;
+    box-shadow: inset 0 0 0 1px #295F98;
+  }
+  .link--button__text--for {
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #295F98;
+    background: #295F98;
+    mask: url(../img/button-sprite.png);
+    mask-size: 3000% 100%;
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
+    animation: link--button-anim 0.8s steps(29) forwards !important;
+  }
+
+  &:hover .link--button__text--for {
+    animation-name: link--button-anim2 !important;
+  }
+}
+
+
+
+
+@keyframes link--button-anim {
+  from {
+    mask-position: 100% 0;
+  }
+ 
+  to {
+    mask-position: 0 0;
+  }
+ }
+ @keyframes link--button-anim2 {
+ from {
+    mask-position: 0 0;
+ }
+
+ to {
+    mask-position: 100% 0;
+ }
+}

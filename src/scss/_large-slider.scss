@@ -1,0 +1,128 @@
+.large-slider {
+	margin: 13rem 0 13rem;
+	overflow: hidden;
+  
+  @include breakpoint (mobile) {
+    margin: 2rem 0
+  }
+
+	&__in {
+		position: relative;
+		
+    .swiper-pagination {
+      display: block;
+      bottom: 25px;
+      z-index: 10;
+
+      .swiper-pagination-bullet {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        margin: 0 6px;
+        background: rgba(255, 255, 255, 0.29);
+        transition: background 0.3s ease;
+        opacity: 1;
+        cursor: pointer;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          left: -4px;
+          right: -4px;
+          top: -4px;
+          bottom: -4px;
+          border: 1px solid #FFF;
+          border-radius: 8px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        &-active {
+          background: #FFF;
+          
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+	}
+
+	&:hover {
+		.large-slider__slider-nav-buttons-container {
+			opacity: 1;
+			
+			.slider__nav-button {
+	  		&--prev {
+	  			left: 0;
+	  		}
+
+	  		&--next {
+	  			right: 0;
+	  		}
+	  	}
+		}
+	}
+
+  &__slider-nav-buttons-container {
+  	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 0;
+  	bottom: 0;
+  	height: 0;
+  	z-index: 10;
+  	margin: auto;
+  	opacity: 0;
+  	transition: opacity 0.3s ease 0.5s;
+  	
+  	.container {
+  		position: relative;
+  	}
+  	
+  	.slider__nav-button {
+  		position: absolute;
+  		top: -2.5rem;
+      
+      @include breakpoint (mobile) {
+        display: none !important;
+      }
+  		
+  		.slider__nav-button-bg {
+  			background: rgba(255, 255, 255, 0.1);
+  		}
+  		
+  		.slider__nav-button-icon {
+  			fill: #FFF;
+  		}
+
+  		&:hover {
+  			.slider__nav-button-bg {
+	  			background-color: var(--soft-red);
+	  		}
+  		}
+
+  		&--prev {
+  			left: -500px;
+  			transition: left 0.3s ease 0.5s;
+  		}
+
+  		&--next {
+  			right: -500px;
+  			transition: right 0.3s ease 0.5s;
+  		}
+  	}
+  }
+
+	&__item {
+		height: 90rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+    
+    @include breakpoint (mobile) {
+      height: 34rem;
+    }
+	}
+}

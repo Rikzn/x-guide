@@ -1,0 +1,74 @@
+{
+  "title": "X-Guide - Тур",
+  "Header": {
+    "header": "Восхождение на Эльбрус с юга 5 642м",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Туры",
+        "href": "/guides.html" },
+      { "text": "Восхождения",
+        "href": "/guide.html" }
+    ],
+    "hero-img-src": "./img/tour.jpg"
+  },
+  "Tours": { 
+    "headers": ["Август 2020", "Сентябрь 2020", "Октябрь 2020", "Сентябрь 2020", "Октябрь 2020","Сентябрь 2020", "Октябрь 2020"],
+    "items": [
+      { "date": "1 августа - августа",
+        "price": "15 000",
+        "price_old": "15 000"
+      },
+      { "date": "15 августа - августа",
+        "price": "15 000",
+        "price_old": "15 000"
+      },
+      { "date": "24 мая - преля",
+        "price": "15 000",
+        "price_old": "15 000"
+      },
+      { "date": "10 августа - августа ",
+        "price": "15 000",
+        "price_old": "15 000"
+      },
+      { "date": "15 июня - июля",
+        "price": "15 000",
+        "price_old": "15 000"
+      },
+      { "date": "18 августа - сентября",
+        "price": "15 000",
+        "price_old": "15 000"
+      }
+    ]
+  },
+  "FullItemsSlider": [
+    {
+      "img": "./img/small-slider/slide1.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide2.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide3.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide4.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide5.jpg",
+      "video": "CNpqVWhgdZs"
+    },
+    {
+      "img": "./img/small-slider/slide6.jpg",
+      "video": "CNpqVWhgdZs"
+    }
+  ],
+  "Blog": ["./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-3.jpg"],
+  "LargeSlider": ["./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png", "./img/large-slider.png"],
+  "form-section-header": "Оставьте заявку, чтобы отправится покорять Эльбрус с нами",
+  "form-header": "Заявка на участие\n в туре"
+}
