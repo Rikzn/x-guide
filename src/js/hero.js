@@ -27,6 +27,7 @@ export default function Hero () {
       slidesPerView: 'auto',
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      Autoplay: 5000
     });
     
     const mainSliderContainer = element.querySelector('.js-hero-main-slider');
