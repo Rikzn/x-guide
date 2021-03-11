@@ -24,7 +24,7 @@ function init() {
           watchSlidesVisibility: true,
           breakpoints: {
               768: {
-                allowTouchMove: isTouch,
+                // allowTouchMove: isTouch,
               },
           }
       };
