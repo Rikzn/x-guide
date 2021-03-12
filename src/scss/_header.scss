@@ -365,6 +365,10 @@ body {
   }
 
   .nav-links-link {
+    svg {
+      width: 1.2rem;
+      height: 5px;
+    }
     @include breakpoint(mobile) {
       margin: 0.5rem 0;
       padding: 1.2rem 0;

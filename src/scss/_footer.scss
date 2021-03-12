@@ -57,7 +57,7 @@
 }
 .nav-links {
   color: var(--white);
-
+  display: flex;
   .page-header--mini &,
   .header--questions & {
     color: var(--primary-color);

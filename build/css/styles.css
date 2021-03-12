@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.4.10
+ * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: January 29, 2021
+ * Released on: March 5, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -3056,6 +3056,9 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1; }
+  .page-header__nav-links .nav-links-link svg {
+    width: 1.2rem;
+    height: 5px; }
   @media only screen and (max-width: 767px) {
     .page-header__nav-links .nav-links-link {
       margin: 0.5rem 0;
@@ -4110,8 +4113,6 @@ body {
 
 .search-tours-form__mobile-button-close {
   display: none;
-  position: relative;
-  right: 15px;
   width: 1.2rem;
   height: 1.2rem; }
   .active .search-tours-form__mobile-button-close {
@@ -4119,8 +4120,7 @@ body {
     margin-left: 2px; }
   .search-tours-form__mobile-button-close:before {
     content: " ";
-    display: block;
-    width: 100%;
+    width: 0;
     height: .2rem;
     margin: auto;
     position: absolute;
@@ -4130,11 +4130,13 @@ body {
     right: 0;
     background-color: var(--white);
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0; }
   .search-tours-form__mobile-button-close:after {
     content: " ";
-    display: block;
-    width: 100%;
+    width: 0;
     height: .2rem;
     margin: auto;
     position: absolute;
@@ -4144,7 +4146,10 @@ body {
     right: 0;
     background-color: var(--white);
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+            transform: rotate(-45deg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0; }
 
 .search-tours-form {
   width: 100%;
@@ -4544,6 +4549,29 @@ body {
       margin-left: 2.6rem;
       padding-left: 0;
       font-size: 1.8rem; } }
+
+@media only screen and (max-width: 767px) {
+  .active .search-tours-form__mobile-button-icon {
+    display: none; }
+  .active .search-tours-form__mobile-button-icon-wrapper {
+    background-color: transparent;
+    border: 1px solid #295F98;
+    width: 4rem;
+    height: 4rem;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+  .active .search-tours-form__mobile-button-close::before {
+    width: 15px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: #295F98;
+    opacity: 1; }
+  .active .search-tours-form__mobile-button-close::after {
+    width: 15px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: #295F98;
+    opacity: 1; } }
 
 .grid-catalog {
   z-index: 1; }
@@ -5514,8 +5542,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
-  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
+  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-link-wrapper {
       -webkit-transition: none !important;
@@ -5524,8 +5552,8 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
-    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
+    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
+    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
 
 .grid-catalog__item-link-container {
   padding-top: 2.8rem;
@@ -6905,10 +6933,10 @@ body {
   left: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
   z-index: 1; }
@@ -7394,7 +7422,7 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
+  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
   @media only screen and (max-width: 767px) {
     .gallery-reviews__container {
       padding-top: 4rem;
@@ -12151,7 +12179,10 @@ textarea.form-section__form-input {
     padding: 1rem 0; } }
 
 .nav-links {
-  color: var(--white); }
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .page-header--mini .nav-links,
   .header--questions .nav-links {
     color: var(--primary-color); }
