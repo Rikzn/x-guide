@@ -78,9 +78,13 @@
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 137%;
-
+  display: flex;
+  align-items: center;
   &:hover, &:focus {
     opacity: 0.6;
+  }
+  svg {
+    margin-left: 5px;
   }
 
   @include breakpoint(mobile) {
