@@ -440,3 +440,11 @@
   opacity: 1;
   visibility: visible;
 }
+.hero__main-slider {
+  .swiper-wrapper {
+    z-index: 0;
+  }
+  .swiper-container {
+    z-index: 0;
+  }
+}

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.5.0
+ * Swiper 6.4.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: March 5, 2021
+ * Released on: January 29, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -2708,6 +2708,8 @@ body {
 .page-header {
   position: relative;
   background-color: var(--blue); }
+  .page-header .swiper-container {
+    z-index: 0; }
 
 .page-header--mini,
 .header--questions {
@@ -2798,7 +2800,7 @@ body {
     right: 0;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(31.16%, rgba(66, 129, 205, 0)), color-stop(110.63%, #2B669B));
     background: linear-gradient(180deg, rgba(66, 129, 205, 0) 31.16%, #2B669B 110.63%);
-    z-index: 1; }
+    z-index: 0; }
   .page-header--about .hero__bg-slider::after {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(45.2%, rgba(66, 129, 205, 0)), color-stop(133.31%, #2B669B));
     background: linear-gradient(180deg, rgba(66, 129, 205, 0) 45.2%, #2B669B 133.31%); }
@@ -3056,32 +3058,37 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1; }
-  .page-header__nav-links .nav-links-link {
-    cursor: pointer; }
-    @media only screen and (max-width: 767px) {
-      .page-header__nav-links .nav-links-link {
-        margin: 0.5rem 0;
-        padding: 1.2rem 0;
-        display: none;
-        font-size: 1.6rem;
-        color: var(--white);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
-        .menu-open .page-header__nav-links .nav-links-link {
-          display: block;
-          margin-left: 1rem;
-          font-size: 2.2rem;
-          line-height: 120%; } }
-    .page-header__nav-links .nav-links-link svg {
-      width: 1.2rem;
-      height: 6px;
-      margin-left: 5px; }
-    .page-header__nav-links .nav-links-link:hover {
-      opacity: 1; }
-      .page-header__nav-links .nav-links-link:hover .nav-links-dropdown {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transition: 0.3s;
-        transition: 0.3s; }
+  @media only screen and (max-width: 767px) {
+    .page-header__nav-links .nav-links-link {
+      margin: 0.5rem 0;
+      padding: 1.2rem 0;
+      display: none;
+      font-size: 1.6rem;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+      .menu-open .page-header__nav-links .nav-links-link {
+        display: block;
+        margin-left: 1rem;
+        font-size: 2.2rem;
+        line-height: 120%; } }
+  .page-header__nav-links .nav-links-link svg {
+    width: 1.2rem;
+    height: 6px;
+    margin-left: 5px; }
+  .page-header__nav-links .nav-links-link:hover {
+    border-bottom: 1px solid #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .page-header__nav-links .nav-links-link:hover .nav-links-dropdown {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .page-header__nav-links .nav-links-link:hover svg {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
   .page-header__nav-links .nav-links-dropdown {
     position: absolute;
     background-color: #12214D;
@@ -3093,12 +3100,45 @@ body {
     visibility: hidden;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    z-index: -1; }
+    z-index: -1;
+    padding-bottom: 7.4rem;
+    height: 795px;
+    top: 0; }
     .page-header__nav-links .nav-links-dropdown__inner {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-top: 270px; }
+      padding-top: 13.4rem;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 100%; }
+    .page-header__nav-links .nav-links-dropdown__item {
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      max-width: 150px;
+      margin-right: 85px;
+      margin-bottom: 4rem; }
+      .page-header__nav-links .nav-links-dropdown__item li {
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.4);
+        padding-bottom: 14px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .page-header__nav-links .nav-links-dropdown__item li:last-child {
+          padding-bottom: 0; }
+        .page-header__nav-links .nav-links-dropdown__item li:hover {
+          color: white;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+    .page-header__nav-links .nav-links-dropdown__title {
+      padding-bottom: 24px;
+      cursor: context-menu; }
 
 .menu-open .nav-links-accordion + .nav-links-link {
   display: none; }
@@ -3368,7 +3408,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  z-index: 1; }
+  z-index: 0; }
   .page-header--thin .page-header__container,
   .page-header--reviews .page-header__container {
     padding-bottom: 7rem; }
@@ -5569,8 +5609,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
-  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
+  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-link-wrapper {
       -webkit-transition: none !important;
@@ -5579,8 +5619,8 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
-    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
+    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
+    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
 
 .grid-catalog__item-link-container {
   padding-top: 2.8rem;
@@ -6960,10 +7000,10 @@ body {
   left: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
   z-index: 1; }
@@ -7120,6 +7160,12 @@ body {
           transform: none !important;
   opacity: 1;
   visibility: visible; }
+
+.hero__main-slider .swiper-wrapper {
+  z-index: 0; }
+
+.hero__main-slider .swiper-container {
+  z-index: 0; }
 
 .about {
   overflow: hidden;
@@ -7449,7 +7495,7 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
+  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
   @media only screen and (max-width: 767px) {
     .gallery-reviews__container {
       padding-top: 4rem;
@@ -12235,8 +12281,6 @@ textarea.form-section__form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .nav-links-link:hover, .nav-links-link:focus {
-    opacity: 0.6; }
   .nav-links-link svg {
     margin-left: 5px; }
   @media only screen and (max-width: 767px) {

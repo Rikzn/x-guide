@@ -12,6 +12,9 @@ body {
   // opacity: 0;
   // visibility: hidden;
   background-color: var(--blue);
+  .swiper-container {
+    z-index: 0;
+  }
 }
 .page-header--mini,
 .header--questions {
@@ -106,7 +109,7 @@ body {
     left: 0;
     right: 0;
     background: linear-gradient(180deg, rgba(66, 129, 205, 0) 31.16%, #2B669B 110.63%);
-    z-index: 1;
+    z-index: 0;
   }
 
   .page-header--about &::after {
@@ -365,7 +368,6 @@ body {
   }
 
   .nav-links-link {
-    cursor: pointer;
     @include breakpoint(mobile) {
       margin: 0.5rem 0;
       padding: 1.2rem 0;
@@ -387,15 +389,21 @@ body {
       margin-left: 5px;
     }
     &:hover {
+      border-bottom: 1px solid #fff;
+      transition: 0.3s;
       .nav-links-dropdown {
         opacity: 1;
         visibility: visible;
         transition: 0.3s;
       }
-      opacity: 1;
+      svg {
+        transform: rotate(180deg);
+        transition: 0.3s;
+      }
     }
   }
   .nav-links {
+
     &-dropdown {
       position: absolute;
       background-color: #12214D;
@@ -406,9 +414,39 @@ body {
       visibility: hidden;
       transition: 0.3s;
       z-index: -1;
+      padding-bottom: 7.4rem;
+      height: 795px;
+      top: 0;
       &__inner {
-        display: flex;
-        margin-top: 270px;
+        display: flex;       
+        padding-top: 13.4rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+      }
+      &__item {
+        height: min-content;
+        max-width: 150px;
+        margin-right: 85px;
+        margin-bottom: 4rem;
+        li {
+          font-size: 16px;
+          line-height: 22px;
+          color: rgba($color: #fff, $alpha: 0.4);
+          padding-bottom: 14px;
+          transition: 0.3s;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          &:hover {
+            color: rgba($color: #fff, $alpha: 1.0);
+            transition: 0.3s;
+          }
+        }
+      }
+      &__title {
+        padding-bottom: 24px;
+        cursor: context-menu;
       }
     }
   }
@@ -696,7 +734,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  z-index: 1;
+  z-index: 0;
 
   .page-header--thin &,
   .page-header--reviews & {
