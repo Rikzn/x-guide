@@ -174,7 +174,9 @@ body {
   z-index: 1;
   display: flex;
   align-items: center;
-
+  @include breakpoint(small-tablet) {
+    padding: 4rem 10.4rem;
+  }
   @include breakpoint (mobile) {
     padding-top: max(calc(env(safe-area-inset-top,0rem) + 2rem),2rem);
     padding-bottom: 0rem;
@@ -365,6 +367,7 @@ body {
     margin-top: 3rem;
     transform: translateY(0);
     opacity: 1;
+    flex-direction: column;
   }
 
   .nav-links-link {
@@ -420,23 +423,28 @@ body {
       &__inner {
         display: flex;       
         padding-top: 13.4rem;
-        flex-wrap: wrap;
-        flex-direction: column;
         height: 100%;
+        padding-left: 10%;
+        @include breakpoint(small-tablet) {
+          // padding-left: 0;
+        }
       }
       &__item {
         height: min-content;
-        max-width: 150px;
-        margin-right: 85px;
-        margin-bottom: 4rem;
+        max-width: 15rem;
+        margin-right: 8.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
         li {
-          font-size: 16px;
-          line-height: 22px;
+          font-size: 1.6rem;
+          line-height: 2.2rem;
           color: rgba($color: #fff, $alpha: 0.4);
-          padding-bottom: 14px;
+          padding-bottom: 1.4rem;
           transition: 0.3s;
           &:last-child {
             padding-bottom: 0;
+            margin-bottom: 4rem;
           }
           &:hover {
             color: rgba($color: #fff, $alpha: 1.0);
@@ -445,7 +453,7 @@ body {
         }
       }
       &__title {
-        padding-bottom: 24px;
+        padding-bottom: 2.4rem;
         cursor: context-menu;
       }
     }
@@ -509,9 +517,9 @@ body {
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
   
-  &.open {
-    padding: 2rem 3.5rem;
-  }
+  // &.open {
+  //   padding: 2rem 3.5rem;
+  // }
 }
 .nav-links-list-item {
   margin: 0.6rem 2rem;
