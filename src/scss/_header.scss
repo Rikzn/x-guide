@@ -15,6 +15,14 @@ body {
   .swiper-container {
     z-index: 0;
   }
+  .fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #295F98;
+    padding: 1rem 4.4rem;
+    z-index: 9999999;
+    transition: 0.5s;
+  }
 }
 .page-header--mini,
 .header--questions {
@@ -190,7 +198,6 @@ body {
   @media only screen and (max-height: (700px)) {
     padding-bottom: 1rem;
   }
-
   .menu-open & {
     width: 100%;
     min-height: 100%;
@@ -424,10 +431,7 @@ body {
         display: flex;       
         padding-top: 13.4rem;
         height: 100%;
-        padding-left: 10%;
-        @include breakpoint(small-tablet) {
-          // padding-left: 0;
-        }
+        padding-left: 28.3rem;
       }
       &__item {
         height: min-content;
@@ -1467,3 +1471,5 @@ body {
     }
   }
 }
+
+

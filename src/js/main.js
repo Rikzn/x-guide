@@ -64,3 +64,14 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300)
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    const headerNav = document.querySelector('.page-header__nav');
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.scrollY;
+        let heroCenter = hero.offsetHeight / 2;
+        console.log(heroCenter);
+        (scrollTop >= heroCenter) ? headerNav.classList.add('fixed') : headerNav.classList.remove('fixed')
+    });
+})
