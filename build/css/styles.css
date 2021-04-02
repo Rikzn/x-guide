@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.4.10
+ * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: January 29, 2021
+ * Released on: March 5, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -5619,8 +5619,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
-  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
+  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-link-wrapper {
       -webkit-transition: none !important;
@@ -5629,8 +5629,8 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
-    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
+    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
+    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
 
 .grid-catalog__item-link-container {
   padding-top: 2.8rem;
@@ -7010,10 +7010,10 @@ body {
   left: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
   z-index: 1; }
@@ -7505,7 +7505,7 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
+  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
   @media only screen and (max-width: 767px) {
     .gallery-reviews__container {
       padding-top: 4rem;
@@ -12449,3 +12449,66 @@ textarea.form-section__form-input {
   max-width: 2rem;
   max-height: 1.7rem;
   fill: var(--white); }
+
+.equipment__title {
+  font-size: 4.5rem;
+  line-height: 6.5rem;
+  font-weight: 900;
+  font-family: var(--jost);
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--primary-color); }
+
+.equipment__subtitle {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #333;
+  font-family: var(--nunito);
+  max-width: 872px; }
+
+.equipment__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.equipment__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .equipment__item-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .equipment__item-btn > svg {
+      width: 25px;
+      height: 25px; }
+  .equipment__item-point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .equipment__item-point > input {
+      display: none; }
+
+.equipment__description-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.equipment__description-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }

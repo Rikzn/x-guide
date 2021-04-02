@@ -1,0 +1,50 @@
+.equipment {
+    &__title {
+        font-size: 4.5rem;
+        line-height: 6.5rem;
+        font-weight: 900;
+        font-family: var(--jost);
+        font-style: italic;
+        text-transform: uppercase;
+        color: var(--primary-color);
+    }
+    &__subtitle {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        color: #333;
+        font-family: var(--nunito);
+        max-width: 872px;
+    }
+    &__container {
+        display: flex;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &-btn {
+            display: flex;
+            align-items: center;
+            &>svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        
+        &-point {
+            display: flex;
+            align-items: center;
+            &>input {
+                display: none;
+            }
+        }
+    }
+    &__description {
+        &-item {
+            display: flex;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
