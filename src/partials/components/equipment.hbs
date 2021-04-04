@@ -3,121 +3,217 @@
   <p class="equipment__subtitle">Внеси 5000 ₽, чтобы забронировать место в группе, остальную сумму в 1-й день тура.
     Первые места в группе дешевле, по мере её заполняемости цена будет расти до 36900 ₽</p>
   <div class="equipment__container">
-    <div class="equipment__list">
-      <div class="equipment__item">
-        <div class="equipment__item-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use href="#clothes" />
-          </svg>
+    <div class="equipment__list js-accordion">
+      <div class="equipment__item js-accordion-item active">
+        <div class="equipment__item-btn js-accordion-btn">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#clothes" />
+            </svg>
+          </span>
           <h5>Одежда</h5>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <use href="#icon-chevron" />
           </svg>
         </div>
-        <div class="equipment__item-content">
+        <div class="equipment__item-content js-accordion-content open">
           <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+            <input type="checkbox" class="equipment-checkbox" name="equipment-1" id="equipment-1">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Вместительный походный рюкзак</p>
-            <p>800р</p>
+            <span>
+              <input type="text" value="800" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipmen__item-checkbox-false"></div>
-            <p>Термомайка </p>
-            <p>100р</p>
+          <label name="equipment-2" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-2" id="equipment-2">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
+            <p>Термомайка</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-3" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-3" id="equipment-3">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Флисовая кофта</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-4" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-4" id="equipment-4">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Балаклава</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
         </div>
-
       </div>
-      <div class="equipment__item">
-        <div class="equipment__item-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use href="#clothes" />
-          </svg>
-          <h5>Одежда</h5>
+      <div class="equipment__item js-accordion-item">
+        <div class="equipment__item-btn js-accordion-btn">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#shoes" />
+            </svg>
+          </span>
+          <h5>Обувь</h5>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <use href="#icon-chevron" />
           </svg>
         </div>
-        <div class="equipment__item-content">
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+        <div class="equipment__item-content js-accordion-content">
+          <label name="equipment-5" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-5" id="equipment-5">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Вместительный походный рюкзак</p>
-            <p>800р</p>
+            <span>
+              <input type="text" value="800" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipmen__item-checkbox-false"></div>
-            <p>Термомайка </p>
-            <p>100р</p>
+          <label name="equipment-6" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-6" id="equipment-6">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
+            <p>Термомайка</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-7" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-7" id="equipment-7">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Флисовая кофта</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-8" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-8" id="equipment-8">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Балаклава</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
         </div>
 
       </div>
-      <div class="equipment__item">
-        <div class="equipment__item-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use href="#clothes" />
-          </svg>
-          <h5>Одежда</h5>
+      <div class="equipment__item js-accordion-item">
+        <div class="equipment__item-btn js-accordion-btn">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#personal-items" />
+            </svg>
+          </span>
+          <h5>Личное снаряжение</h5>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <use href="#icon-chevron" />
           </svg>
         </div>
-        <div class="equipment__item-content">
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+        <div class="equipment__item-content js-accordion-content">
+          <label name="equipment-9" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-9" id="equipment-9">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Вместительный походный рюкзак</p>
-            <p>800р</p>
+            <span>
+              <input type="text" value="800" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipmen__item-checkbox-false"></div>
-            <p>Термомайка </p>
-            <p>100р</p>
+          <label name="equipment-10" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-10" id="equipment-10">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
+            <p>Термомайка</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-11" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-11" id="equipment-11">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Флисовая кофта</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__itemcheckbox-false"></div>
+          <label name="equipment-12" class="equipment__item-point">
+            <input type="checkbox" class="equipment-checkbox" name="equipment-12" id="equipment-12">
+            <div class="equipment__item-checkbox-false">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#check" />
+              </svg>
+            </div>
             <p>Балаклава</p>
-            <p>100р</p>
+            <span>
+              <input type="text" value="100" disabled>
+              ₽
+            </span>
           </label>
         </div>
 
       </div>
+      <div class="equipment__result">
+        <p>Стоимость проката</p> 
+        <span class="equipment__result-item">
+          1200 ₽
+        </span> 
+      </div>
+      <a href="#" class="link--button link--button--blue" download> Скачать список снаряжения</a>
     </div>
     <div class="equipment__description">
       <div class="equipment__description-inner">
@@ -132,5 +228,6 @@
         </div>
       </div>
     </div>
+    <img src="img/bg-shape.png" alt="bg-shape">
   </div>
 </section>
