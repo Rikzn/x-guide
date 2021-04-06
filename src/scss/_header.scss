@@ -18,7 +18,7 @@ body {
   .fixed {
     position: fixed;
     width: 100%;
-    background-color: #295F98;
+    background-color: rgba($color: #295F98, $alpha: 0.8);
     padding: 1rem 4.4rem;
     z-index: 9999999;
     transition: 0.5s;

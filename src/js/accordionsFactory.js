@@ -52,8 +52,6 @@ export default function(accordionElements, openFirst = false) {
                 console.warn('No content or accordion btns');
                 return;
             }
-
-            
             const handler = function(event) {
                 console.log(animating);
 

@@ -1,10 +1,11 @@
-<section class="equipment container">
-  <h2 class="equipment__title">Снаряжение для путешествия</h2>
+<section class="equipment">
+  <div class="container">
+    <h2 class="equipment__title">Снаряжение для путешествия</h2>
   <p class="equipment__subtitle">Внеси 5000 ₽, чтобы забронировать место в группе, остальную сумму в 1-й день тура.
     Первые места в группе дешевле, по мере её заполняемости цена будет расти до 36900 ₽</p>
-  <div class="equipment__container">
+  <div class="equipment__container js-equipment-tabs">
     <div class="equipment__list js-accordion">
-      <div class="equipment__item js-accordion-item active">
+      <div class="equipment__item js-accordion-item active" >
         <div class="equipment__item-btn js-accordion-btn">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,20 +18,35 @@
           </svg>
         </div>
         <div class="equipment__item-content js-accordion-content open">
-          <label name="equipment-1" class="equipment__item-point">
-            <input type="checkbox" class="equipment-checkbox" name="equipment-1" id="equipment-1">
-            <div class="equipment__item-checkbox-false">
+          <div class="equipment__item-wrapper accordion">
+            <div class="equipment__item-inner">
+            <label name="equipment-1" class="equipment__item-point company-ratings__tabs-nav-link" id="tab_1">
+              <input type="checkbox" class="equipment-checkbox" name="equipment-1" id="equipment-1">
+              <div class="equipment__item-checkbox-false">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#check" />
+                </svg>
+              </div>
+              <p>Вместительный походный рюкзак</p>
+              <span>
+                <input type="text" value="800" disabled>
+                ₽
+              </span>
+            </label>
+            <div class="equipment__item-arrow accordion__control">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use href="#check" />
+                <use href="#icon-chevron" />
               </svg>
             </div>
-            <p>Вместительный походный рюкзак</p>
-            <span>
-              <input type="text" value="800" disabled>
-              ₽
-            </span>
-          </label>
-          <label name="equipment-2" class="equipment__item-point">
+            </div>
+            <div class="equipment__item-mobileContent accordion__content">
+              <img src="img/backpack.jpg" alt="Рюкзак">
+              <p>Штурмовой рюкзак применяется как для восхождений,
+                так и для радиальных выходов без больших рюкзаков.Должно влезть: перекус, крем от загара, фотоаппарат, минимальная
+                аптечка, вода или термос, иногда - дождевик или теплая кофта/куртка.Объём: 20-35 литров.</p>
+            </div>
+          </div>
+          <label name="equipment-2" class="equipment__item-point company-ratings__tabs-nav-link" id="tab_2">
             <input type="checkbox" class="equipment-checkbox" name="equipment-2" id="equipment-2">
             <div class="equipment__item-checkbox-false">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -42,8 +58,13 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
-          <label name="equipment-3" class="equipment__item-point">
+          <label name="equipment-3" class="equipment__item-point company-ratings__tabs-nav-link" id="tab_3">
             <input type="checkbox" class="equipment-checkbox" name="equipment-3" id="equipment-3">
             <div class="equipment__item-checkbox-false">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -55,6 +76,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-4" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-4" id="equipment-4">
@@ -68,6 +94,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
         </div>
       </div>
@@ -96,6 +127,11 @@
               <input type="text" value="800" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-6" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-6" id="equipment-6">
@@ -109,6 +145,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-7" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-7" id="equipment-7">
@@ -122,6 +163,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-8" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-8" id="equipment-8">
@@ -135,6 +181,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
         </div>
 
@@ -164,6 +215,11 @@
               <input type="text" value="800" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-10" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-10" id="equipment-10">
@@ -177,6 +233,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-11" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-11" id="equipment-11">
@@ -190,6 +251,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
           <label name="equipment-12" class="equipment__item-point">
             <input type="checkbox" class="equipment-checkbox" name="equipment-12" id="equipment-12">
@@ -203,6 +269,11 @@
               <input type="text" value="100" disabled>
               ₽
             </span>
+            <div class="equipment__item-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron" />
+              </svg>
+            </div>
           </label>
         </div>
 
@@ -213,10 +284,13 @@
           1200 ₽
         </span> 
       </div>
-      <a href="#" class="link--button link--button--blue" download> Скачать список снаряжения</a>
+      <a href="#" class="link--button link--button--blue" download>
+            <span class="link--button__text link--button__text--bg">Скачать список снаряжения </span>
+        	  <span class="link--button__text link--button__text--for">Скачать список снаряжения </span>
+      	  </a>
     </div>
     <div class="equipment__description">
-      <div class="equipment__description-inner">
+      <div class="equipment__description-inner company-ratings__tabs-item" data-tab="#tab_1">
         <div class="equipment__description-item">
           <img src="img/backpack.jpg" alt="Рюкзак">
           <div class="equipment__description-text">
@@ -227,7 +301,30 @@
           
         </div>
       </div>
+      <div class="equipment__description-inner company-ratings__tabs-item" data-tab="#tab_2">
+        <div class="equipment__description-item">
+          <img src="img/backpack.jpg" alt="Рюкзак">
+          <div class="equipment__description-text">
+            <h3>Термомайка</h3>
+          <p>Штурмовой рюкзак применяется как для восхождений, 
+            так и для радиальных выходов без больших рюкзаков.Должно влезть: перекус, крем от загара, фотоаппарат, минимальная аптечка, вода или термос, иногда - дождевик или теплая кофта/куртка.Объём: 20-35 литров.</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="equipment__description-inner company-ratings__tabs-item" data-tab="#tab_3">
+        <div class="equipment__description-item">
+          <img src="img/backpack.jpg" alt="Рюкзак">
+          <div class="equipment__description-text">
+            <h3>Флисовая кофта</h3>
+          <p>Штурмовой рюкзак применяется как для восхождений, 
+            так и для радиальных выходов без больших рюкзаков.Должно влезть: перекус, крем от загара, фотоаппарат, минимальная аптечка, вода или термос, иногда - дождевик или теплая кофта/куртка.Объём: 20-35 литров.</p>
+          </div>
+          
+        </div>
+      </div>
+      <img src="img/bg-shape.png" alt="bg-shape">
     </div>
-    <img src="img/bg-shape.png" alt="bg-shape">
+  </div>
   </div>
 </section>

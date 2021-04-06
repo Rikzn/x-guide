@@ -1,5 +1,5 @@
 .equipment {
-    
+    overflow: hidden;
     &__title {
         font-size: 4.5rem;
         line-height: 6.5rem;
@@ -8,6 +8,7 @@
         font-style: italic;
         text-transform: uppercase;
         color: var(--primary-color);
+        margin-bottom: 2.3rem;
     }
 
     &__subtitle {
@@ -20,21 +21,16 @@
 
     &__container {
         display: flex;
-        margin-top: 72px;
+        margin-top: 7.2rem;
         justify-content: space-between;
         position: relative;
-        height: 650px;
-        &>img {
-            position: absolute;
-            z-index: -1;
-            top: 35%;
-            left: 37%;
-            transform: translate(0, -50%);
-        }
     }
 
     &__list {
         flex-basis: 41%;
+        @include breakpoint(mobile) {
+            flex-basis: 100%;
+          }
     }
 
     &__item {
@@ -118,9 +114,15 @@
                 &::before {
                     opacity: 1;
                     transition: 0.3s;
+                    @include breakpoint(mobile) {
+                        opacity: 0;
+                    }
                 }
             }
-            
+            @include breakpoint(mobile) {
+                flex-grow: 1;
+                margin-bottom: 0;
+            }
             p {
                 font-size: 2rem;
                 line-height: 2.2rem;
@@ -164,6 +166,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 1.2rem;
             &>svg {
                 width: 0.8rem;
                 height: 0.6rem;
@@ -172,20 +175,95 @@
                 transition: 0.2s;
             }
         }
+
+        &-arrow {
+            display: none;
+            @include breakpoint(mobile) {
+                display: block;
+                padding-left: 18px;
+                position: relative;
+                margin-left: 14px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    width: 1px;
+                    height: 123%;
+                    background-color: rgba(18, 33, 77, 0.2);
+                }
+              }
+            &>svg {
+                width: 2rem;
+                height: .9rem;
+            }
+        }
+
+        &-mobileContent {
+            display: none;
+            @include breakpoint(mobile) {
+                display: flex;
+                // opacity: 0;
+                padding: 15px;
+                border-top: 1px solid rgba(18, 33, 77, 0.2);
+                &>img {
+                    width: 8.9rem;
+                    height: 11.7rem;
+                    margin-right: 2.3rem;
+                }
+
+                &>p {
+                    font-size: 1.4rem;
+                    max-width: 40.4rem;
+                }
+            }
+
+        }
+
+        &-inner {
+            @include breakpoint(mobile) {
+                display: flex;
+                padding: 15px;
+            }
+        }
+
+        &-wrapper {
+            @include breakpoint(mobile) {
+                border-radius: 10px;
+                border: 1px solid rgba(18, 33, 77, 0.2);
+            }
+        }
     }
 
     &__description {
         flex-basis: 56%;
-        max-width: 740px;
-        max-height: 361px;
+        max-width: 74rem;
+        max-height: 36rem;
         box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
         border-radius: 10px;
         background-color: #fff;
-        padding: 42px 35px 54px 50px;
-        &-item {
-            display: flex;
+        padding: 4.2rem 3.5rem 5.4rem 5rem;
+        position: relative;
+        &>img {
+            position: absolute;
+            z-index: -1;
+            top: -10%;
+            left: 12%;
+            transform: scale(1.5);
 
         }
+        @include breakpoint(mobile) {
+            display: none;
+          }
+        &-item {
+            display: none;
+            &>img {
+                width: 17.8rem;
+                height: 26.5rem;
+            }
+        }
+
         &-text {
             display: flex;
             flex-direction: column;
@@ -207,6 +285,7 @@
                 max-width: 413px;
             }
         }
+
     }
 
     &__result {
@@ -215,6 +294,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 4.9rem;
         &>p {
             font-size: 2rem;
             line-height: 2.5rem;
@@ -240,7 +320,13 @@
             max-height: fit-content;
             transition: opacity 0.5s, max-height 0.3s;
             z-index: 1;
-        }    
+        }
+        .equipment__description-item {
+            display: flex;
+        }
+        .equipment__item-mobileContent {
+            // opacity: 1;
+        } 
     }
 
     .equipment-checkbox:checked + .equipment__item-checkbox-false {
