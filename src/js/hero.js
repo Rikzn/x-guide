@@ -38,6 +38,11 @@ export default function Hero () {
       thumbs: {
         swiper: thumbsSlider
       },
+      autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+      },
       controller: {
         control: bgSlider,
       },
