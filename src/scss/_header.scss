@@ -18,10 +18,36 @@ body {
   .fixed {
     position: fixed;
     width: 100%;
-    background-color: rgba($color: #295F98, $alpha: 0.8);
+    background-color: #fff;
     padding: 1rem 4.4rem;
     z-index: 9999999;
     transition: 0.5s;
+    .logo__link-text {
+      display: none;
+    }
+    .logo__link-icon {
+      max-width: 4.5rem;
+      max-height: 4.7rem;
+    }
+    .nav-links {
+      margin-left: 11rem;
+    }
+    .nav-links-link {
+      color: var(--blue);
+    }
+    .page-header__search-button-icon {
+      fill: var(--blue); 
+    }
+    .page-header__phone-number {
+      color: var(--blue);
+    }
+    .phone-number__phone-link {
+      border: 1px solid rgba($color: #295F98, $alpha: 0.5);
+    }
+    .page-header__search-form-input {
+      border: 1px solid rgba($color: #295F98, $alpha: 0.5);
+      background-color: rgba($color: #295F98, $alpha: 0.5);
+    }
   }
 }
 .page-header--mini,
@@ -178,10 +204,12 @@ body {
 
 .page-header__nav {
   padding: 4rem 4.4rem;
-  position: relative;
+  position: fixed;
+  top: 0;
   z-index: 1;
   display: flex;
   align-items: center;
+  width: 100%;
   @include breakpoint(small-tablet) {
     padding: 4rem 10.4rem;
   }

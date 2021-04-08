@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			const control = self.querySelector('.accordion__control');
 			const content = self.querySelector('.accordion__content');
 
-			self.classList.toggle('open');
+			self.classList.toggle('open-accordion');
 
 			// если открыт аккордеон
-			if (self.classList.contains('open')) {
+			if (self.classList.contains('open-accordion')) {
 				control.setAttribute('aria-expanded', true);
 				content.setAttribute('aria-hidden', false);
 			} else {

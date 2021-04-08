@@ -231,7 +231,13 @@
   }
 
   &:hover {
-    background-color: var(--soft-red);
+    background-color: var(--white);
+    transition: 0.3s;
+    border: 1px solid var(--soft-red);
+    &>svg {
+        fill: var(--soft-red);
+        transition: 0.3s;
+    }
   }
 
   &:active {
@@ -252,6 +258,7 @@
   @include breakpoint (mobile) {
     display: none;
   }
+
 }
 .search-tours-form__submit-text {
   display: none;

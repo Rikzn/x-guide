@@ -86,8 +86,11 @@
     }
 
     &:hover {
+      background-color: #fff;
+      transition: 0.1s;
       .program__btn-text {
         opacity: 1;
+        transition: 0.1s;
       }
     }
 
