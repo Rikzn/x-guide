@@ -93,6 +93,7 @@
             margin-bottom: 2.7rem;
             cursor: pointer;
             position: relative;
+            transition: 0.3s;
             &:last-child {
                 margin-bottom: 2.6rem;
             }
@@ -111,6 +112,8 @@
                 z-index: -1;
             }
             &:hover {
+                background-color: #EDF3FB;
+                transition: 0.3s;
                 &::before {
                     opacity: 1;
                     transition: 0.3s;
@@ -319,6 +322,17 @@
         }
     }
 
+    &__btn {
+        &>svg {
+            width: 1.6rem;
+            height: 1.3rem;
+            margin-right: 1.3rem;
+            @include breakpoint(mobile) {
+                display: none
+                }
+            }
+    }
+
     .active {
         .equipment__item-btn>svg {
             transform: rotate(-180deg);
@@ -338,6 +352,7 @@
             // opacity: 1;
         } 
     }
+
     .open-accordion {
         .equipment__item-mobileContent {
             max-height: 250px;
@@ -353,6 +368,7 @@
         }
     }
     }
+
     .equipment-checkbox:checked + .equipment__item-checkbox-false {
         background-color: #12214D;
         &>svg {
