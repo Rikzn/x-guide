@@ -1692,6 +1692,8 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: inset 0 0 0 1px var(--soft-red);
           box-shadow: inset 0 0 0 1px var(--soft-red);
   background-color: var(--soft-red); }
+  .link--button--orange .link--button__text--for > svg {
+    fill: #fff; }
 
 .link--button__text {
   padding: 2rem 2.6rem;
@@ -3851,6 +3853,7 @@ body {
 
 .page-header__breadcrumbs {
   margin-bottom: 2.5rem;
+  padding-top: 19.3rem;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;
@@ -11618,7 +11621,7 @@ textarea.form-section__form-input {
     font-family: var(--jost);
     font-style: italic;
     font-weight: 900;
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
     color: var(--primary-color); }
     @media only screen and (max-width: 767px) {
@@ -12585,7 +12588,9 @@ textarea.form-section__form-input {
               align-items: center;
       margin-bottom: 2.7rem;
       cursor: pointer;
-      position: relative; }
+      position: relative;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
       .equipment__item-point:last-child {
         margin-bottom: 2.6rem; }
       .equipment__item-point::before {
@@ -12603,13 +12608,17 @@ textarea.form-section__form-input {
         -webkit-transition: 0.4s;
         transition: 0.4s;
         z-index: -1; }
-      .equipment__item-point:hover::before {
-        opacity: 1;
+      .equipment__item-point:hover {
+        background-color: #EDF3FB;
         -webkit-transition: 0.3s;
         transition: 0.3s; }
-        @media only screen and (max-width: 767px) {
-          .equipment__item-point:hover::before {
-            opacity: 0; } }
+        .equipment__item-point:hover::before {
+          opacity: 1;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+          @media only screen and (max-width: 767px) {
+            .equipment__item-point:hover::before {
+              opacity: 0; } }
       @media only screen and (max-width: 767px) {
         .equipment__item-point {
           -webkit-box-flex: 1;
@@ -12796,6 +12805,13 @@ textarea.form-section__form-input {
       line-height: 2.2rem;
       font-weight: 900;
       color: var(--primary-color); }
+  .equipment__btn > svg {
+    width: 1.6rem;
+    height: 1.3rem;
+    margin-right: 1.3rem; }
+    @media only screen and (max-width: 767px) {
+      .equipment__btn > svg {
+        display: none; } }
   .equipment .active .equipment__item-btn > svg {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
