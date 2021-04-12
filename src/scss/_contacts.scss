@@ -1,6 +1,8 @@
-.contacts {}
-.contacts__container {
+.contacts {
 
+}
+.contacts__container {
+  padding-top: 16.9rem;
   @include breakpoint(mobile) {
     padding-top: 4rem;
   }

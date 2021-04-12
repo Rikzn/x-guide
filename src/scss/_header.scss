@@ -459,7 +459,7 @@ body {
         display: flex;       
         padding-top: 13.4rem;
         height: 100%;
-        padding-left: 17.3rem;
+        padding-left: 15%;
       }
       &__item {
         height: min-content;
@@ -1128,6 +1128,7 @@ body {
   position: absolute;
   left: 0;
   pointer-events: auto;
+  height: 2.4rem;
 
   @include breakpoint (mobile) {
     left: auto;
@@ -1308,7 +1309,12 @@ body {
 }
 .hero__form-select {
   width: 310px;
-  
+  @include breakpoint (small-tablet) {
+    width: 196px;
+  }
+  @include breakpoint (mobile) {
+    width: 310px;
+  }
   .grid-catalog__item-more-date-label {
     color: #FFF !important;
   }
@@ -1501,4 +1507,13 @@ body {
   }
 }
 
-
+.header--questions {
+  @include breakpoint(mobile) {
+    padding-top: 10rem;
+  }
+}
+.header--question {
+  @include breakpoint(mobile) {
+    padding-top: 10rem;
+  }
+}

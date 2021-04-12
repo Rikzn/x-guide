@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.4.10
+ * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: January 29, 2021
+ * Released on: March 5, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -1639,7 +1639,7 @@ select:-webkit-autofill:focus {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 2.7rem;
+  right: 1rem;
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
   fill: #b6b6b6;
@@ -2356,6 +2356,12 @@ select:-webkit-autofill:focus {
 
 .choose-section__number-label {
   opacity: 0.5; }
+
+.choices__list--dropdown .choices__item {
+  font-size: 1.4rem; }
+
+.selects__choices-item {
+  font-size: 1.4rem; }
 
 .tour-accordion {
   margin-bottom: 1.5rem;
@@ -3147,7 +3153,7 @@ body {
       display: flex;
       padding-top: 13.4rem;
       height: 100%;
-      padding-left: 17.3rem; }
+      padding-left: 15%; }
     .page-header__nav-links .nav-links-dropdown__item {
       height: -webkit-min-content;
       height: -moz-min-content;
@@ -3811,7 +3817,8 @@ body {
   padding: 0 2rem;
   position: absolute;
   left: 0;
-  pointer-events: auto; }
+  pointer-events: auto;
+  height: 2.4rem; }
   @media only screen and (max-width: 767px) {
     .page-header__search-button {
       left: auto;
@@ -3961,6 +3968,12 @@ body {
 
 .hero__form-select {
   width: 310px; }
+  @media only screen and (max-width: 968px) {
+    .hero__form-select {
+      width: 196px; } }
+  @media only screen and (max-width: 767px) {
+    .hero__form-select {
+      width: 310px; } }
   .hero__form-select .grid-catalog__item-more-date-label {
     color: #FFF !important; }
   .hero__form-select .selects__choices-input-icon {
@@ -4098,6 +4111,14 @@ body {
         width: 1.2rem;
         height: 1.2rem;
         border-width: .3rem; } }
+
+@media only screen and (max-width: 767px) {
+  .header--questions {
+    padding-top: 10rem; } }
+
+@media only screen and (max-width: 767px) {
+  .header--question {
+    padding-top: 10rem; } }
 
 .search-tours-form-section {
   z-index: 10; }
@@ -5178,7 +5199,8 @@ body {
   position: relative;
   vertical-align: middle;
   cursor: pointer;
-  pointer-events: all; }
+  pointer-events: all;
+  height: 0.7rem; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-info-container {
       margin-left: 0; } }
@@ -5649,8 +5671,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
-  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
+  -webkit-transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  transition: pointer-events 0s, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-link-wrapper {
       -webkit-transition: none !important;
@@ -5659,8 +5681,8 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
-    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
+    -webkit-transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out;
+    transition: pointer-events 0s 0.25s, opacity 0.15s 0.15s ease-in-out, visibility 0.15s 0.15s ease-in-out; }
 
 .grid-catalog__item-link-container {
   padding-top: 2.8rem;
@@ -7534,7 +7556,7 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
+  grid-template-areas: "header-gal header-gal header-rev" "grid-gal grid-gal grid-rev" "link-gal link-gal link-rev"; }
   @media only screen and (max-width: 767px) {
     .gallery-reviews__container {
       padding-top: 4rem;
@@ -8665,9 +8687,11 @@ body {
   text-transform: uppercase;
   color: var(--primary-color); }
 
-@media only screen and (max-width: 767px) {
-  .contacts__container {
-    padding-top: 4rem; } }
+.contacts__container {
+  padding-top: 16.9rem; }
+  @media only screen and (max-width: 767px) {
+    .contacts__container {
+      padding-top: 4rem; } }
 
 .contacts__content-row {
   display: -webkit-box;
@@ -9445,7 +9469,7 @@ textarea.form-section__form-input {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border: 1px solid #12214D;
-  border-radius: 50%;
+  border-radius: 100%;
   margin-right: 1.4rem;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
@@ -9461,10 +9485,10 @@ textarea.form-section__form-input {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 43%;
-    height: 43%;
+    width: 0.6rem;
+    height: 0.6rem;
     background-color: var(--primary-color);
-    border-radius: 50%;
+    border-radius: 100%;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     opacity: 0; }
@@ -9911,6 +9935,10 @@ textarea.form-section__form-input {
 .grid-guide-media__link-container {
   margin-top: 3.5rem;
   text-align: right; }
+
+@media only screen and (max-width: 767px) {
+  .question-section__container {
+    padding-top: 10.8rem; } }
 
 .question-section__header {
   margin-bottom: 4.5rem;
@@ -11212,7 +11240,9 @@ textarea.form-section__form-input {
         max-width: 100%;
         min-width: 100%; } }
   .i-about__btns {
-    margin-bottom: 4.5rem; }
+    margin-bottom: 4.5rem;
+    position: relative;
+    z-index: -1; }
     @media only screen and (max-width: 767px) {
       .i-about__btns {
         display: -webkit-box;
