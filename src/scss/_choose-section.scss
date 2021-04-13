@@ -185,6 +185,10 @@
   
   @include breakpoint(mobile) {
     columns: 2;
+    overflow-y: scroll;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media(max-width: 500px) {

@@ -2335,7 +2335,16 @@ select:-webkit-autofill:focus {
     .choose-section__tags-list {
       -webkit-columns: 2;
          -moz-columns: 2;
-              columns: 2; } }
+              columns: 2;
+      overflow-y: scroll;
+      height: 300px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   @media (max-width: 500px) {
     .choose-section__tags-list {
       -webkit-columns: 1;
