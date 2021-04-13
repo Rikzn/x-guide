@@ -2163,7 +2163,8 @@ select:-webkit-autofill:focus {
       top: -337px;
       margin-bottom: -50px; }
       .choose-section.active {
-        margin-bottom: -330px; } }
+        margin-bottom: -330px;
+        padding-bottom: 3rem; } }
 
 .choose-section--category .choose-section__accordion-content {
   margin-top: 3rem; }
@@ -2173,7 +2174,7 @@ select:-webkit-autofill:focus {
 
 .choose-section--category .choose-section__tags-list {
   margin-top: 0;
-  margin-bottom: 9rem; }
+  margin-bottom: 6.3rem; }
   @media only screen and (max-width: 767px) {
     .choose-section--category .choose-section__tags-list {
       margin-bottom: 2rem; } }
@@ -4148,11 +4149,11 @@ body {
 
 @media only screen and (max-width: 767px) {
   .header--questions {
-    padding-top: 10rem; } }
+    padding-top: 6rem; } }
 
 @media only screen and (max-width: 767px) {
   .header--question {
-    padding-top: 10rem; } }
+    padding-top: 6rem; } }
 
 .search-tours-form-section {
   z-index: 10; }
@@ -10234,6 +10235,7 @@ textarea.form-section__form-input {
         .blog__slide-info-labelContent {
           font-size: 0.8rem; } }
   .blog__slide-favorites-button {
+    display: none;
     width: 2.7rem;
     height: 2.7rem;
     margin-left: .5rem;

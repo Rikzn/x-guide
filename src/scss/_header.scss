@@ -1532,11 +1532,11 @@ body {
 
 .header--questions {
   @include breakpoint(mobile) {
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
 }
 .header--question {
   @include breakpoint(mobile) {
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
 }
