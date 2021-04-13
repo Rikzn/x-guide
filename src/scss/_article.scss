@@ -7,9 +7,9 @@
 
   &__tags {
     margin-bottom: 3.4rem;
-    
     @include breakpoint(mobile) {
       margin-bottom: 2.7rem;
+      margin-top: 2rem;
     }
     
     &-item {
@@ -80,6 +80,7 @@
   }
 
   &__favorites-button {
+    display: none;
     width: 2.7rem;
     height: 2.7rem;
     margin-left: .5rem;
@@ -361,7 +362,6 @@
   }
 
   &__text {
-    display: none;
     font-family: var(--nunito);
     
     &.active {
@@ -513,7 +513,7 @@
 
 .book {
   position: relative;
-  padding: 7rem 7rem 7rem 38rem;
+  padding: 7rem 3.6rem 7rem 38rem;
   border-radius: 1rem;
   background: var(--gray-blue);
   
@@ -576,6 +576,9 @@
     @include breakpoint(mobile) {
       font-size: 1.6rem;
     }
+  }
+  &__link {
+    padding: 2rem 6.5rem;
   }
 }
 

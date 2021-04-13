@@ -17,10 +17,10 @@
 
     @include breakpoint (mobile) {
       .blog__themes {
-        margin-bottom: 6rem;
+        margin-bottom: 0rem;
 
         &:last-child {
-          margin-bottom: 2rem;
+          margin-bottom: 0rem;
           
           .grid-guide-blog-container {
             margin-bottom: 2.6rem;

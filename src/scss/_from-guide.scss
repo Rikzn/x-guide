@@ -15,7 +15,6 @@
   line-height: 130%;
   text-transform: uppercase;
   color: var(--primary-color);
-  
   span {
     color: #295F98;
   }
@@ -23,7 +22,8 @@
   @include breakpoint(mobile) {
     max-width: 94%;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
+    margin-top: 5.4rem;
     line-height: 140%;
   }
 }
@@ -224,6 +224,7 @@
   }
 }
 .grid-guide-blog__favorites-button {
+  display: none;
   width: 2.7rem;
   height: 2.7rem;
   margin-left: 0.5rem;
@@ -344,7 +345,6 @@
 
   @include breakpoint(mobile) {
     line-height: 1.6rem;
-    text-align: left;
     opacity: 1;
   }
 }

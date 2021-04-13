@@ -22,12 +22,22 @@ body {
     padding: 1rem 4.4rem;
     z-index: 9999999;
     transition: 0.5s;
+    @include breakpoint (mobile) {
+      padding-top: max(calc(env(safe-area-inset-top,0) + 2rem),2rem);
+      padding-bottom: 1rem;
+      padding-left: max(env(safe-area-inset-left,1.4rem),var(--content-padding));
+      padding-right: max(env(safe-area-inset-right,1.4rem),var(--content-padding));
+    }
     .logo__link-text {
       display: none;
     }
     .logo__link-icon {
       max-width: 4.5rem;
       max-height: 4.7rem;
+      @include breakpoint (mobile) {
+        max-width: 4rem;
+        max-height: 4rem;
+      }
     }
     .nav-links {
       margin-left: 11rem;
@@ -43,6 +53,18 @@ body {
     }
     .phone-number__phone-link {
       border: 1px solid rgba($color: #295F98, $alpha: 0.5);
+    }
+    .phone-number__icon {
+      fill: var(--blue);
+      transition: 0.2s;
+    }
+    .page-header__menu-button-line {
+      background-color: var(--blue);
+      transition: 0.2s;
+    }
+    .page-header__menu-button::after, .page-header__menu-button::before {
+      background-color: var(--blue);
+      transition: 0.2s;
     }
     .page-header__search-form-input {
       border: 1px solid rgba($color: #295F98, $alpha: 0.5);

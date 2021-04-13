@@ -1,4 +1,5 @@
 .choose-section {
+  margin-bottom: 2rem;
   @include breakpoint(mobile) {
     position: relative;
     top: -337px;
