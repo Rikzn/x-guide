@@ -1,0 +1,29 @@
+<div class="js-accordion">
+  <section class="choose-section js-accordion-item active {{#if choose-block-mod}}choose-section--{{choose-block-mod}}{{/if}}">
+    <div class="container choose-section__container">
+      <div class="choose-section__top-row">
+        <h2 class="choose-section__header">{{ choose-header }}</h2>
+        <div class="choose-section__right-column">
+          <button class="choose-section__button js-accordion-btn">
+            <span>Все теги</span>
+            <svg class="choose-section__button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use href="#icon-chevron--thin"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="choose-section__accordion-content js-accordion-content open" style="max-height: none;">
+        <ul class="choose-section__tags-list">
+          {{#each Tags }}
+          <li class="choose-section__tag"><a href="#">
+            {{ this.text }}
+            <span class="choose-section__number-label">
+              {{ this.number }}
+            </span>
+          </a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

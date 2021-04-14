@@ -257,8 +257,10 @@ select:-webkit-autofill:focus {
     background-color: transparent;
 }
 
-.js-accordion {
-    @include breakpoint (mobile) {
-        height: 80px;
+.page-main-mobile {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
     }
 }

@@ -2,8 +2,8 @@
   margin-bottom: 2rem;
   @include breakpoint(mobile) {
     position: relative;
-    top: -346px;
-    margin-bottom: -50px;
+    // top: -346px;
+    // margin-bottom: -50px;
     
     &.active {
       padding-bottom: 3rem;
@@ -84,6 +84,8 @@
    @include breakpoint(mobile) {
      display: inline-block;
      font-size: 2.4rem;
+     position: absolute;
+     top: -39px;
    }
 }
 .choose-section__right-column {
