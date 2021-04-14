@@ -528,7 +528,7 @@
   vertical-align: middle;
   cursor: pointer;
   pointer-events: all;
-  height: 0.7rem;
+  // height: 0.7rem;
 
   @include breakpoint(mobile) {
     margin-left: 0;
