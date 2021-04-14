@@ -47,7 +47,7 @@
 
   @include breakpoint (mobile) {
     margin-bottom: 0;
-    padding-bottom: 2.8rem;
+    padding-bottom: 1.6rem;
     order: -2;
     font-size: 2.4rem;
     line-height: 3.5rem;
@@ -235,7 +235,7 @@
   @include breakpoint (mobile) {
     order: -1;
     padding-bottom: 1.8rem;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 }
 .tours-slider__link {
