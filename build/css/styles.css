@@ -2163,7 +2163,6 @@ select:-webkit-autofill:focus {
       top: -337px;
       margin-bottom: -50px; }
       .choose-section.active {
-        margin-bottom: -330px;
         padding-bottom: 3rem; } }
 
 .choose-section--category .choose-section__accordion-content {
@@ -2217,7 +2216,8 @@ select:-webkit-autofill:focus {
               align-items: flex-start; }
       .choose-section__top-row .choose-section__right-column {
         margin-left: 0;
-        margin-top: 1rem; } }
+        margin-top: 1rem;
+        width: 100%; } }
 
 .choose-section__header {
   font-family: var(--jost);
@@ -2313,7 +2313,7 @@ select:-webkit-autofill:focus {
             transform: rotate(45deg); }
 
 .choose-section__button {
-  margin-left: 2.5rem;
+  margin-left: auto;
   padding: 1rem 2rem;
   background-color: rgba(41, 95, 152, 0.05);
   border-radius: 1rem;
@@ -2369,7 +2369,23 @@ select:-webkit-autofill:focus {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column; }
+      .choose-section__tags-list:-webkit-scrollbar {
+        width: 3px;
+        /* ширина scrollbar */ }
+      .choose-section__tags-list::-webkit-scrollbar-track {
+        background: var(--gray-blue);
+        border-radius: 20px;
+        /* цвет дорожки */ }
+      .choose-section__tags-list::-webkit-scrollbar-thumb {
+        background-color: var(--blue);
+        /* цвет плашки */
+        border-radius: 20px;
+        /* закругления плашки */ }
+      .choose-section__tags-list::-webkit-scrollbar {
+        background-color: #fff;
+        height: 3px;
+        width: 3px; } }
   @media (max-width: 500px) {
     .choose-section__tags-list {
       -webkit-columns: 1;

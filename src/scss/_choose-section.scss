@@ -6,7 +6,6 @@
     margin-bottom: -50px;
     
     &.active {
-      margin-bottom: -330px;
       padding-bottom: 3rem;
     }
   }
@@ -61,6 +60,7 @@
     .choose-section__right-column {
       margin-left: 0;
       margin-top: 1rem;
+      width: 100%;
     }
   }
   
@@ -158,7 +158,7 @@
   }
 }
 .choose-section__button {
-  margin-left: 2.5rem;
+  margin-left: auto;
   padding: 1rem 2rem;
   background-color: rgba($color: #295F98, $alpha: 0.05);
   border-radius: 1rem;
@@ -207,6 +207,23 @@
     height: 300px;
     display: flex;
     flex-direction: column;
+    &:-webkit-scrollbar {
+      width: 3px;               /* ширина scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--gray-blue);
+      border-radius: 20px;        /* цвет дорожки */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--blue);    /* цвет плашки */
+      border-radius: 20px;       /* закругления плашки */
+      // border: 3px solid orange;  /* padding вокруг плашки */
+    }
+    &::-webkit-scrollbar {
+      background-color: #fff; 
+      height: 3px;
+      width: 3px;
+    }
   }
 
   @media(max-width: 500px) {
