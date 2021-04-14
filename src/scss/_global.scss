@@ -256,3 +256,9 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
 }
+
+.js-accordion {
+    @include breakpoint (mobile) {
+        height: 80px;
+    }
+}

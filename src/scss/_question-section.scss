@@ -16,7 +16,7 @@
   color: var(--primary-color);
 
   @include breakpoint(mobile) {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 2.4rem;
     line-height: 125%;
   }
