@@ -4,7 +4,7 @@
 .contacts__container {
   padding-top: 16.9rem;
   @include breakpoint(mobile) {
-    padding-top: 4rem;
+    padding-top: 4.5rem;
   }
 }
 .contacts__content-row {
@@ -147,6 +147,9 @@
     margin-top: 4rem;
     font-size: 3.5rem;
   }
+  @include breakpoint(small-mobile) {
+    white-space: nowrap;
+  }
 }
 .contacts__link--email {
   margin-bottom: 4rem;
@@ -163,6 +166,9 @@
 
   @include breakpoint(mobile) {
     font-size: 1.6rem;
+  }
+  @include breakpoint(small-mobile) {
+    white-space: nowrap;
   }
 }
 .contacts__social-links-header {

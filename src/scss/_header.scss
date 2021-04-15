@@ -43,32 +43,32 @@ body {
       margin-left: 11rem;
     }
     .nav-links-link {
-      color: var(--blue);
+      color: var(--primary-color);
     }
     .page-header__search-button-icon {
-      fill: var(--blue); 
+      fill: var(--primary-color); 
     }
     .page-header__phone-number {
-      color: var(--blue);
+      color: var(--primary-color);
     }
     .phone-number__phone-link {
-      border: 1px solid rgba($color: #295F98, $alpha: 0.5);
+      border: 1px solid rgba($color: #12214D, $alpha: 0.5);
     }
     .phone-number__icon {
-      fill: var(--blue);
+      fill: var(--primary-color);
       transition: 0.2s;
     }
     .page-header__menu-button-line {
-      background-color: var(--blue);
+      background-color: var(--primary-color);
       transition: 0.2s;
     }
     .page-header__menu-button::after, .page-header__menu-button::before {
-      background-color: var(--blue);
+      background-color: var(--primary-color);
       transition: 0.2s;
     }
     .page-header__search-form-input {
-      border: 1px solid rgba($color: #295F98, $alpha: 0.5);
-      background-color: rgba($color: #295F98, $alpha: 0.5);
+      border: 1px solid rgba($color: #12214D, $alpha: 0.5);
+      background-color: rgba($color: #12214D, $alpha: 0.5);
     }
   }
 }

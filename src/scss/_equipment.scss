@@ -1,5 +1,9 @@
 .equipment {
     overflow: hidden;
+    padding-bottom: 10.7rem;
+    @include breakpoint(mobile) {
+        padding-bottom: 5.4rem;
+    }
     &__title {
         font-size: 4.5rem;
         line-height: 6.5rem;
@@ -9,6 +13,10 @@
         text-transform: uppercase;
         color: var(--primary-color);
         margin-bottom: 2.3rem;
+        @include breakpoint(mobile) {
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+        }
     }
 
     &__subtitle {
@@ -17,6 +25,9 @@
         color: #333;
         font-family: var(--nunito);
         max-width: 872px;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
     }
 
     &__container {
@@ -24,6 +35,9 @@
         margin-top: 7.2rem;
         justify-content: space-between;
         position: relative;
+        @include breakpoint(mobile) {
+            margin-top: 4.2rem;
+        }
     }
 
     &__list {
@@ -59,6 +73,9 @@
                 font-weight: 900;
                 font-family: var(--jost);
                 color: var(--primary-color);
+                @include breakpoint(mobile) {
+                    font-size: 1.6rem;
+                }
             }
             &>span {
                 position: relative;
@@ -133,7 +150,12 @@
                 font-size: 2rem;
                 line-height: 2.2rem;
                 font-weight: 600;
+                font-family: var(--nunito);
                 color: var(--primary-color);
+                @include breakpoint(mobile) {
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
 
             }
             &>input {
@@ -312,6 +334,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4.9rem;
+        font-family: var(--nunito);
         &>p {
             font-size: 2rem;
             line-height: 2.5rem;

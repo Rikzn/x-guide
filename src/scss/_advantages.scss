@@ -5,6 +5,8 @@
 
   @include breakpoint(mobile) {
     display: block;
+    padding-top: 4.7rem;
+    padding-bottom: 0;
   }
 }
 
@@ -55,7 +57,11 @@
   margin-bottom: 2rem;
   padding-left: 2.2rem;
   position: relative;
-  
+  @include breakpoint(mobile) {
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+
   &::before {
     content: " ";
     display: inline-block;
@@ -82,7 +88,7 @@
 }
 .advantages__advantage-info {
   margin-bottom: 6rem;
-  color: var(--primary-color);
+  color: var(--blue);
 
   @include breakpoint(mobile) {
     margin-top: 1rem;
@@ -95,6 +101,7 @@
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  color: var(--primary-color);
 }
 .advantages__advantage-info-text-bottom {
   font-family: var(--jost);
@@ -104,8 +111,11 @@
   line-height: 10rem;
 
   @include breakpoint(mobile) {
-    font-size: 3.4rem;
+    font-size: 3.8rem;
     line-height: 5.5rem;
+  }
+  @include breakpoint(small-mobile) {
+    font-size: 3.4rem;
   }
 
   span {

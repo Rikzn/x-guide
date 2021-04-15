@@ -4,6 +4,10 @@
 .work-in__container {
   padding-top: 8rem;
   padding-bottom: 6rem;
+  @include breakpoint(mobile) {
+    padding-top: 3.8rem;
+    padding-bottom: 3rem;
+  }
 }
 .work-in__layout {
   display: flex;
@@ -65,7 +69,7 @@
     margin-bottom: 1rem;
 
     @include breakpoint(mobile) {
-      margin-bottom: 2rem;
+      margin-bottom: 1.7rem;
     }
 
     &:last-child {

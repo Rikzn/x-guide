@@ -197,3 +197,12 @@
   top: 0;
   left: 0;
 }
+
+.grid-guide__btn {
+  @include breakpoint(mobile) {
+    .link--button__text {
+      padding: 1.8rem 3.6rem;
+      font-size: 1.6rem;
+    }
+  }
+}

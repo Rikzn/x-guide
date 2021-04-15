@@ -15,7 +15,7 @@
 
   @include breakpoint(mobile) {
     margin-bottom: 1rem;
-    padding: 2.4rem 2.2rem;
+    padding: 1.1rem 2.2rem;
   }
 
   &.active {
@@ -36,7 +36,7 @@
   }
 
   @include breakpoint(mobile) {
-    padding: 2rem 0;
+    padding: 1.6rem 0;
   }
 }
 .tour-accordion__button {
@@ -318,7 +318,7 @@
   font-weight: bold;
 
   @include breakpoint(mobile) {
-    max-width: 76%;
+    max-width: 78%;
   }
 }
 .tour-accordion__text--truncated {

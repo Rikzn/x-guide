@@ -7,7 +7,7 @@
   @include breakpoint (mobile) {
     display: block;
     padding-top: 3.6rem;
-    padding-bottom: 7.2rem;
+    padding-bottom: 5.6rem;
   }
 }
 .select-travel-form__description {
@@ -27,6 +27,9 @@
     font-size: 2.4rem;
     line-height: 150%;
   }
+  @include breakpoint (small-mobile) {
+    font-size: 2.2rem;
+  }
 }
 .select-travel-form__description-text {
   max-width: 53rem;
@@ -39,8 +42,8 @@
   color: var(--gray);
 
   @include breakpoint (mobile) {
-    padding-top: 3rem;
-    padding-bottom: 5.4rem;
+    padding-top: 1.8rem;
+    padding-bottom: 3.4rem;
     font-size: 2rem;
     line-height: 140%;
   }
@@ -63,6 +66,7 @@
   @include breakpoint (mobile) {
     width: 268%;
     max-height: 150%;
+    top: 40%;
   }
 }
 .form-section__form-content {
