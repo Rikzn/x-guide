@@ -4062,6 +4062,9 @@ body {
   @media only screen and (max-width: 767px) {
     .hero__form-select {
       width: 310px; } }
+  @media only screen and (max-width: 576px) {
+    .hero__form-select {
+      width: 272px; } }
   .hero__form-select .grid-catalog__item-more-date-label {
     color: #FFF !important; }
   .hero__form-select .selects__choices-input-icon {
@@ -4160,6 +4163,12 @@ body {
     .hero__form-info {
       margin-left: 0;
       margin-top: 1.2rem; } }
+  @media only screen and (max-width: 576px) {
+    .hero__form-info {
+      width: 100%;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .hero__form-info-item {
   margin-right: 5rem; }
@@ -11572,7 +11581,7 @@ textarea.form-section__form-input {
         margin-bottom: 0; } }
   @media only screen and (max-width: 767px) {
     .program__in {
-      margin-top: -5rem; } }
+      margin-top: -6rem; } }
   .program__btns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11584,7 +11593,7 @@ textarea.form-section__form-input {
     @media only screen and (max-width: 767px) {
       .program__btns {
         position: relative;
-        top: 300px;
+        top: 321px;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;

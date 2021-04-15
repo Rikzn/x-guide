@@ -1337,6 +1337,9 @@ body {
   @include breakpoint (mobile) {
     width: 310px;
   }
+  @include breakpoint (small-mobile) {
+    width: 272px;
+  }
   .grid-catalog__item-more-date-label {
     color: #FFF !important;
   }
@@ -1476,6 +1479,10 @@ body {
   @include breakpoint(mobile) {
     margin-left: 0;
     margin-top: 1.2rem;
+  }
+  @include breakpoint(small-mobile) {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 .hero__form-info-item {
