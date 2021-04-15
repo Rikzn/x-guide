@@ -1714,6 +1714,14 @@ select:-webkit-autofill:focus {
     .link--button__text {
       padding: 1.4rem 2.6rem; } }
 
+.link--button__text-big {
+  padding: 2rem 4.5rem;
+  display: block;
+  border-radius: 1.1rem; }
+  @media only screen and (max-width: 767px) {
+    .link--button__text-big {
+      padding: 1.4rem 4.5rem; } }
+
 .link--button__text--bg {
   margin: auto;
   position: absolute;
@@ -3525,8 +3533,7 @@ body {
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
-  z-index: 0; }
+          justify-content: flex-end; }
   .page-header--thin .page-header__container,
   .page-header--reviews .page-header__container {
     padding-bottom: 7rem; }
@@ -4158,7 +4165,7 @@ body {
   margin-right: 5rem; }
   @media only screen and (max-width: 767px) {
     .hero__form-info-item {
-      margin-right: 2.2rem; } }
+      margin-right: 2rem; } }
   .hero__form-info-item .hero__form-info-item-title {
     display: block;
     margin-bottom: 0.6rem;
@@ -7323,7 +7330,7 @@ body {
   @media only screen and (max-width: 767px) {
     .about__container {
       padding-top: 4.8rem;
-      padding-bottom: 7rem;
+      padding-bottom: 6rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -7644,7 +7651,7 @@ body {
   @media only screen and (max-width: 767px) {
     .gallery-reviews__container {
       padding-top: 4rem;
-      padding-bottom: 2rem;
+      padding-bottom: 0rem;
       display: block; } }
 
 .gallery-reviews__header {
@@ -7813,7 +7820,7 @@ body {
   @media only screen and (max-width: 767px) {
     .gallery-reviews__link-container {
       padding-top: 4rem;
-      padding-bottom: 8rem; } }
+      padding-bottom: 6rem; } }
 
 .gallery__link-container {
   grid-area: link-gal; }
@@ -11333,7 +11340,7 @@ textarea.form-section__form-input {
   .i-about__btns {
     margin-bottom: 4.5rem;
     position: relative;
-    z-index: -1; }
+    z-index: 1; }
     @media only screen and (max-width: 767px) {
       .i-about__btns {
         display: -webkit-box;

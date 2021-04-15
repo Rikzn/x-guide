@@ -14,7 +14,7 @@
 
   @include breakpoint (mobile) {
     padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
     display: block;
   }
 }
@@ -170,7 +170,7 @@
 
   @include breakpoint (mobile) {
     padding-top: 4rem;
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
   }
 }
 .gallery__link-container {

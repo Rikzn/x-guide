@@ -18,7 +18,7 @@
 	&__btns {
 		margin-bottom: 4.5rem;
 		position: relative;
-		z-index: -1;
+		z-index: 1;
 		@include breakpoint (mobile) {
 			display: flex;
 			-ms-overflow-x: scroll;

@@ -39,7 +39,7 @@ export default function Hero () {
         swiper: thumbsSlider
       },
       autoplay: {
-        delay: 2000,
+        delay: 6000,
         stopOnLastSlide: false,
         disableOnInteraction: false
       },

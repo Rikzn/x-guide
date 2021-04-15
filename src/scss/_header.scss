@@ -796,7 +796,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  z-index: 0;
 
   .page-header--thin &,
   .page-header--reviews & {
@@ -1483,7 +1482,7 @@ body {
   margin-right: 5rem;
   
   @include breakpoint(mobile) {
-    margin-right: 2.2rem;
+    margin-right: 2rem;
   }
 
 
