@@ -223,19 +223,20 @@
     opacity: 0.6;
   }
 }
+
 .tour-accordion__right-col {
   min-width: 0;
   flex: 0 0 50%;
-}
-.tour-accordion__aside {
-  display: flex;
-  flex: 0 0 32%;
-  justify-content: flex-end;
-
   @include breakpoint(mobile) {
-    flex: 0 0 4rem;
+    display: none;
   }
 }
+
+.tour-accordion__aside {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .tour-accordion__content-container {
   max-height: 0;
   overflow: hidden;
@@ -382,5 +383,10 @@
       // right: 0;
       align-items: center;
     }
+  }
+}
+.active {
+  .tour-accordion__right-col {
+    display: flex;
   }
 }

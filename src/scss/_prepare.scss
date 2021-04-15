@@ -1,6 +1,6 @@
 .prepare {
   margin-bottom: 12rem;
-  
+  padding-top: 3rem;
   @include breakpoint(mobile) {
     margin-bottom: 6.6rem;
   }
@@ -110,6 +110,9 @@
   		&-in {
   			max-width: 60%;
   			min-width: 60%;
+			  @include breakpoint(mobile) {
+				max-width: 84%;
+			  }
   		}
   	}
 
@@ -171,6 +174,9 @@
       background: linear-gradient(0deg, #EDF3FB 34.82%, rgba(237, 243, 251, 0) 95.54%);
       border-radius: 0 0 1rem 1rem;
       z-index: 5;
+	  @include breakpoint(mobile) {
+		  height: 15px;
+	  }
     }
 
     .prepare__plan-in {

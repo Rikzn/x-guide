@@ -544,8 +544,8 @@
 }
 .grid-catalog__item-info-click-target {
   display: none;
-  width: 150%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -558,8 +558,8 @@
 }
 .grid-catalog__item-info-icon {
   display: block;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   opacity: 0.3;
 
   .grid-catalog__item-info-container:hover & {
