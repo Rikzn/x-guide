@@ -11666,7 +11666,8 @@ textarea.form-section__form-input {
       @media only screen and (max-width: 767px) {
         .program__item-info {
           max-width: 100%;
-          min-width: 100%; } }
+          min-width: 100%;
+          padding-top: 2rem; } }
     .program__item-header {
       font-family: var(--jost);
       font-style: italic;
