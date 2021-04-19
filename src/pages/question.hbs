@@ -1,13 +1,15 @@
 {{#extend "layout"}}
 {{#content "page-content"}}
-  {{> header--question }}
+{{> header--question }}
 
-  <main class="page-main">
+<main class="page-main">
+  <div class="question">
     {{> question-section }}
-    {{> form-section }}
-  </main>
-  
-  {{> footer }}
-  {{> video-modal }}
+  </div>
+  {{> form-section }}
+</main>
+
+{{> footer }}
+{{> video-modal }}
 {{/content}}
 {{/extend}}

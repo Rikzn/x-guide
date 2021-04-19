@@ -1,13 +1,12 @@
-.tour-accordion-container {
+.tour-accordion-container {}
 
-}
 .tour-accordion {
   margin-bottom: 1.5rem;
   padding: 4rem 5rem;
   position: relative;
   border-radius: 1rem;
   background-color: var(--white);
-  
+
   &--small {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -18,14 +17,20 @@
     padding: 1.1rem 2.2rem;
   }
 
+  @include breakpoint(small-mobile) {
+    margin-bottom: 1rem;
+    padding: 1.1rem 1.8rem;
+  }
+
   &.active {
     .tour-accordion__info-label {
       @include breakpoint(mobile) {
-       display: none;
+        display: none;
       }
     }
   }
 }
+
 .tour-accordion__row {
   display: flex;
   padding: 2.6rem 0;
@@ -39,6 +44,7 @@
     padding: 1.6rem 0;
   }
 }
+
 .tour-accordion__button {
   width: 100%;
   padding: 4rem 5rem;
@@ -74,20 +80,28 @@
     }
   }
 }
+
 .tour-accordion__row--header {
   padding: 0;
   border: none;
 }
+
 .tour-accordion__aline-center-block {
   display: flex;
   align-items: center;
 }
+
 .tour-accordion__content-side {
   display: flex;
   flex: 1 1 auto;
 }
+
 .tour-accordion__left-col {
   flex: 0 0 50%;
+
+  @include breakpoint(small-mobile) {
+    flex: 0 0 45%;
+  }
 
   .tour-accordion__row--header & {
     padding-right: 12rem;
@@ -99,6 +113,7 @@
     }
   }
 }
+
 .tour-accordion__header {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -121,14 +136,17 @@
     line-height: 130%;
   }
 }
+
 .tour-accordion.active {
   .tour-accordion__header--secondary {
     opacity: 1;
   }
+
   .tour-accordion__header--secondary-price {
     opacity: 1;
   }
 }
+
 .tour-accordion__header--secondary {
   display: inline-block;
   color: rgba(51, 51, 51, 0.5);
@@ -138,7 +156,7 @@
   font-size: 1.7rem;
   line-height: 2.3rem;
   opacity: 0;
-  
+
   &-price {
     opacity: 0;
     color: rgba(18, 33, 77, 0.4);
@@ -149,7 +167,7 @@
     line-height: 2.9rem;
     transition: opacity 0.3s ease;
     text-transform: uppercase;
-    
+
     @include breakpoint(mobile) {
       font-size: 1.2rem;
       position: relative;
@@ -179,6 +197,7 @@
     line-height: 130%;
   }
 }
+
 .tour-accordion__info-label {
   display: inline-block;
   margin-left: 2.5rem;
@@ -207,6 +226,7 @@
     }
   }
 }
+
 .tour-accordion__chevron-icon-container {
   transition: transform 0.25s ease-in-out;
 
@@ -214,12 +234,13 @@
     transform: rotate(180deg);
   }
 }
+
 .tour-accordion__chevron-icon {
   width: 2rem;
   height: 0.9rem;
   fill: var(--primary-color);
 
-  .tour-accordion__button:hover + .tour-accordion__row & {
+  .tour-accordion__button:hover+.tour-accordion__row & {
     opacity: 0.6;
   }
 }
@@ -227,6 +248,7 @@
 .tour-accordion__right-col {
   min-width: 0;
   flex: 0 0 50%;
+
   @include breakpoint(mobile) {
     display: none;
   }
@@ -258,6 +280,7 @@
     }
   }
 }
+
 .tour-accordion__text {
   font-family: var(--nunito);
   font-style: normal;
@@ -265,7 +288,7 @@
   font-size: 2rem;
   line-height: 2.7rem;
   color: var(--primary-color);
-  
+
   &-price {
     margin-right: 1rem;
     color: rgba(18, 33, 77, 1);
@@ -274,7 +297,7 @@
     font-weight: bold;
     font-family: var(--nunito);
     line-height: 3.4rem;
-    
+
     @include breakpoint(mobile) {
       font-size: 1.4rem;
     }
@@ -291,7 +314,7 @@
       font-family: var(--nunito);
       line-height: 2.5rem;
       text-decoration: line-through;
-      
+
       @include breakpoint(mobile) {
         display: block;
         font-size: 1.2rem;
@@ -314,6 +337,7 @@
     line-height: 130%;
   }
 }
+
 .tour-accordion__text--bold {
   font-weight: bold;
 
@@ -321,46 +345,54 @@
     max-width: 78%;
   }
 }
+
 .tour-accordion__text--truncated {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
   padding-top: 10%;
+
+  @include breakpoint(mobile) {
+    margin-left: auto;
+  }
 }
+
 .tour-accordion__link-button {
   &-text-desc {
     display: inline;
-    
+
     @include breakpoint(mobile) {
-      display: none !important;  
+      display: none !important;
     }
   }
 
   &-text-mob {
     display: none;
-    
+
     @include breakpoint(mobile) {
-      display: inline !important;  
+      display: inline !important;
     }
   }
 }
+
 .link--button__text {
   .tour-accordion__link-button & {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
     @include breakpoint(mobile) {
-      padding: 2.2rem 1.9rem;
+      padding: 1.8rem 2rem;
       font-size: 1.2rem;
       line-height: 1.7rem;
 
-      & > span:last-child {
+      &>span:last-child {
         display: none;
       }
     }
   }
 }
+
 .link--button__icon-container {
   .tour-accordion__link-button & {
     display: none;
@@ -373,6 +405,7 @@
     }
   }
 }
+
 .link--button__icon {
   .tour-accordion__link-button & {
     @include breakpoint(mobile) {
@@ -385,6 +418,7 @@
     }
   }
 }
+
 .active {
   .tour-accordion__right-col {
     display: flex;

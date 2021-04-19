@@ -1,6 +1,5 @@
-.guide-description {
+.guide-description {}
 
-}
 .guide-description__container {
   padding-top: 11rem;
   padding-bottom: 7rem;
@@ -12,6 +11,7 @@
     padding-top: 4rem;
   }
 }
+
 .guide-description__block {
   margin-top: 7rem;
 
@@ -23,6 +23,7 @@
     margin-top: 0;
   }
 }
+
 .guide-description__block-header {
   font-family: var(--jost);
   font-style: italic;
@@ -36,6 +37,7 @@
     line-height: 140%;
   }
 }
+
 .guide-description__block-list {
   font-family: var(--nunito);
   font-style: normal;
@@ -48,6 +50,7 @@
     line-height: 2.2rem;
   }
 }
+
 .guide-description__block-list-item {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -76,16 +79,18 @@
     }
   }
 }
+
 .guide-description-right-col {
   margin-left: 18rem;
   padding-top: 3rem;
   flex: 0 0 34%;
-  
+
   @include breakpoint(mobile) {
     width: 100%;
     margin-left: 0;
   }
 }
+
 .guide-description__short-info {
   font-family: var(--nunito);
   font-style: normal;
@@ -98,18 +103,24 @@
     font-size: 1.6rem;
   }
 }
+
 .guide-description__short-info-row {
   display: flex;
   align-items: center;
+
 }
+
 .guide-description__short-info-left-col {
   padding-right: 1rem;
   flex: 0 0 62%;
   opacity: 0.4;
+
 }
+
 .guide-description__short-info-right-col {
   font-weight: bold;
 }
+
 .guide-description__socials-link-container {
   display: flex;
   margin: 1rem 0 1rem -1.2rem;
@@ -119,6 +130,7 @@
     margin: 1rem 0 1rem -0.8rem;
   }
 }
+
 .guide-description__socials-link {
   display: block;
   width: 4.8rem;
@@ -135,10 +147,17 @@
     margin: 0.4rem;
   }
 
+  @include breakpoint(small-mobile) {
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: 0.4rem;
+  }
+
   &:hover {
     opacity: 0.6;
   }
 }
+
 .guide-description__socials-link-icon {
   display: block;
   max-width: 2.2rem;
@@ -156,6 +175,7 @@
     max-height: 1.2rem;
   }
 }
+
 .guide-description__credo {
   margin-top: 5rem;
 
@@ -163,6 +183,7 @@
     margin-top: 3rem;
   }
 }
+
 .guide-description__credo-header {
   font-family: var(--jost);
   font-style: italic;
@@ -176,6 +197,7 @@
     font-size: 2rem;
   }
 }
+
 .guide-description__credo-quote {
   margin-top: 3rem;
   padding: 4.6rem 5.6rem 4rem;
@@ -191,6 +213,7 @@
     padding: 3.5rem 4.6rem 2.8rem;
   }
 }
+
 .guide-description__credo-quote-text {
   position: relative;
   font-family: var(--nunito);
@@ -204,6 +227,7 @@
     line-height: 2.2rem;
   }
 }
+
 .guide-description__credo-quote-border-bottom {
   width: calc(100% + 2px);
   position: absolute;
@@ -213,6 +237,7 @@
   stroke: var(--gray-blue);
   fill: none;
 }
+
 .guide-description__credo-quote-icon {
   width: 10rem;
   height: 5rem;
@@ -230,6 +255,7 @@
 .tours-of-guide {
   background-color: var(--gray-blue);
 }
+
 .tours-of-guide__container {
   padding-top: 10rem;
   padding-bottom: 12rem;
@@ -239,6 +265,7 @@
     padding-bottom: 4rem;
   }
 }
+
 .tours-of-guide__header {
   margin-bottom: 3rem;
   font-family: var(--jost);

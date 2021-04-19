@@ -2461,6 +2461,10 @@ select:-webkit-autofill:focus {
     .tour-accordion {
       margin-bottom: 1rem;
       padding: 1.1rem 2.2rem; } }
+  @media only screen and (max-width: 576px) {
+    .tour-accordion {
+      margin-bottom: 1rem;
+      padding: 1.1rem 1.8rem; } }
   @media only screen and (max-width: 767px) {
     .tour-accordion.active .tour-accordion__info-label {
       display: none; } }
@@ -2530,6 +2534,11 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%; }
+  @media only screen and (max-width: 576px) {
+    .tour-accordion__left-col {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 45%;
+              flex: 0 0 45%; } }
   .tour-accordion__row--header .tour-accordion__left-col {
     padding-right: 12rem;
     -webkit-box-pack: justify;
@@ -2741,6 +2750,9 @@ select:-webkit-autofill:focus {
   text-overflow: ellipsis;
   text-align: center;
   padding-top: 10%; }
+  @media only screen and (max-width: 767px) {
+    .tour-accordion__text--truncated {
+      margin-left: auto; } }
 
 .tour-accordion__link-button-text-desc {
   display: inline; }
@@ -2759,7 +2771,7 @@ select:-webkit-autofill:focus {
   padding-bottom: 1.5rem; }
   @media only screen and (max-width: 767px) {
     .tour-accordion__link-button .link--button__text {
-      padding: 2.2rem 1.9rem;
+      padding: 1.8rem 2rem;
       font-size: 1.2rem;
       line-height: 1.7rem; }
       .tour-accordion__link-button .link--button__text > span:last-child {
@@ -6305,6 +6317,9 @@ body {
     padding: 1.8rem 3.6rem;
     font-size: 1.6rem; } }
 
+.page-header--guides .hero__main-slider-item-text {
+  display: none; }
+
 .guide-description__container {
   padding-top: 11rem;
   padding-bottom: 7rem;
@@ -6438,6 +6453,11 @@ body {
     .guide-description__socials-link {
       width: 3.6rem;
       height: 3.6rem;
+      margin: 0.4rem; } }
+  @media only screen and (max-width: 576px) {
+    .guide-description__socials-link {
+      width: 3.4rem;
+      height: 3.4rem;
       margin: 0.4rem; } }
   .guide-description__socials-link:hover {
     opacity: 0.6; }
@@ -9723,7 +9743,7 @@ textarea.form-section__form-input {
   padding-top: 12rem; }
   @media only screen and (max-width: 767px) {
     .from-guide__container {
-      padding-top: 5rem; } }
+      padding-top: 1rem; } }
 
 .from-guide__header {
   position: relative;
@@ -10261,6 +10281,15 @@ textarea.form-section__form-input {
   transition: background-color 0.15s; }
   .other-items__link:hover {
     background-color: var(--gray-blue); }
+
+@media only screen and (max-width: 767px) {
+  .question .question-section__header {
+    position: relative;
+    top: 0; } }
+
+@media only screen and (max-width: 767px) {
+  .question .question-section__container {
+    padding-top: 0; } }
 
 .blog__slider-wrap {
   margin: 0 -8rem 4.3rem; }
