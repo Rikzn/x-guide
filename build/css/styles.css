@@ -2820,7 +2820,7 @@ body {
     transition: 0.5s; }
     @media only screen and (max-width: 767px) {
       .page-header .fixed {
-        padding-top: max(calc(env(safe-area-inset-top,0) + 2rem), 2rem);
+        padding-top: max(calc(env(safe-area-inset-top, 0) + 2rem), 2rem);
         padding-bottom: 1rem;
         padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding)); } }
@@ -2851,7 +2851,8 @@ body {
       background-color: var(--primary-color);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
-    .page-header .fixed .page-header__menu-button::after, .page-header .fixed .page-header__menu-button::before {
+    .page-header .fixed .page-header__menu-button::after,
+    .page-header .fixed .page-header__menu-button::before {
       background-color: var(--primary-color);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
@@ -3021,7 +3022,7 @@ body {
       padding: 4rem 10.4rem; } }
   @media only screen and (max-width: 767px) {
     .page-header__nav {
-      padding-top: max(calc(env(safe-area-inset-top,0rem) + 2rem), 2rem);
+      padding-top: max(calc(env(safe-area-inset-top, 0rem) + 2rem), 2rem);
       padding-bottom: 0rem;
       padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
       padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
@@ -3267,7 +3268,10 @@ body {
       display: flex;
       padding-top: 13.4rem;
       height: 100%;
-      padding-left: 15%; }
+      padding-left: 16rem; }
+      @media only screen and (max-width: 1200px) {
+        .page-header__nav-links .nav-links-dropdown__inner {
+          padding-left: 18rem; } }
     .page-header__nav-links .nav-links-dropdown__item {
       height: -webkit-min-content;
       height: -moz-min-content;
@@ -3449,7 +3453,7 @@ body {
     .page-header__menu-button {
       display: inline-block; } }
   .menu-open .page-header__menu-button {
-    top: calc(max(calc(env(safe-area-inset-top,0) + 2rem),2rem) + 1rem); }
+    top: calc(max(calc(env(safe-area-inset-top, 0) + 2rem), 2rem) + 1rem); }
   .page-header__menu-button::before, .page-header__menu-button::after {
     content: " ";
     display: block;
@@ -12260,7 +12264,16 @@ textarea.form-section__form-input {
               max-height: 150px;
               background-color: #edf3fb; }
   .albums__items-wrap {
-    height: auto !important; }
+    height: 0 !important;
+    opacity: 0;
+    -webkit-transition: 0.9s;
+    transition: 0.9s; }
+    .albums__items-wrap.active {
+      opacity: 1;
+      display: block;
+      height: auto !important;
+      -webkit-transition: 0.9s;
+      transition: 0.9s; }
   @media only screen and (max-width: 767px) {
     .albums__items {
       position: static !important;
