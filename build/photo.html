@@ -11,6 +11,7 @@
     <script src="assets/js/svgInject.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700;1,900&family=Nunito:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
         X-Guide - Фотоотчет
@@ -258,54 +259,22 @@
 								<span class="albums__item-tag">20 фото</span>
 								<span class="albums__item-tag">1 видео</span>
 							</span>
-							<div class="albums__item-share active">
-								<div class="albums__item-share-list">
-									<a href="" class="albums__item-share-item">
-										<svg class="albums__item-share-icn" class="" xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink">
-											<use href="#fb" />
-										</svg>
-									</a>
-									<a href="" class="albums__item-share-item">
-										<svg class="albums__item-share-icn" class="" xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink">
-											<use href="#tw" />
-										</svg>
-									</a>
-									<a href="" class="albums__item-share-item">
-										<svg class="albums__item-share-icn" class="" xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink">
-											<use href="#telegram" />
-										</svg>
-									</a>
-									<a href="" class="albums__item-share-item">
-										<svg class="albums__item-share-icn" class="" xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink">
-											<use href="#vk" />
-										</svg>
-									</a>
-									<a href="" class="albums__item-share-item">
-										<svg class="albums__item-share-icn" class="" xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink">
-											<use href="#whats" />
-										</svg>
-									</a>
-								</div>
-								<div class="albums__item-share-icons">
-									<svg class="albums__item-share-icons-share" class="" xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink">
-										<use href="#share" />
-									</svg>
-									<svg class="albums__item-share-icons-close" class="" xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink">
-										<use href="#close" />
-									</svg>
-								</div>
-							</div>
+	
 							<span class="albums__item-info">
 								<span class="albums__item-info-date">09.09.20</span>
 								<a href="#" class="albums__item-info-name">Восхождение на эльбрус</a>
 							</span>
+						</div>
+						<div class="albums__item-gallery">
+							<a href="img/gallery-1.jpg" class="albums__item-gallery-link" data-fancybox="gallery-1">
+								<img src="img/gallery-1.jpg" alt="" class="albums__item-gallery-link-image" >
+							</a>
+							<a href="img/gallery-2.jpg" class="albums__item-gallery-link" data-fancybox="gallery-1">
+								<img src="img/gallery-2.jpg" alt="" class="albums__item-gallery-link-image" >
+							</a>
+							<a href="https://www.youtube.com/watch?v=w7ejDZ8SWv8" class="albums__item-gallery-link" data-fancybox="gallery-1">
+	
+							</a>
 						</div>
 					</div>
 					<div class="albums__item js-masonry-item js-masonry-item-size">
@@ -361,6 +330,18 @@
 								<span class="albums__item-info-date">09.09.20</span>
 								<a href="#" class="albums__item-info-name">Восхождение на эльбрус</a>
 							</span>
+						</div>
+						<div class="albums__item-gallery">
+							<a href="img/gallery-2.jpg" class="albums__item-gallery-link" data-fancybox="gallery-2">
+								<img src="img/gallery-2.jpg" alt="" class="albums__item-gallery-link-image">
+							</a>
+							<a href="img/gallery-1.jpg" class="albums__item-gallery-link" data-fancybox="gallery-2">
+								<img src="img/gallery-1.jpg" alt="" class="albums__item-gallery-link-image">
+							</a>
+	
+							<a href="https://www.youtube.com/watch?v=w7ejDZ8SWv8" class="albums__item-gallery-link" data-fancybox="gallery-2">
+	
+							</a>
 						</div>
 					</div>
 					<div class="albums__item albums__item--h2 js-masonry-item">
@@ -478,8 +459,7 @@
 	  <path class="play-button__triangle" d="M64.3147 52.2333C64.7905 52.6329 64.7905 53.3653 64.3147 53.7649L50.0523 65.7421C49.4017 66.2885 48.4093 65.826 48.4093 64.9763L48.4093 41.0219C48.4093 40.1722 49.4017 39.7097 50.0524 40.2561L64.3147 52.2333Z" fill="#12214D"/>
 	</svg></div>
 							</div>
-							<button class="albums__item-video-btn js-video-modal-button" data-video-id="CNpqVWhgdZs"
-								data-video-img-src="./img/albums/4.png"></button>
+	
 						</div>
 					</div>
 					<div class="albums__item js-masonry-item">
@@ -4923,8 +4903,8 @@
     <script src="https://www.youtube.com/iframe_api"></script>
   </section>        
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/app.js"></script>
     <script src="assets/js/submit-form.js"></script>
 </body>

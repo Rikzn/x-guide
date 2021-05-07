@@ -26,7 +26,8 @@ import TourInfo from './tour-info';
 import Map from './map';
 import BlogSlider from './blog-slider';
 import BlogSliderItems from './blog-slider-items';
-import AlbumsGriid from './albums';
+import MediaModals from './mediaModals';
+// import AlbumsGriid from './albums';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -57,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Map();
     BlogSlider();
     BlogSliderItems();
-    AlbumsGriid();
+    MediaModals();
+    // AlbumsGriid();
 });
 
 window.addEventListener('load', function() {

@@ -47,14 +47,19 @@ function destroyGrids () {
   	grid.destroy();
   });
 
+  window.photoLayoutInstance = null;
+
   instances.length = 0;
 }
 
 function createGridDesktop (container, element) {
-  return new Masonry(container, {
+  const photoLayoutInstance = new Masonry(container, {
     itemSelector: '.js-masonry-item',
     columnWidth: '.js-masonry-item-size',
     percentPosition: true,
     gutter: 20
   });
+
+  window.photoLayoutInstance = photoLayoutInstance;
+  return photoLayoutInstance;
 }
