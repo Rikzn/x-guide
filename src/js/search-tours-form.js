@@ -84,7 +84,7 @@ function init () {
     DateRangeInput.classList.toggle('calendar-shown');
   }
 
-
+  window.tourFiltersSelects = [];
 
   SearchToursFormSelectInputs.forEach(input => {
     const choices = new Choices(input, {
@@ -98,6 +98,8 @@ function init () {
         item: 'choices__item search-tours-form__select-option',
       },
     });
+
+    window.tourFiltersSelects.push(choices)
 
     input.addEventListener(
       'change',

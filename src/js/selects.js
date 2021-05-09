@@ -1,9 +1,10 @@
 import Choices from 'choices.js';
 
 export default function Selects() {
-    window.selectInstances = [];
+    
+   
     const initializeSelects = () => {
-        window.selectInstances = [];
+        
         const SelectsForChoices = document.querySelectorAll('.js-selects-for-choices').forEach(select => {
             let select_settings = {
                 position: 'bottom',
@@ -53,10 +54,7 @@ export default function Selects() {
 
             const choices = new Choices(select, select_settings);
 
-            window.selectInstances.push({
-              instance: choices,
-              selectHtmlElement: select
-            })
+          
 
             select.addEventListener(
                 'change',
