@@ -13132,3 +13132,328 @@ textarea.form-section__form-input {
       opacity: 1;
       -webkit-transition: 0.1s;
       transition: 0.1s; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem var(--content-padding);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .4s, visibility 0s linear .4s;
+  transition: opacity .4s, visibility 0s linear .4s; }
+  .modal::-webkit-scrollbar * {
+    background: transparent; }
+  .modal::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .modal::-webkit-scrollbar {
+    display: none;
+    background-color: transparent; }
+  .modal::-webkit-scrollbar-thumb {
+    background-color: transparent; }
+  .modal.active {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity .4s, visibility .4s;
+    transition: opacity .4s, visibility .4s; }
+
+.modal__inner {
+  width: 100%;
+  margin: auto;
+  max-width: 42rem;
+  background-color: #fff;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 4rem;
+  font-family: 'Nunito', sans-serif;
+  position: relative; }
+  @media only screen and (max-width: 767px) {
+    .modal__inner {
+      padding: 2rem; } }
+
+.modal__heading {
+  margin-bottom: 3rem;
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  color: #12214d;
+  font-style: italic;
+  font-family: 'Jost', sans-serif; }
+
+.modal__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 1.5rem;
+  width: 100%; }
+  .modal__form .parsley-errors-list.filled {
+    opacity: 1;
+    z-index: 70; }
+
+.modal__form-field {
+  position: relative; }
+
+.modal__form-input {
+  height: 5rem;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(18, 35, 77, 0.2);
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 0 2.2rem;
+  color: #12214d;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+  .modal__form-input.parsley-error {
+    border-color: #EA7464; }
+  .modal__form-input::-webkit-input-placeholder {
+    opacity: 0; }
+  .modal__form-input:-moz-placeholder {
+    opacity: 0; }
+  .modal__form-input::-moz-placeholder {
+    opacity: 0; }
+  .modal__form-input:-ms-input-placeholder {
+    opacity: 0; }
+
+textarea.modal__form-input {
+  height: 15rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  resize: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  width: 100%; }
+
+.modal__form-input-label {
+  position: absolute;
+  left: 2.2rem;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: rgba(18, 33, 77, 0.6);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  padding: 0.5rem;
+  background-color: #fff;
+  top: 1rem;
+  pointer-events: none; }
+
+.modal__form-input:not(:-moz-placeholder-shown) ~ .modal__form-input-label {
+  transform: scale(0.8) translateY(-3.4rem) translateX(-0.3rem); }
+
+.modal__form-input:not(:-ms-input-placeholder) ~ .modal__form-input-label {
+  transform: scale(0.8) translateY(-3.4rem) translateX(-0.3rem); }
+
+.modal__form-input:focus ~ .modal__form-input-label,
+.modal__form-input:not(:placeholder-shown) ~ .modal__form-input-label {
+  -webkit-transform: scale(0.8) translateY(-3.4rem) translateX(-0.3rem);
+          transform: scale(0.8) translateY(-3.4rem) translateX(-0.3rem); }
+
+.modal__close {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  margin-left: 0.7rem; }
+  @media only screen and (max-width: 767px) {
+    .modal__close {
+      left: auto;
+      bottom: auto;
+      right: 2rem;
+      top: 2rem; } }
+  .modal__close svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+    fill: white;
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+    @media only screen and (max-width: 767px) {
+      .modal__close svg {
+        fill: #12214d; } }
+  .no-touch .modal__close:hover svg,
+  .touch .modal__close:active svg {
+    fill: #EA7464; }
+
+.modal__form-upload-files {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.modal__form-upload-files-checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1.5rem; }
+
+.modal__form-upload-files-checkbox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem; }
+  .modal__form-upload-files-checkbox:last-child {
+    margin-right: 0; }
+
+.modal__form-upload-files-checkbox-input {
+  display: none; }
+
+.modal__form-upload-files-checkbox-checkmark {
+  width: 1.6rem;
+  height: 1.6rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: 1px solid rgba(18, 33, 77, 0.4);
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .modal__form-upload-files-checkbox-checkmark::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(18, 33, 77, 0.4);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+
+.modal__form-upload-files-checkbox-input:checked ~ .modal__form-upload-files-checkbox-checkmark::before {
+  opacity: 1; }
+
+.modal__form-upload-files-checkbox-input:checked ~ .modal__form-upload-files-checkbox-text {
+  color: #12214d; }
+
+.modal__form-upload-files-checkbox-text {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: rgba(18, 33, 77, 0.6);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+.modal__form-upload-files-upload-zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  border: 1px solid rgba(18, 35, 77, 0.2);
+  border-radius: 1rem;
+  position: relative;
+  width: 100%; }
+
+.modal__form-upload-files-upload-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+.modal__form-upload-files-upload-text {
+  width: 30%;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: rgba(18, 33, 77, 0.6); }
+
+.modal__form-upload-files-upload-btn {
+  padding: 0.9rem 1.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #295f98;
+  font-family: 'Nunito', sans-serif;
+  background: #edf3fb;
+  border-radius: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.modal__form-upload-files-tabs {
+  position: relative; }
+
+.modal__form-upload-files-tabs-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visibility 0s linear .3s;
+  transition: opacity .3s, visibility 0s linear .3s;
+  z-index: 5; }
+  .modal__form-upload-files-tabs-item.active {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
+
+.modal__form-submit {
+  display: block;
+  width: 100%; }

@@ -27,6 +27,9 @@ import Map from './map';
 import BlogSlider from './blog-slider';
 import BlogSliderItems from './blog-slider-items';
 import MediaModals from './mediaModals';
+import Modals from './modals';
+import FileUpload from './fileUpload';
+import ReviewFormTabs from './reviewFormTabs';
 // import AlbumsGriid from './albums';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -59,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
     BlogSlider();
     BlogSliderItems();
     MediaModals();
+    Modals();
+    FileUpload();
+    ReviewFormTabs();
     // AlbumsGriid();
 });
 

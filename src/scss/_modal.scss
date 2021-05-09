@@ -1,0 +1,305 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(black, 0.5);
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    @include noScrollbar();
+    padding: 2rem var(--content-padding);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+    }
+   
+}
+
+.modal__inner {
+    width: 100%;
+    margin: auto;
+    max-width: 42rem;
+    background-color: #fff;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 4rem;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.modal__heading {
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    color: #12214d;
+    font-style: italic;
+    font-family: 'Jost', sans-serif;
+}
+
+.modal__form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.5rem;
+
+    width: 100%;
+
+    .parsley-errors-list.filled {
+        // position: static;
+        // margin: 0;
+        // padding: 0;
+        // font-size: 1.4rem;
+        // line-height: 1.2;
+        // color: black;
+        // flex-grow: 0;
+        // display: block;
+        opacity: 1;
+        z-index: 70;
+    }
+}
+
+.modal__form-field {
+    position: relative;
+    
+}
+
+.modal__form-input {
+    height: 5rem;
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(18, 35, 77, 0.2);
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0 2.2rem;
+    color: #12214d;
+    transition: border-color .2s;
+    &.parsley-error {
+        border-color: #EA7464;
+    }
+
+    @include placeholder {
+        opacity: 0;
+    }
+}
+
+textarea.modal__form-input {
+    height: 15rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    resize: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+}
+
+.modal__form-input-label {
+    position: absolute;
+    left: 2.2rem;
+    transform-origin: left bottom;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(#12214d, 0.6);
+    transition: transform 0.3s;
+    padding: 0.5rem;
+    background-color: #fff;
+    top: 1rem;
+    pointer-events: none;
+}
+
+.modal__form-input:focus ~ .modal__form-input-label,
+.modal__form-input:not(:placeholder-shown) ~ .modal__form-input-label {
+    transform: scale(0.8) translateY(-3.4rem) translateX(-0.3rem);
+}
+
+.modal__close {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    margin-left: 0.7rem;
+
+    @include breakpoint(mobile) {
+        left: auto;
+        bottom: auto;
+        right: 2rem;
+        top: 2rem;
+    }
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        display: block;
+        fill: white;
+        transition: fill .2s;
+
+        @include breakpoint(mobile) {
+            fill: #12214d;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: #EA7464;
+        }
+    }
+}
+
+.modal__form-upload-files {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.modal__form-upload-files-checkboxes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.modal__form-upload-files-checkbox {
+    flex-shrink: 0;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 2rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.modal__form-upload-files-checkbox-input {
+    display: none;
+}
+
+.modal__form-upload-files-checkbox-checkmark {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(#12214d, 0.4);
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: rgba(#12214d, 0.4);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+}
+
+.modal__form-upload-files-checkbox-input:checked ~ .modal__form-upload-files-checkbox-checkmark::before {
+    opacity: 1;
+}
+.modal__form-upload-files-checkbox-input:checked ~ .modal__form-upload-files-checkbox-text {
+    color: #12214d;
+}
+
+.modal__form-upload-files-checkbox-text {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: rgba(#12214d, 0.6);
+    transition: color 0.2s;
+}
+
+.modal__form-upload-files-upload-zone {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid rgba(18, 35, 77, 0.2);
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.modal__form-upload-files-upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.modal__form-upload-files-upload-text {
+    width: 30%;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    color: rgba(#12214D, .6);
+}
+
+.modal__form-upload-files-upload-btn {
+    padding: 0.9rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #295f98;
+    font-family: 'Nunito', sans-serif;
+    background: #edf3fb;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    
+}
+
+
+.modal__form-upload-files-tabs {
+    position: relative;
+}
+
+.modal__form-upload-files-tabs-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    z-index: 5;
+    &.active {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
+
+
+.modal__form-submit {
+    display: block;
+    width: 100%;
+}

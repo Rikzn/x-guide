@@ -1,0 +1,83 @@
+<div class="modal js-modal" id="review-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Оставьте свой отзыв
+        </h3>
+        <form action="/" method="POST" class="modal__form" data-need-validation>
+            <div class="modal__form-field">
+                <input type="text" name="name" class="modal__form-input" required id="review-name"
+                    placeholder="Ваше имя">
+                <label for="review-name" class="modal__form-input-label">Ваше имя</label>
+            </div>
+            <div class="modal__form-field">
+                <textarea name="comment" class="modal__form-input" required id="review-comment"
+                    placeholder="Ваш комментарий"></textarea>
+                <label for="review-comment" class="modal__form-input-label">Ваш комментарий</label>
+            </div>
+            <div class="modal__form-field">
+                <div class="modal__form-upload-files">
+                    <div class="modal__form-upload-files-checkboxes">
+                        <label class="modal__form-upload-files-checkbox">
+
+                            <input type="radio" name="upload-type" value="1"
+                                class="modal__form-upload-files-checkbox-input" checked>
+                            <span class="modal__form-upload-files-checkbox-checkmark">
+
+                            </span>
+                            <span class="modal__form-upload-files-checkbox-text">
+                                Добавить фото
+                            </span>
+
+                        </label>
+                        <label class="modal__form-upload-files-checkbox">
+
+                            <input type="radio" name="upload-type" value="2"
+                                class="modal__form-upload-files-checkbox-input">
+                            <span class="modal__form-upload-files-checkbox-checkmark">
+
+                            </span>
+                            <span class="modal__form-upload-files-checkbox-text">
+                                Добавить видео
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="modal__form-upload-files-tabs">
+                        <div class="modal__form-upload-files-tabs-item">
+                            <label class="modal__form-upload-files-upload-zone js-file-upload">
+
+                                <input type="file" class="modal__form-upload-files-upload-input">
+                                <div class="modal__form-upload-files-upload-text js-file-upload-text">
+                                    Прикрепить фото
+                                </div>
+                                <div class="modal__form-upload-files-upload-btn">
+                                    Выберите файл
+                                </div>
+                            </label>
+                        </div>
+                        <div class="modal__form-upload-files-tabs-item">
+                            <input type="text" name="name" class="modal__form-input" required id="review-link"
+                                placeholder="Вставьте ссылку на видео">
+                            <label for="review-link" class="modal__form-input-label">Вставьте ссылку на видео</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__form-field">
+                <button class="link--button link--button--orange modal__form-submit" type="submit">
+
+
+                    <span class="link--button__text link--button__text--bg">Оставить отзыв</span>
+                    <span class="link--button__text link--button__text--for">Оставить отзыв</span>
+                </button>
+
+
+            </div>
+        </form>
+    </div>
+</div>
