@@ -96,7 +96,7 @@ function createSwiperDesktop (container, element) {
   sliders.small =  new Swiper(element.querySelector('.swiper-container-in'), {
 	  slidesPerView: 9,
     spaceBetween: 6,
-    grabCursor: true
+    grabCursor: false
   });
 
   element.querySelectorAll('.article__slider-preview').forEach(item => {

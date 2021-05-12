@@ -1518,6 +1518,13 @@ body {
         .selects__choices-item {
           color: var(--blue) !important;
           opacity: 0.7;
+          transition: color .2s, background-color .2s;
+
+          &.is-highlighted {
+            color: white !important;
+            opacity: 1;
+            background-color: var(--blue) !important;
+          }
         }
       }
 

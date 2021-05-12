@@ -12,6 +12,9 @@ export default function TourInfo () {
     if (!modal || !buttons)
       return;
 
+
+    console.log('Hello test')
+
     let instance = {
       modal: modal,
       buttons: buttons,
@@ -27,11 +30,14 @@ export default function TourInfo () {
 }
 
 function toggleModal (event) {
+  console.log('Toggling')
   event && event.preventDefault();
 
   let instance = this;
   
   instance.modal.classList.toggle('open');
+
+  
 
   infoIsOpen
     ? unlockScroll(instance.modal)

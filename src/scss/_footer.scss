@@ -86,6 +86,11 @@
   line-height: 137%;
   display: flex;
   align-items: center;
+  transition: opacity .2s;
+
+  .no-touch &:hover {
+    opacity: 0.8;
+  }
   svg {
     margin-left: 5px;
   }
@@ -133,14 +138,16 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 7rem;
   white-space: nowrap;
-
+  transition: all .2s;
   .page-header--mini &,
   .header--questions & {
     border: 1px solid rgba($color: #12214D, $alpha: 0.5);
   }
 
   &:hover, &:focus {
-    opacity: 0.6;
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: white;
   }
 
   @include breakpoint(mobile) {

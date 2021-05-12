@@ -179,11 +179,20 @@
         }
 
         &-content {
-            max-height: 0;
+            
             opacity: 0;
             z-index: -99;
-            transition: opacity 0.2s, max-height 0.5s;
+            transition: opacity 0.2s;
             position: relative;
+            &::before {
+                content: '';
+                height: 3.2rem;
+                flex-shrink: 0;
+                width: 100%;
+                display: block;
+            }
+
+
             
         }
 
@@ -264,6 +273,7 @@
         }
 
         &-wrapper {
+            
             @include breakpoint(mobile) {
                 border-radius: 10px;
                 border: 1px solid rgba(18, 33, 77, 0.2);
@@ -367,7 +377,7 @@
         }
         .equipment__item-content {
             opacity: 1;
-            margin-top: 3.3rem;
+           
             max-height: fit-content;
             transition: opacity 0.5s, max-height 0.3s;
             z-index: 1;

@@ -160,13 +160,18 @@
         max-width: 95%;
         font-size: 2rem;
         line-height: 130%;
+        padding-top: 1.4rem;
+
+        @include breakpoint(mobile) {
+          font-size: 1.6rem;
+        }
       }
     }
 
     &.active {
       .faq__item-in {
         max-height: none;
-        padding-top: 1.4rem;
+       
         visibility: visible;
       }
       .faq__item-header-icon {

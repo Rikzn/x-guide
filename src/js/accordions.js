@@ -1,29 +1,53 @@
-import accordionsFactory from './accordionsFactory';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-export default function Accordions () {
-    const AccordionsInstances = [];
+export default function Accordions() {
+    const SPEED = 0.5;
 
-    AccordionsInstances.length && AccordionsInstances.forEach((inst) => {
-        typeof inst.destroy === 'function' && inst.destroy();
-    });
+    const openAccordion = element => {
+        gsap.to(element, {
+            height: 'auto',
+            duration: SPEED,
+            onComplete: () => ScrollTrigger.refresh()
+        });
+    };
+    const closeAccordion = element => {
+        gsap.to(element, {
+            height: 0,
+            duration: SPEED,
+            onComplete: () => ScrollTrigger.refresh()
+        });
+    };
 
-    document.querySelectorAll('.js-accordion').forEach(createAccordion);
+    const elements = Array.from(document.querySelectorAll('.js-accordion-item'));
 
-    function createAccordion (accordion) {
-        let factory = null;
-        const initializeMainAccordion = () => {
-            if (factory) {
-                factory.destroy();
-                factory = null;
+    elements.forEach(element => {
+        const btn = element.querySelector('.js-accordion-btn');
+        const content = element.querySelector('.js-accordion-content');
+
+
+        if (!btn || !content) return;
+
+        btn.addEventListener('click', event => {
+            event.preventDefault();
+
+            elements.forEach(otherElement => {
+                if (otherElement !== element) {
+                    if (otherElement.classList.contains('active')) {
+                        const content = otherElement.querySelector('.js-accordion-content');
+                        closeAccordion(content);
+                        otherElement.classList.remove('active');
+                    }
+                }
+            });
+
+            if (element.classList.contains('active')) {
+                closeAccordion(content);
+            } else {
+                openAccordion(content);
             }
-
-            factory = accordionsFactory(Array.from(accordion.querySelectorAll('.js-accordion-item')));
-
-            factory.init();
-        };
-
-        initializeMainAccordion();
-
-        AccordionsInstances.push(factory);
-    }
+            element.classList.toggle('active');
+        });
+    });
 }

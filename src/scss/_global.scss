@@ -240,6 +240,17 @@ td, th {
     }
 }
 
+a:not([href]) {
+    pointer-events: none;
+}
+
+
+.js-accordion-content {
+    height: 0;
+    max-height: initial !important;
+    overflow: hidden;
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);

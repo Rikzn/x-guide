@@ -44,7 +44,7 @@
   flex-direction: row;
   border-radius: 1rem;
   overflow: hidden;
-
+  align-items: center;
   @include breakpoint (mobile) {
     
     &:nth-child(n+5) {
@@ -81,10 +81,11 @@
   }
 }
 .blog__item-bg-container {
-  width: 43%;
+  width: 14rem;
   height: 10rem;
   border-radius: 1rem;
   overflow: hidden;
+  flex-shrink: 0;
   transform: translateZ(0);
 
   @include breakpoint (mobile) {
@@ -206,6 +207,10 @@
 }
 .blog__item-content {
   padding-bottom: 1.4rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   @include breakpoint (mobile) {
     padding: 0;

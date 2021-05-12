@@ -46,6 +46,8 @@ export default function TeamSlider () {
       speed: speed,
       loop: true,
       slidesPerView: 'auto',
+      loopedSlides: 7,
+      loopAdditionalSlides: 3,
       centeredSlides: true,
       watchOverflow: true,
       navigation: {

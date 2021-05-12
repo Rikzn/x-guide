@@ -180,6 +180,10 @@
       opacity: 0.3;
       color: #333;
       z-index: 10;
+
+      @include breakpoint(mobile) {
+        pointer-events: none;
+      }
     }
 
     .grid-catalog__item-info {

@@ -231,10 +231,12 @@
   font-weight: normal;
   font-size: 2rem;
   line-height: 130%;
+  padding-right: 4rem;
 
   @include breakpoint (mobile) {
     order: -1;
     padding-bottom: 1.8rem;
+    padding-right: 2rem;
     font-size: 1.6rem;
   }
 }

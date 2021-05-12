@@ -58,6 +58,7 @@ function createSwiperMobile (container, element) {
     updateOnWindowResize: true,
     speed: 700,
     loop: true,
+    loopedSlides: 3,
     watchSlidesVisibility: true,
     slidesPerView: 'auto'
   });
@@ -68,6 +69,8 @@ function createSwiperDesktop (container, element) {
     updateOnWindowResize: true,
     speed: 700,
     loop: true,
+    loopedSlides: 3,
+    
     slidesPerView: 'auto',
     watchSlidesVisibility: true,
     navigation: {

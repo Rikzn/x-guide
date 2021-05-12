@@ -46,8 +46,7 @@
 
   &__btns {
     display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 5rem;
     
     @include breakpoint (mobile) {
@@ -70,6 +69,13 @@
     color: var(--blue) !important;
     border-radius: 1rem;
     border: 1px solid;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    &:last-child {
+      margin-right: 0;
+    }
     
     @include breakpoint (mobile) {
       white-space: nowrap;
