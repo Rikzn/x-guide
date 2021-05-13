@@ -13,7 +13,7 @@ body {
     // opacity: 0;
     // visibility: hidden;
     background-color: var(--blue);
-   
+
     .swiper-container {
         z-index: 0;
     }
@@ -24,11 +24,11 @@ body {
         background-color: #fff;
         padding: 1rem 4.4rem;
         z-index: 1000;
-       
-        box-shadow: 0 0 1rem rgba(black, .1);
+
+        box-shadow: 0 0 1rem rgba(black, 0.1);
 
         @include breakpoint(mobile) {
-            padding-top: max(calc(env(safe-area-inset-top, 0) + 2rem), 2rem);
+            padding-top: 1rem;
             padding-bottom: 1rem;
             padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
             padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
@@ -92,7 +92,7 @@ body {
 }
 
 .page-header__nav {
-    transition: background-color .2s, padding .2s, box-shadow .2s;
+    transition: background-color 0.2s, padding 0.2s, box-shadow 0.2s;
 }
 
 .page-header--mini,
@@ -415,10 +415,10 @@ body {
     max-width: 9.7rem;
     max-height: 2.1rem;
     fill: var(--white);
-    transition: fill .2s;
+    transition: fill 0.2s;
     display: block !important;
     .page-header__nav.fixed & {
-        fill: black;
+        fill: white;
     }
 
     .page-header--mini &,
@@ -434,11 +434,6 @@ body {
             fill: #fff;
         }
     }
-}
-
-
-.page-header .fixed div.nav-links-link:hover {
-    color: white;
 }
 
 .page-header__logo-link-text {
@@ -1149,9 +1144,9 @@ body {
             position: absolute;
             top: -0.1rem;
             display: block;
-            background-color: rgba(white, .3);
+            background-color: rgba(white, 0.3);
             border-radius: 0.15rem;
-            
+
             transition: opacity 0.2s;
             width: 100%;
             left: 0;
@@ -1365,11 +1360,13 @@ body {
 
 .breadcrumbs__item {
     display: inline-block;
-    transition: opacity 0.15s;
+    a {
+        transition: opacity 0.15s;
 
-    &:hover {
-        opacity: 0.6;
-        transition: opacity 0s;
+        &:hover {
+            opacity: 0.6;
+            transition: opacity 0s;
+        }
     }
 }
 
