@@ -2518,7 +2518,7 @@ select:-webkit-autofill:focus {
     padding: 1rem 2rem; }
     @media only screen and (max-width: 767px) {
       .tour-accordion__button span {
-        padding: .6rem 1rem; } }
+        padding: 0.6rem 1rem; } }
 
 .tour-accordion__row--header {
   padding: 0;
@@ -2541,16 +2541,14 @@ select:-webkit-autofill:focus {
           flex: 1 1 auto; }
 
 .tour-accordion__left-col {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%; }
-  @media only screen and (max-width: 576px) {
+  width: 45rem; }
+  @media only screen and (max-width: 767px) {
     .tour-accordion__left-col {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 45%;
-              flex: 0 0 45%; } }
+              flex: 0 0 45%;
+      width: auto; } }
   .tour-accordion__row--header .tour-accordion__left-col {
-    padding-right: 4rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
@@ -2595,7 +2593,9 @@ select:-webkit-autofill:focus {
   font-weight: normal;
   font-size: 1.7rem;
   line-height: 2.3rem;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
   .tour-accordion__header--secondary-price {
     opacity: 0;
     color: rgba(18, 33, 77, 0.4);
@@ -2604,8 +2604,8 @@ select:-webkit-autofill:focus {
     font-weight: 900;
     font-style: italic;
     line-height: 2.9rem;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
     text-transform: uppercase; }
     @media only screen and (max-width: 767px) {
       .tour-accordion__header--secondary-price {
@@ -2643,7 +2643,8 @@ select:-webkit-autofill:focus {
   line-height: 2.7rem;
   border-radius: 1rem;
   color: var(--blue);
-  background-color: var(--gray-blue); }
+  background-color: var(--gray-blue);
+  margin-right: 2rem; }
   @media only screen and (max-width: 767px) {
     .tour-accordion__info-label {
       margin-left: 1rem;
@@ -2656,29 +2657,20 @@ select:-webkit-autofill:focus {
     .tour-accordion__info-label--mob-hide {
       display: none; } }
 
-.tour-accordion__chevron-icon-container {
-  width: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-  @media only screen and (max-width: 767px) {
-    .tour-accordion__chevron-icon-container {
-      width: auto;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      margin-left: 2rem; } }
+@media only screen and (max-width: 767px) {
+  .tour-accordion__chevron-icon-container {
+    width: auto;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; } }
 
 .tour-accordion__chevron-icon {
   width: 2rem;
   height: 0.9rem;
   fill: var(--primary-color);
-  -webkit-transition: opacity .2s, -webkit-transform .2s;
-  transition: opacity .2s, -webkit-transform .2s;
-  transition: transform .2s, opacity .2s;
-  transition: transform .2s, opacity .2s, -webkit-transform .2s; }
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s; }
   .js-accordion-item.active .tour-accordion__chevron-icon {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
@@ -2687,12 +2679,21 @@ select:-webkit-autofill:focus {
 
 .tour-accordion__right-col {
   min-width: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%; }
-  @media only screen and (max-width: 767px) {
-    .tour-accordion__right-col {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 968px) {
+    .tour-accordion__row--header .tour-accordion__right-col {
       display: none; } }
+  @media only screen and (max-width: 968px) {
+    .tour-accordion.active .tour-accordion__row--header .tour-accordion__right-col {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .tour-accordion__aside {
   display: -webkit-box;
@@ -2706,14 +2707,14 @@ select:-webkit-autofill:focus {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
-  -webkit-transition: max-height .4s ease-in-out, visibility 0.4s;
-  transition: max-height .4s ease-in-out, visibility 0.4s; }
+  -webkit-transition: max-height 0.4s ease-in-out, visibility 0.4s;
+  transition: max-height 0.4s ease-in-out, visibility 0.4s; }
   .active .tour-accordion__content-container {
     visibility: visible;
-    -webkit-transition: max-height .4s ease-in-out, visibility 0s;
-    transition: max-height .4s ease-in-out, visibility 0s; }
+    -webkit-transition: max-height 0.4s ease-in-out, visibility 0s;
+    transition: max-height 0.4s ease-in-out, visibility 0s; }
   .tour-accordion__content-container::before {
-    content: " ";
+    content: ' ';
     display: block;
     padding-bottom: 4rem; }
     @media only screen and (max-width: 767px) {
@@ -2740,7 +2741,7 @@ select:-webkit-autofill:focus {
         font-size: 1.4rem;
         line-height: 1.2; } }
     .tour-accordion__text-price::after {
-      content: "₽"; }
+      content: '₽'; }
     .tour-accordion__text-price-old {
       color: rgba(18, 33, 77, 0.4);
       font-size: 1.8rem;
@@ -2755,7 +2756,7 @@ select:-webkit-autofill:focus {
           font-size: 1.2rem;
           line-height: 1.2; } }
       .tour-accordion__text-price-old::after {
-        content: "₽"; }
+        content: '₽'; }
   @media only screen and (max-width: 767px) {
     .tour-accordion__text {
       font-size: 1.4rem;
@@ -2814,11 +2815,6 @@ select:-webkit-autofill:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; } }
-
-.active .tour-accordion__right-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 body {
   opacity: 0;
