@@ -76,6 +76,7 @@ function createSwiperDesktop (container, element) {
     updateOnWindowResize: true,
     speed: 700,
     effect: 'fade',
+    watchOverflow: true,
     navigation: {
       nextEl: element.querySelector('.slider__nav-button--next'),
       prevEl: element.querySelector('.slider__nav-button--prev'),

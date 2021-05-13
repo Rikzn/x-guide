@@ -417,10 +417,7 @@
     }
 
     
-    &:not(.swiper-slide-visible)
-    /* &.swiper-slide-prev,
-    &.swiper-slide-duplicate-prev:not(.swiper-slide-visible) */
-    /* &.hidden */ {
+    &:not(.swiper-slide-visible) {
       opacity: 0;
       transform: translateX(100%);
       visibility: hidden;

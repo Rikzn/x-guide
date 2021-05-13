@@ -10,6 +10,13 @@ function init() {
 
         const tabItems = Array.from(element.querySelectorAll('.js-tabs-item'));
 
+        if (!tabsNav.length || !tabItems.length) return;
+
+        
+
+
+
+
         function setActiveTab(index, event) {
             if (event) event.preventDefault();
 

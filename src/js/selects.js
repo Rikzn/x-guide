@@ -9,6 +9,8 @@ export default function Selects() {
             let select_settings = {
                 position: 'bottom',
                 searchEnabled: false,
+                shouldSortItems: false,
+                shouldSort: false,
                 itemSelectText: '',
                 classNames: {
                     containerOuter: 'choices selects__choices',

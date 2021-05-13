@@ -367,11 +367,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  padding-top: 10%;
+ 
 
-  @include breakpoint(mobile) {
-    margin-left: auto;
-  }
+  // @include breakpoint(mobile) {
+  //   margin-left: auto;
+  // }
 }
 
 .tour-accordion__link-button {

@@ -29,6 +29,7 @@ export default function Hero() {
             spaceBetween: 6,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+            threshold: 10,
             breakpoints: {
                 577: {
                     slidesPerView: 'auto',

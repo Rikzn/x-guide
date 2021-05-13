@@ -59,6 +59,7 @@ function createSwiperDesktop (container, element) {
     slidesPerView: 3,
     spaceBetween: 30,
     grabCursor: true,
+    watchOverflow: true,
     navigation: {
       nextEl: element.querySelector('.slider__nav-button--next'),
       prevEl: element.querySelector('.slider__nav-button--prev'),
