@@ -22,6 +22,7 @@ function init() {
           //spaceBetween: 20,
           speed: 700,
           watchSlidesVisibility: true,
+       
           breakpoints: {
               768: {
                 // allowTouchMove: isTouch,

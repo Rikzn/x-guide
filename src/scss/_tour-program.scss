@@ -40,7 +40,7 @@
 
   &__in {
     @include breakpoint (mobile) {
-      margin-top: -6rem;
+      margin-top: 3rem;
     }
   }
 
@@ -51,12 +51,13 @@
     
     @include breakpoint (mobile) {
       position: relative;
-      top: 321px;
+     
       -webkit-justify-content: flex-start;
       justify-content: flex-start;
       -ms-overflow-x: scroll;
       overflow-x: scroll;
       margin-bottom: 3rem;
+      margin-top: 3rem;
       margin-right: -2rem;
     }
   }  

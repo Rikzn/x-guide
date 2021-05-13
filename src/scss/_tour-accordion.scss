@@ -104,7 +104,7 @@
   }
 
   .tour-accordion__row--header & {
-    padding-right: 12rem;
+    padding-right: 4rem;
     justify-content: space-between;
 
     @include breakpoint(mobile) {
@@ -233,7 +233,11 @@
 
 .tour-accordion__chevron-icon-container {
   transition: transform 0.25s ease-in-out;
+  width: 20rem;
 
+  @include breakpoint(mobile) {
+    width: auto;
+  }
   .js-accordion-item.active & {
     transform: rotate(180deg);
   }
@@ -261,6 +265,7 @@
 .tour-accordion__aside {
   display: flex;
   justify-content: flex-end;
+ 
 }
 
 .tour-accordion__content-container {
@@ -304,6 +309,7 @@
 
     @include breakpoint(mobile) {
       font-size: 1.4rem;
+      line-height: 1.2;
     }
 
     &::after {
@@ -322,7 +328,7 @@
       @include breakpoint(mobile) {
         display: block;
         font-size: 1.2rem;
-        line-height: 0;
+        line-height: 1.2;
       }
 
       &::after {
