@@ -232,21 +232,27 @@
 }
 
 .tour-accordion__chevron-icon-container {
-  transition: transform 0.25s ease-in-out;
+  
   width: 20rem;
+  display: flex;
+  justify-content: flex-end;
 
   @include breakpoint(mobile) {
     width: auto;
+    flex-shrink: 0;
+    margin-left: 2rem;
   }
-  .js-accordion-item.active & {
-    transform: rotate(180deg);
-  }
+ 
 }
 
 .tour-accordion__chevron-icon {
   width: 2rem;
   height: 0.9rem;
   fill: var(--primary-color);
+  transition: transform .2s, opacity .2s;
+  .js-accordion-item.active & {
+    transform: rotate(180deg);
+  }
 
   .tour-accordion__button:hover+.tour-accordion__row & {
     opacity: 0.6;
