@@ -43,6 +43,10 @@ html {
         font-size: 5px;
     }
 
+    @media screen and (max-width: 768px) {
+        font-size:5.4px;
+    }
+
     @include breakpoint(mobile) {
         font-size: 10px;
     }
