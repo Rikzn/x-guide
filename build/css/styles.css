@@ -1284,12 +1284,12 @@ button.swiper-pagination-bullet {
 :root {
   --max-container-width: 132rem;
   --content-padding: 2rem;
-  --primary-color: #12214D;
-  --blue: #295F98;
+  --primary-color: #12214d;
+  --blue: #295f98;
   --gray: #333333;
-  --white: #FFFFFF;
-  --gray-blue: #EDF3FB;
-  --soft-red: #EA7464;
+  --white: #ffffff;
+  --gray-blue: #edf3fb;
+  --soft-red: #ea7464;
   --jost: 'Jost', sans-serif;
   --nunito: 'Nunito', sans-serif;
   --rhythmic: 'Rhythmic RUS'; }
@@ -1424,8 +1424,8 @@ button {
 a {
   background-color: transparent;
   text-decoration: none;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   a:link, a:visited {
     color: inherit; }
 
@@ -1433,8 +1433,8 @@ svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   fill: currentColor;
-  -webkit-transition: fill .2s;
-  transition: fill .2s; }
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s; }
 
 img {
   border-style: none;
@@ -1456,7 +1456,8 @@ table {
 th {
   font-weight: 400; }
 
-td, th {
+td,
+th {
   text-align: left;
   vertical-align: top; }
 
@@ -1518,6 +1519,9 @@ a:not([href]) {
   height: 0;
   max-height: initial !important;
   overflow: hidden; }
+
+.ya-share2 {
+  z-index: 50; }
 
 ::-moz-selection {
   color: white;

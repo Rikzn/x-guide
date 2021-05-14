@@ -68,8 +68,8 @@ function createSwiperMobile(container, element) {
         loop: true,
         slidesPerView: 'auto',
         grabCursor: true,
-        loopedSlides: 7,
-		loopAdditionalSlides: 3
+        loopedSlides: 12,
+		loopAdditionalSlides: 6
     });
 
     return slider;

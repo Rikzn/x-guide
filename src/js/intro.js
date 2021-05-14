@@ -83,10 +83,9 @@ function init () {
     { opacity: 1,
       duration: 0.25 },
   )
-  .fromTo(
+  .from(
     SearchToursForm,
-    { yPercent: 0 },
-    { yPercent: -50,
+    { yPercent: 50,
       duration: 1 },
     '<',
   );
