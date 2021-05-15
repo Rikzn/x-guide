@@ -35,8 +35,19 @@
     font-family: 'Nunito', sans-serif;
     position: relative;
 
+
+    &--transparent {
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
+
+        &--transparent {
+            padding: 0;
+        }
     }
 }
 
@@ -132,6 +143,7 @@ textarea.modal__form-input {
     left: 100%;
     bottom: 100%;
     margin-left: 0.7rem;
+    z-index: 30;
 
     @include breakpoint(mobile) {
         left: auto;

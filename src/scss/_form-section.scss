@@ -391,11 +391,12 @@ textarea.form-section__form-input {
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  transition: 0.35s ease-in-out;
+  transition: opacity .4s, visibility 0s linear .4s;
 
   .js-success & {
     opacity: 1;
     visibility: visible;
+    transition: opacity .4s, visibility .4s;
   }
 }
 // .form-modal--hidden {

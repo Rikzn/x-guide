@@ -172,6 +172,7 @@
         @include breakpoint(mobile) {
             font-size: 1.2rem;
             position: relative;
+            padding-right: 2rem;
         }
 
         .grid-catalog__item-info-icon {

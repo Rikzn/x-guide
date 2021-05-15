@@ -2617,7 +2617,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .tour-accordion__header--secondary-price {
         font-size: 1.2rem;
-        position: relative; } }
+        position: relative;
+        padding-right: 2rem; } }
     .tour-accordion__header--secondary-price .grid-catalog__item-info-icon {
       position: relative;
       width: 1.6rem;
@@ -5440,17 +5441,11 @@ body {
   position: relative;
   vertical-align: middle;
   cursor: pointer;
-  pointer-events: all; }
+  pointer-events: all;
+  bottom: .15rem; }
   @media only screen and (max-width: 767px) {
     .grid-catalog__item-info-container {
       margin-left: 0; } }
-  @media only screen and (max-width: 370px) {
-    .grid-catalog__item-info-container {
-      margin: auto;
-      margin-left: 0.5rem;
-      position: absolute;
-      top: 0;
-      bottom: 0; } }
 
 .grid-catalog__item-info-click-target {
   display: none;
@@ -9849,11 +9844,13 @@ textarea.form-section__form-input {
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out; }
+  -webkit-transition: opacity .4s, visibility 0s linear .4s;
+  transition: opacity .4s, visibility 0s linear .4s; }
   .js-success .form-section__form-modal {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    -webkit-transition: opacity .4s, visibility .4s;
+    transition: opacity .4s, visibility .4s; }
 
 .form-section__form-modal-header {
   font-family: var(--jost);
@@ -13362,9 +13359,15 @@ textarea.form-section__form-input {
   padding: 4rem;
   font-family: 'Nunito', sans-serif;
   position: relative; }
+  .modal__inner--transparent {
+    background: transparent;
+    border-radius: 0;
+    padding: 0; }
   @media only screen and (max-width: 767px) {
     .modal__inner {
-      padding: 2rem; } }
+      padding: 2rem; }
+      .modal__inner--transparent {
+        padding: 0; } }
 
 .modal__heading {
   margin-bottom: 3rem;
@@ -13455,7 +13458,8 @@ textarea.modal__form-input {
   position: absolute;
   left: 100%;
   bottom: 100%;
-  margin-left: 0.7rem; }
+  margin-left: 0.7rem;
+  z-index: 30; }
   @media only screen and (max-width: 767px) {
     .modal__close {
       left: auto;

@@ -530,19 +530,14 @@
   vertical-align: middle;
   cursor: pointer;
   pointer-events: all;
+  bottom: .15rem;
   // height: 0.7rem;
 
   @include breakpoint(mobile) {
     margin-left: 0;
   }
 
-  @include breakpoint(supersmall-mobile) {
-    margin: auto;
-    margin-left: 0.5rem;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
+  
 }
 .grid-catalog__item-info-click-target {
   display: none;
