@@ -259,6 +259,11 @@ a:not([href]) {
     z-index: 50;
 }
 
+.button-lock-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);
