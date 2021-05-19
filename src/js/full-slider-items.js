@@ -1,143 +1,135 @@
 import { Swiper, Autoplay, Navigation, EffectFade, Pagination } from 'swiper';
+import lowSlidesAmountFix from './lowSlidesAmountFix';
 Swiper.use([Autoplay, Navigation, EffectFade, Pagination]);
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
-let itIsMobile, resizeTimer;
-const instances = [];
 const elements = Array.from(document.querySelectorAll('.js-full-small-slider'));
 
-export default function FullSliderItems() {
-    let speed = 700;
-
-    itIsMobile = detectDevice();
-    createAllSwipers();
-
-    window.addEventListener('resize', resizeHandler);
-}
-
-function resizeHandler() {
-    window.clearTimeout(resizeTimer);
-    window.setTimeout(checkDeviceWidth, 100);
-}
-
-function checkDeviceWidth() {
-    let newItIsMobile = detectDevice();
-
-    if (itIsMobile === newItIsMobile) return;
-
-    itIsMobile = newItIsMobile;
-
-    destroyAllSwipers();
-    window.setTimeout(createAllSwipers, 2000);
-}
-
-function detectDevice() {
-    return window.matchMedia('(max-width: 767px)').matches;
-}
-
-function destroyAllSwipers() {
-    instances.forEach(swiper => {
-        swiper.destroy();
-    });
-
-    instances.length = 0;
-}
-
-function createAllSwipers() {
+export default function fullSmallSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
+        const swiperSlides = Array.from(element.querySelectorAll('.swiper-slide'));
 
-        instances.push(createSwiper(container, element));
+        lowSlidesAmountFix(swiperSlides, 768);
+
+        const options = {
+            spaceBetween: 10,
+            watchOverflow: true,
+            slidesPerView: 'auto',
+            loop: true,
+            loopedSlides: 6,
+            centeredSlides: true,
+            loopAdditionalSlides: 6,
+            breakpoints: {
+                768: {
+                    spaceBetween: 20
+                }
+            }
+        };
+
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            options.speed = 3500;
+            options.autoplay = {
+                delay: 0,
+                disableOnInteraction: true
+            };
+
+            element.classList.add('slider-with-autoplay');
+        }
+        const slider = new Swiper(container, options);
+
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            element.addEventListener('mouseenter', () => {
+                slider.autoplay.stop();
+                console.log('Autoplay stopped');
+            });
+            element.addEventListener('mouseleave', () => {
+                slider.autoplay.start();
+                console.log('Autoplay started');
+            });
+        }
     });
 }
 
-function createSwiper(container, element) {
-    return itIsMobile ? createSwiperMobile(container, element) : createSwiperDesktop(container, element);
-}
+// export default function FullSliderItems() {
+//     let speed = 700;
 
-function createSwiperMobile(container, element) {
-    let slider;
+//     itIsMobile = detectDevice();
+//     createAllSwipers();
 
-    slider = new Swiper(container, {
-        updateOnWindowResize: true,
-        spaceBetween: 10,
-        centeredSlides: true,
-        loop: true,
-        slidesPerView: 'auto',
-        grabCursor: true,
-        loopedSlides: 12,
-		loopAdditionalSlides: 6
-    });
+//     window.addEventListener('resize', resizeHandler);
+// }
 
-    return slider;
-}
+// function resizeHandler() {
+//     window.clearTimeout(resizeTimer);
+//     window.setTimeout(checkDeviceWidth, 100);
+// }
 
-function createSwiperDesktop(container, element) {
-    const wrapper = element.querySelector('.swiper-wrapper');
+// function checkDeviceWidth() {
+//     let newItIsMobile = detectDevice();
 
-    const slider = new Swiper(container, {
-        updateOnWindowResize: true,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-        slidesPerView: 'auto',
-        grabCursor: true
-    });
+//     if (itIsMobile === newItIsMobile) return;
 
-    if (window.matchMedia(`(max-width: ${767}px)`).matches) return;
+//     itIsMobile = newItIsMobile;
 
-    let autoplayIsEnabled = false,
-        timer = 0;
+//     destroyAllSwipers();
+//     window.setTimeout(createAllSwipers, 2000);
+// }
 
-    ScrollTrigger.create({
-        trigger: container,
-        start: `top bottom-=${container.clientHeight}`,
-        end: `top top-=${container.clientHeight / 2}`,
-        onEnter: autoplayEnable,
-        onEnterBack: autoplayEnable,
-        onLeave: autoplayDisable,
-        onLeaveBack: autoplayDisable
-    });
+// function detectDevice() {
+//     return window.matchMedia('(max-width: 767px)').matches;
+// }
 
-    function arrowClickHandler(changeSlide) {
-        window.clearTimeout(timer);
-        timer = window.setTimeout(autoplayEnable, 3000);
-        if (!autoplayIsEnabled) return;
-        changeSlide();
-        autoplayDisable();
-    }
+// function destroyAllSwipers() {
+//     instances.forEach(swiper => {
+//         swiper.destroy();
+//     });
 
-    function autoplayEnable() {
-        if (autoplayIsEnabled) return;
+//     instances.length = 0;
+// }
 
-        slider.params.autoplay.delay = 0;
-        slider.params.autoplay.disableOnInteraction = false;
+// function createAllSwipers() {
+//     elements.forEach(element => {
+//         const container = element.querySelector('.swiper-container');
 
-        slider.params.speed = 3500;
-        slider.params.allowTouchMove = false;
+//         instances.push(createSwiper(container, element));
+//     });
+// }
 
-        wrapper.classList.add('swiper-wrapper--autoplay');
-        slider.autoplay.start();
-        slider.update(true);
+// function createSwiper(container, element) {
+//     return itIsMobile ? createSwiperMobile(container, element) : createSwiperDesktop(container, element);
+// }
 
-        autoplayIsEnabled = true;
-    }
+// function createSwiperMobile(container, element) {
+//     let slider;
 
-    function autoplayDisable() {
-        if (!autoplayIsEnabled) return;
+//     slider = new Swiper(container, {
+//         updateOnWindowResize: true,
+//         spaceBetween: 10,
+//         centeredSlides: true,
+//         loop: true,
+//         slidesPerView: 'auto',
+//         grabCursor: true,
+//         loopedSlides: 12,
+// 		loopAdditionalSlides: 6
+//     });
 
-        slider.params.speed = 700;
-        slider.params.allowTouchMove = true;
+//     return slider;
+// }
 
-        wrapper.classList.remove('swiper-wrapper--autoplay');
-        slider.autoplay.stop();
-        slider.update(true);
+// function createSwiperDesktop(container, element) {
+//     const wrapper = element.querySelector('.swiper-wrapper');
 
-        autoplayIsEnabled = false;
-    }
+//     const slider = new Swiper(container, {
+//         updateOnWindowResize: true,
+//         spaceBetween: 20,
+//         centeredSlides: true,
+//         loopedSlides : 24,
+//         loopAdditionalSlides: 12,
+//         loop: true,
+//         slidesPerView: 'auto',
+//         grabCursor: true
+//     });
 
-    return slider;
-}
+//     if (window.matchMedia(`(max-width: ${767}px)`).matches) return;
+
+// }

@@ -68,6 +68,9 @@ export default function Menu() {
     if (window.matchMedia('(max-width: 767px)').matches) return;
 
     const navDropdowns = Array.from(document.querySelectorAll('.js-nav-dropdown'));
+    const logo = document.querySelector('.page-header__logo');
+
+   
 
     navDropdowns.forEach(dropdown => {
         dropdown.addEventListener('mouseleave', event => {
@@ -75,8 +78,11 @@ export default function Menu() {
             if (!event.relatedTarget.closest('.page-header__nav')) {
                 navDropdowns.forEach(item => item.classList.remove('dropdown-shown'));
                 menu.classList.remove('with-open-dropdown');
+                document.body.classList.remove('dropdown-menu-shown')
                 unlockScroll();
             }
+
+            
         });
 
         dropdown.addEventListener('mouseenter', () => {
@@ -84,6 +90,14 @@ export default function Menu() {
             dropdown.classList.add('dropdown-shown');
             menu.classList.add('with-open-dropdown');
             lockScroll(dropdown);
+            document.body.classList.add('dropdown-menu-shown')
         });
+       
+    });
+
+    logo.addEventListener('mouseenter', () => {
+        navDropdowns.forEach(item => item.classList.remove('dropdown-shown'));
+        menu.classList.remove('with-open-dropdown');
+        document.body.classList.remove('dropdown-menu-shown')
     });
 }

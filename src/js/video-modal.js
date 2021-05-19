@@ -1,6 +1,7 @@
 import { lockScroll, unlockScroll } from "./scrollBlocker";
 
 export default function VideoModal () {
+  
   const Modal = document.querySelector('.video-modal');
   if (!Modal)
     return;

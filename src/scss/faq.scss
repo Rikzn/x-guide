@@ -274,4 +274,9 @@
 .faq__block-in {
   width: 30%;
   flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    flex-grow: 0;
+  }
 }

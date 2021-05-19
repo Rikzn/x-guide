@@ -144,10 +144,17 @@
     border: 1px solid rgba($color: #12214D, $alpha: 0.5);
   }
 
+  .dropdown-menu-shown .page-header & {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+
   &:hover, &:focus {
     background-color: var(--blue);
-    border-color: var(--blue);
+    border-color: var(--blue) !important;
     color: white;
+
+
   }
 
   @include breakpoint(mobile) {

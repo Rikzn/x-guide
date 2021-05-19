@@ -31,7 +31,7 @@
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.9.2",
     "picturefill": "^3.0.3",
-    "swiper": "^6.4.5"
+    "swiper": "^6.4.15"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

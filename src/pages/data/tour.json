@@ -49,22 +49,6 @@
     {
       "img": "./img/small-slider/slide2.jpg",
       "video": "CNpqVWhgdZs"
-    },
-    {
-      "img": "./img/small-slider/slide3.jpg",
-      "video": "CNpqVWhgdZs"
-    },
-    {
-      "img": "./img/small-slider/slide4.jpg",
-      "video": "CNpqVWhgdZs"
-    },
-    {
-      "img": "./img/small-slider/slide5.jpg",
-      "video": "CNpqVWhgdZs"
-    },
-    {
-      "img": "./img/small-slider/slide6.jpg",
-      "video": "CNpqVWhgdZs"
     }
   ],
   "Blog": ["./img/guide-blog-img-1.jpg", "./img/guide-blog-img-2.jpg", "./img/guide-blog-img-3.jpg"],

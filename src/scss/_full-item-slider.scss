@@ -1,7 +1,16 @@
 .full-item-slider {
 	margin-top: 2rem;
 	margin-bottom: 1.5rem;
-	overflow: hidden;
+	overflow: visible;
+
+
+
+	&.slider-with-autoplay .swiper-wrapper {
+		transition-timing-function: linear !important;
+	}
+	.swiper-container {
+		overflow: visible;
+	}
 	
 	@include breakpoint (mobile) {
 		margin-top: 7rem;
@@ -25,7 +34,7 @@
 			width: 9.6rem;
 			height: 9.6rem;
 			margin: auto;
-			opacity: 0;
+			
 			transition: opacity 0.3s ease;
 		}
 
@@ -40,11 +49,7 @@
 			z-index: 10;
 		}
 
-		&:hover, &:focus {
-			.full-item-slider__item-video-icn {
-				opacity: 1;
-			}
-		}
+		
 
 		@include breakpoint (mobile) {
 			width: 16.5rem;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Swiper 6.5.9
+ * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -8,7 +8,7 @@
  *
  * Released under the MIT License
  *
- * Released on: April 30, 2021
+ * Released on: February 18, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -185,7 +185,7 @@
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
   display: -webkit-box;
@@ -319,7 +319,7 @@ button.swiper-pagination-bullet {
           box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none; }
+  appearance: none; }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer; }
@@ -603,7 +603,7 @@ button.swiper-pagination-bullet {
   bottom: 0;
   right: 0;
   -webkit-filter: blur(50px);
-          filter: blur(50px); }
+  filter: blur(50px); }
 
 .swiper-container-flip {
   overflow: visible; }
@@ -3201,6 +3201,8 @@ body {
   .page-header--mini .logo__link-text,
   .header--questions .logo__link-text {
     fill: var(--primary-color); }
+  .dropdown-menu-shown .logo__link-text {
+    fill: white !important; }
   @media only screen and (max-width: 767px) {
     .logo__link-text {
       max-width: 8.7rem;
@@ -3351,7 +3353,8 @@ body {
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  display: block; }
 
 .menu-open .nav-links-accordion + .nav-links-link {
   display: none; }
@@ -3362,6 +3365,13 @@ body {
   opacity: 1 !important; }
   .nav-links-link:not(.dropdown-shown):hover {
     color: rgba(255, 255, 255, 0.7); }
+  .header--questions .nav-links-link:not(.dropdown-shown):hover,
+  .page-header--mini .nav-links-link:not(.dropdown-shown):hover {
+    color: rgba(18, 33, 77, 0.7); }
+  .dropdown-menu-shown .nav-links-link {
+    color: white !important; }
+    .dropdown-menu-shown .nav-links-link:not(.dropdown-shown):hover {
+      color: rgba(255, 255, 255, 0.7) !important; }
 
 .nav-links-link-inner {
   display: block;
@@ -3370,14 +3380,14 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    height: .2rem;
+    height: 0.2rem;
     width: 100%;
     top: 100%;
-    background-color: #EA7464;
-    border-radius: .5rem;
+    background-color: #ea7464;
+    border-radius: 0.5rem;
     opacity: 0;
-    -webkit-transition: opacity .2s;
-    transition: opacity .2s;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
     margin-top: 1rem; }
   .dropdown-shown .nav-links-link-inner::before {
     opacity: 1; }
@@ -3510,6 +3520,8 @@ body {
   .page-header--mini .phone-number__icon,
   .header--questions .phone-number__icon {
     fill: var(--primary-color); }
+  .dropdown-menu-shown .phone-number__icon {
+    fill: white !important; }
   @media only screen and (max-width: 767px) {
     .phone-number__icon {
       display: inline-block; } }
@@ -3941,6 +3953,10 @@ body {
     background-color: rgba(18, 33, 77, 0.02);
     border: 1px solid var(--primary-color);
     color: var(--primary-color); }
+  .dropdown-menu-shown .page-header__search-form-input {
+    border: 1px solid var(--white) !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important; }
   @media only screen and (max-width: 1600px) {
     .page-header__search-form-input {
       width: 100%; } }
@@ -4057,6 +4073,8 @@ body {
   .page-header--mini .page-header__search-button-icon,
   .header--questions .page-header__search-button-icon {
     fill: var(--primary-color); }
+  .dropdown-menu-shown .page-header__search-button-icon {
+    fill: white !important; }
   @media only screen and (max-width: 767px) {
     .page-header__search-button-icon {
       width: 2rem;
@@ -10887,6 +10905,12 @@ textarea.form-section__form-input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .faq__block-in {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
 
 .not {
   position: fixed;
@@ -11657,7 +11681,12 @@ textarea.form-section__form-input {
 .full-item-slider {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  overflow: hidden; }
+  overflow: visible; }
+  .full-item-slider.slider-with-autoplay .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important; }
+  .full-item-slider .swiper-container {
+    overflow: visible; }
   @media only screen and (max-width: 767px) {
     .full-item-slider {
       margin-top: 7rem; } }
@@ -11678,7 +11707,6 @@ textarea.form-section__form-input {
       width: 9.6rem;
       height: 9.6rem;
       margin: auto;
-      opacity: 0;
       -webkit-transition: opacity 0.3s ease;
       transition: opacity 0.3s ease; }
     .full-item-slider__item-video {
@@ -11690,8 +11718,6 @@ textarea.form-section__form-input {
       width: 100%;
       height: 100%;
       z-index: 10; }
-    .full-item-slider__item:hover .full-item-slider__item-video-icn, .full-item-slider__item:focus .full-item-slider__item-video-icn {
-      opacity: 1; }
     @media only screen and (max-width: 767px) {
       .full-item-slider__item {
         width: 16.5rem;
@@ -12807,9 +12833,12 @@ textarea.form-section__form-input {
   .page-header--mini .phone-number__phone-link,
   .header--questions .phone-number__phone-link {
     border: 1px solid rgba(18, 33, 77, 0.5); }
+  .dropdown-menu-shown .page-header .phone-number__phone-link {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white; }
   .phone-number__phone-link:hover, .phone-number__phone-link:focus {
     background-color: var(--blue);
-    border-color: var(--blue);
+    border-color: var(--blue) !important;
     color: white; }
   @media only screen and (max-width: 767px) {
     .phone-number__phone-link {
