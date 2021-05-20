@@ -321,6 +321,16 @@
 }
 .search-tours-form__select-input-layout {
     position: relative;
+
+
+    .choices__list--dropdown {
+        @include breakpoint(mobile) {
+            position: relative;
+            top: auto;
+            margin-top: 0;
+            
+        }
+    }
 }
 .search-tours-form__input--select {
     margin: 0;

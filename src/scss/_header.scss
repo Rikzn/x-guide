@@ -613,6 +613,9 @@ body {
     transition: color 0.2s !important;
     opacity: 1 !important;
 
+
+   
+
     &:not(.dropdown-shown) {
         &:hover {
             color: rgba(white, 0.7);
@@ -635,6 +638,11 @@ body {
                 color: rgba(white, 0.7) !important;
             }
         }
+    }
+
+    &.active {
+        color: var(--soft-red) !important;
+        pointer-events: none;
     }
 }
 

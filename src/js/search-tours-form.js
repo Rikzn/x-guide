@@ -65,7 +65,9 @@ function init() {
     window.tourFiltersSelects = [];
 
     SearchToursFormSelectInputs.forEach(input => {
-        const choices = new Choices(input, {
+
+
+        const options = {
             position: 'bottom',
             searchEnabled: false,
             itemSelectText: '',
@@ -77,7 +79,10 @@ function init() {
                 list: 'choices__list search-tours-form__select-option-list',
                 item: 'choices__item search-tours-form__select-option'
             }
-        });
+        }
+
+        
+        const choices = new Choices(input, options);
 
         window.tourFiltersSelects.push(choices);
 

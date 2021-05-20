@@ -206,7 +206,7 @@
   @include breakpoint(mobile) {
     columns: 2;
     overflow-y: scroll;
-    height: 300px;
+    max-height: 30rem;
     display: flex;
     flex-direction: column;
     &:-webkit-scrollbar {
