@@ -30,6 +30,7 @@ import MediaModals from './mediaModals';
 import Modals from './modals';
 import FileUpload from './fileUpload';
 import ReviewFormTabs from './reviewFormTabs';
+import anchorLinks from './anchorLinks';
 // import AlbumsGriid from './albums';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Modals();
     FileUpload();
     ReviewFormTabs();
+    anchorLinks();
     // AlbumsGriid();
 });
 
