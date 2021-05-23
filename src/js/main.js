@@ -23,7 +23,6 @@ import PhoneMask from './phoneMask';
 import Validation from './validation';
 import VideoModal from './video-modal';
 import TourInfo from './tour-info';
-import Map from './map';
 import BlogSlider from './blog-slider';
 import BlogSliderItems from './blog-slider-items';
 import MediaModals from './mediaModals';
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Validation();
     VideoModal();
     TourInfo();
-    Map();
+    // Map();
     BlogSlider();
     BlogSliderItems();
     MediaModals();

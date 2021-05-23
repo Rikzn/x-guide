@@ -3484,7 +3484,10 @@ body {
   transition: 0.15s ease-in-out, color 0s, margin 0s; }
   @media only screen and (max-width: 767px) {
     .page-header__phone-number {
-      right: 4rem; } }
+      right: auto;
+      position: static;
+      margin: 2rem 0 3rem;
+      margin-left: 1rem; } }
   .menu-open .page-header__phone-number {
     position: static;
     margin: 2rem 0 3rem;
@@ -3494,7 +3497,16 @@ body {
   .phone-number__phone-link.page-header__phone-number-link {
     padding-left: 1rem;
     padding-right: 1rem;
-    border: none !important; } }
+    border: none !important;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem); } }
 
 .menu-open .phone-number__phone-link.page-header__phone-number-link {
   padding-left: 2.3rem;
@@ -3509,7 +3521,8 @@ body {
 
 @media only screen and (max-width: 767px) {
   .phone-number__phone-link-text {
-    display: none; } }
+    display: none;
+    display: inline; } }
 
 .menu-open .phone-number__phone-link-text {
   display: inline; }
@@ -3527,9 +3540,7 @@ body {
     fill: white !important; }
   @media only screen and (max-width: 767px) {
     .phone-number__icon {
-      display: inline-block; } }
-  .menu-open .phone-number__icon {
-    display: none; }
+      display: none; } }
 
 .page-header__phone-number--fadeout {
   -webkit-transform: translateX(3rem);

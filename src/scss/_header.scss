@@ -767,7 +767,11 @@ body {
     transition: 0.15s ease-in-out, color 0s, margin 0s;
 
     @include breakpoint(mobile) {
-        right: 4rem;
+        right: auto;
+
+        position: static;
+        margin: 2rem 0 3rem;
+        margin-left: 1rem;
     }
 
     .menu-open & {
@@ -782,6 +786,12 @@ body {
         padding-left: 1rem;
         padding-right: 1rem;
         border: none !important;
+
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+        transition: transform 0.25s ease-in-out;
+        transform: translateY(3rem);
     }
 
     .menu-open & {
@@ -796,6 +806,8 @@ body {
 .phone-number__phone-link-text {
     @include breakpoint(mobile) {
         display: none;
+
+        display: inline;
     }
 
     .menu-open & {
@@ -820,12 +832,10 @@ body {
     }
 
     @include breakpoint(mobile) {
-        display: inline-block;
-    }
-
-    .menu-open & {
         display: none;
     }
+
+   
 }
 
 .page-header__phone-number--fadeout {
