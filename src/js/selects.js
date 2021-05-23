@@ -6,6 +6,7 @@ export default function Selects() {
     const initializeSelects = () => {
         
         const SelectsForChoices = document.querySelectorAll('.js-selects-for-choices').forEach(select => {
+            if (select.classList.contains('choices__input')) return;
             let select_settings = {
                 position: 'bottom',
                 searchEnabled: false,
