@@ -10799,7 +10799,7 @@ textarea.form-section__form-input {
       font-size: 2.5rem;
       color: var(--primary-color);
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
       margin-top: 5rem;
       opacity: 0.45; }
       @media only screen and (max-width: 767px) {
@@ -10879,10 +10879,10 @@ textarea.form-section__form-input {
 .faq__block-in-list .faq__item:last-child {
   border-bottom: none; }
 
-.faq__block-in-list .faq__item:nth-child(-n+2) {
+.faq__block-in-list .faq__item:nth-child(1) {
   padding-top: 0; }
   @media only screen and (max-width: 767px) {
-    .faq__block-in-list .faq__item:nth-child(-n+2) {
+    .faq__block-in-list .faq__item:nth-child(1) {
       padding-top: 1.8rem; } }
 
 @media only screen and (max-width: 767px) {
