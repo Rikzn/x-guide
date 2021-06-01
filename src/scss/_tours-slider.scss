@@ -381,6 +381,10 @@
 .tours-slider__item-specifications {
   margin-top: 2.4rem;
   padding-bottom: 2.2rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 .tours-slider__item-specification {
   margin-top: 0.6rem;

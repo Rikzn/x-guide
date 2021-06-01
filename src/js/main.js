@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerNav = document.querySelector('.page-header__nav');
     window.addEventListener('scroll', () => {
         let scrollTop = window.scrollY;
-        let heroCenter = hero.offsetHeight / 2;
+        let heroCenter = 30;
         console.log(heroCenter);
         (scrollTop >= heroCenter) ? headerNav.classList.add('fixed') : headerNav.classList.remove('fixed')
     });
