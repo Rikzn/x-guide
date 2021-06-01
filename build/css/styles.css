@@ -7546,6 +7546,14 @@ body {
 .hero__main-slider .swiper-container {
   z-index: 0; }
 
+.tours-slider__right-col {
+  position: relative; }
+  .tours-slider__right-col .tours-slider__slider-nav-buttons-container {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 2rem; }
+
 .about {
   overflow: hidden;
   background-color: var(--gray-blue); }
