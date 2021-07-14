@@ -32,7 +32,7 @@ export default function Selects() {
                   ${data.placeholder ? classNames.placeholder : ''}"
                   data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} 
                   ${data.disabled ? 'aria-disabled="true"' : ''}>
-                  ${!data.placeholder && data.value ? '<img src=img/icons/' + data.value + '-icn.svg>' : ''}
+                  ${!data.placeholder && data.value ? '<img src=/local/templates/x-guide/img/icons/' + data.value + '-icn.svg>' : ''}
                   <span class="chose__item-text">${data.label}</span>
                 </div>
               `);
@@ -46,7 +46,7 @@ export default function Selects() {
                   data-select-text="${this.config.itemSelectText}" data-choice 
                   ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} 
                   data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
-                  ${!data.placeholder && data.value ? '<img src=img/icons/' + data.value + '-icn.svg>' : ''}
+                  ${!data.placeholder && data.value ? '<img src=/local/templates/x-guide/img/icons/' + data.value + '-icn.svg>' : ''}
                   <span class="choises__item-text">${data.label}</span>
                 </div>
               `);

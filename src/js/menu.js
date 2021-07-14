@@ -73,6 +73,7 @@ export default function Menu() {
    
 
     navDropdowns.forEach(dropdown => {
+        if (!logo) return;
         dropdown.addEventListener('mouseleave', event => {
             console.log('Mouseleave target', event.relatedTarget);
             if (!event.relatedTarget.closest('.page-header__nav')) {
@@ -81,8 +82,6 @@ export default function Menu() {
                 document.body.classList.remove('dropdown-menu-shown')
                 unlockScroll();
             }
-
-            
         });
 
         dropdown.addEventListener('mouseenter', () => {

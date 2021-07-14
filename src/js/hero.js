@@ -20,9 +20,9 @@ export default function Hero() {
             }
         });
 
-        const thumbsSliderContainer = element.querySelector('.js-hero-thumbs-slider');
+        const thumbsSliderContainer = element.querySelector('.js-hero-thumbs-slider .swiper-container');
 
-        const thumbsSlider = new Swiper(thumbsSliderContainer.querySelector('.swiper-container'), {
+        const thumbsSlider = new Swiper(thumbsSliderContainer, {
             updateOnWindowResize: true,
             speed: speed,
             slidesPerView: 5,

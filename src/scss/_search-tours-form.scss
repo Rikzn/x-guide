@@ -10,14 +10,22 @@
     opacity: 0;
     transform: translateY(-50%);
 
-    @include breakpoint(mobile) {
-        margin-top: -3.4rem;
-        border-radius: 3.4rem;
-        background-color: var(--white);
-        box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
-        transform: none !important;
+    &:not(.search-tours-form__accordion--simple) {
+        @include breakpoint(mobile) {
+            margin-top: -3.4rem;
+            border-radius: 3.4rem;
+            background-color: var(--white);
+            box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
+            transform: none !important;
+            opacity: 1;
+        }
+    }
+
+    &.search-tours-form__accordion--simple {
         opacity: 1;
     }
+
+   
 }
 .search-tours-form__mobile-button {
     display: none;
@@ -165,22 +173,19 @@
     background-color: var(--white);
     box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
 
-    @include breakpoint(mobile) {
-        height: auto;
-        padding: 1rem 0;
-        position: relative;
-        flex-direction: column;
-        border-radius: unset;
-        background-color: unset;
-        box-shadow: unset;
-        // transform: none !important;
-        // transition: opacity 0.15s 0.1s ease-in-out;
-
-        // .active & {
-        //   opacity: 1;
-        //   transition: opacity 0.3s 0.2s ease-in-out;
-        // }
+    &:not(.search-tours-form--simple) {
+        @include breakpoint(mobile) {
+            height: auto;
+            padding: 1rem 0;
+            position: relative;
+            flex-direction: column;
+            border-radius: unset;
+            background-color: unset;
+            box-shadow: unset;
+        }
     }
+
+   
 }
 .search-tours-form__group {
     width: 25%;
@@ -221,18 +226,22 @@
     transition: 0.15s ease-in-out;
     transition-property: background-color, opacity;
 
-    @include breakpoint(mobile) {
-        width: calc(100% - 5.2rem);
-        height: auto;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        padding: 1.6rem 0;
-        position: relative;
-        right: unset;
-        border-radius: 1.1rem;
-        background-color: var(--soft-red);
-        transition-property: opacity;
+    &:not(.search-tours-form__submit--simple) {
+        @include breakpoint(mobile) {
+            width: calc(100% - 5.2rem);
+            height: auto;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            padding: 1.6rem 0;
+            position: relative;
+            right: unset;
+            border-radius: 1.1rem;
+            background-color: var(--soft-red);
+            transition-property: opacity;
+        }
     }
+
+    
 
     &:hover {
         background-color: var(--white);
@@ -261,6 +270,10 @@
 
     @include breakpoint(mobile) {
         display: none;
+
+        .search-tours-form__submit--simple & {
+            display: block;
+        }
     }
 }
 .search-tours-form__submit-text {
@@ -275,6 +288,10 @@
 
     @include breakpoint(mobile) {
         display: inline-block;
+
+        .search-tours-form__submit--simple & {
+            display: none;
+        }
     }
 }
 .search-tours-form__label {
@@ -644,5 +661,12 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+
+.search-tours-form__input {
+    @include placeholder {
+        color: #e5e5e5;
     }
 }

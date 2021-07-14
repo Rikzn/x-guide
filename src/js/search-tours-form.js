@@ -19,8 +19,9 @@ function init() {
 
     const PickerOption = {
         // showDropdowns: true,
-        endDate: date,
-        minDate: new Date(),
+        // endDate: date,
+        // minDate: new Date(),
+        autoUpdateInput: false,
         buttonClasses: 'search-tours-form__date-button',
         applyButtonClasses: 'search-tours-form__date-button--apply',
         cancelButtonClasses: 'search-tours-form__date-button--cancel',
@@ -45,9 +46,21 @@ function init() {
     $(DateRangeInput).on('show.daterangepicker', toggleDateRangeInput);
     $(DateRangeInput).on('hide.daterangepicker', toggleDateRangeInput);
 
+    $(DateRangeInput).on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('D MMMM') + ' - ' + picker.endDate.format('D MMMM'));
+    });
+  
+    $(DateRangeInput).on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
     applyButton = document.querySelector('.search-tours-form__date-button--apply');
 
-    DateRangeInput.addEventListener('click', clickHandler);
+    if (DateRangeInput) {
+        DateRangeInput.addEventListener('click', clickHandler);
+    }
+
+   
 
     function clickHandler(e) {
         if (!DatePickerIsShown) {
@@ -86,17 +99,21 @@ function init() {
 
         window.tourFiltersSelects.push(choices);
 
-        input.addEventListener(
-            'change',
-            event => {
-                const input = event.target;
-                const formGroup = input.closest('.search-tours-form__group');
-                const placeholder = formGroup.querySelector('.search-tours-form__input-placeholder');
+        if (input) {
+            input.addEventListener(
+                'change',
+                event => {
+                    const input = event.target;
+                    const formGroup = input.closest('.search-tours-form__group');
+                    const placeholder = formGroup.querySelector('.search-tours-form__input-placeholder');
+    
+                    placeholder.classList.toggle('search-tours-form__input-placeholder--hidden', event.detail.value !== '');
+                },
+                false
+            );
+        }
 
-                placeholder.classList.toggle('search-tours-form__input-placeholder--hidden', event.detail.value !== '');
-            },
-            false
-        );
+        
     });
 
     date = null;
