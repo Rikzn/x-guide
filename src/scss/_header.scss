@@ -1819,3 +1819,8 @@ body {
         padding-top: 6rem;
     }
 }
+
+
+.page-header__nav.fixed .logo__link-text {
+    fill: var(--primary-color) !important;
+}
